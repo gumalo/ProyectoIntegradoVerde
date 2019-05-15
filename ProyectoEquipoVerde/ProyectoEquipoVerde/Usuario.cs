@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using MySql.Data.MySqlClient;
 
 namespace ProyectoEquipoVerde
 {
@@ -28,9 +29,20 @@ namespace ProyectoEquipoVerde
         public string Contrasenya { get => contrasenya; set => contrasenya = value; }
         public Image Imagen { get => imagen; set => imagen = value; }
 
-        public static bool IniciadaSesion(int id)
+        public int AgregarUsuario(Usuario usu)
         {
-            
+            int retorno;
+            string consulta = String.Format("INSERT INTO usuarios (id,nombre,apellidos,email,edad,fecha_nac,cuota_inscr) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", usu.idUsuario, usu.nombre, usu.apellidos, usu.email, usu.edad,
+                usu.fechaNac.ToString("yyyy-MM-dd"), usu.cuotaInscr);
+
+            MessageBox.Show(consulta);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
         }
     }
 }

@@ -11,5 +11,13 @@ namespace ProyectoEquipoVerde
         private static int idUserLogged;
 
         public static int IdUserLogged { get => idUserLogged; set => idUserLogged = value; }
+
+        public static bool IniciadaSesion(int id)
+        {
+            if (IdUserLogged == id)
+                return true;
+            else
+                return false;
+        }
     }
 }
