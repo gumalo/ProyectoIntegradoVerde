@@ -26,5 +26,15 @@ namespace ProyectoEquipoVerde
         {
 
         }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataPeliculasV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
