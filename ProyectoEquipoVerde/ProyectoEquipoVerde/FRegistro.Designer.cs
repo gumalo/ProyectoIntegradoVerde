@@ -28,127 +28,162 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRegistro));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblNuevoUsuario = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblNuevaContrasenya = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtContrasenya = new System.Windows.Forms.TextBox();
+            this.lblContrasenya = new System.Windows.Forms.Label();
+            this.txtRepContrasenya = new System.Windows.Forms.TextBox();
             this.lblRepetirContrasenya = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.btnDarseDeAlta = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.btnCargarImagen = new System.Windows.Forms.Button();
+            this.pcbImagenPerfil = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagenPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pcbLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 203);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
+            this.pcbLogo.Location = new System.Drawing.Point(12, 87);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(262, 203);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbLogo.TabIndex = 1;
+            this.pcbLogo.TabStop = false;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(518, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtUsuario.Location = new System.Drawing.Point(519, 72);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(143, 20);
+            this.txtUsuario.TabIndex = 4;
             // 
-            // lblNuevoUsuario
+            // lblUsuario
             // 
-            this.lblNuevoUsuario.AutoSize = true;
-            this.lblNuevoUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNuevoUsuario.Location = new System.Drawing.Point(403, 43);
-            this.lblNuevoUsuario.Name = "lblNuevoUsuario";
-            this.lblNuevoUsuario.Size = new System.Drawing.Size(86, 20);
-            this.lblNuevoUsuario.TabIndex = 3;
-            this.lblNuevoUsuario.Text = "Usuario:";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(404, 72);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(86, 20);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "Usuario:";
             // 
-            // textBox2
+            // txtContrasenya
             // 
-            this.textBox2.Location = new System.Drawing.Point(518, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtContrasenya.Location = new System.Drawing.Point(519, 105);
+            this.txtContrasenya.Name = "txtContrasenya";
+            this.txtContrasenya.Size = new System.Drawing.Size(143, 20);
+            this.txtContrasenya.TabIndex = 6;
+            this.txtContrasenya.UseSystemPasswordChar = true;
             // 
-            // lblNuevaContrasenya
+            // lblContrasenya
             // 
-            this.lblNuevaContrasenya.AutoSize = true;
-            this.lblNuevaContrasenya.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNuevaContrasenya.Location = new System.Drawing.Point(369, 76);
-            this.lblNuevaContrasenya.Name = "lblNuevaContrasenya";
-            this.lblNuevaContrasenya.Size = new System.Drawing.Size(120, 20);
-            this.lblNuevaContrasenya.TabIndex = 5;
-            this.lblNuevaContrasenya.Text = "Contraseña:";
+            this.lblContrasenya.AutoSize = true;
+            this.lblContrasenya.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasenya.Location = new System.Drawing.Point(370, 105);
+            this.lblContrasenya.Name = "lblContrasenya";
+            this.lblContrasenya.Size = new System.Drawing.Size(120, 20);
+            this.lblContrasenya.TabIndex = 5;
+            this.lblContrasenya.Text = "Contraseña:";
             // 
-            // textBox3
+            // txtRepContrasenya
             // 
-            this.textBox3.Location = new System.Drawing.Point(518, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtRepContrasenya.Location = new System.Drawing.Point(519, 141);
+            this.txtRepContrasenya.Name = "txtRepContrasenya";
+            this.txtRepContrasenya.Size = new System.Drawing.Size(143, 20);
+            this.txtRepContrasenya.TabIndex = 8;
+            this.txtRepContrasenya.UseSystemPasswordChar = true;
             // 
             // lblRepetirContrasenya
             // 
             this.lblRepetirContrasenya.AutoSize = true;
             this.lblRepetirContrasenya.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRepetirContrasenya.Location = new System.Drawing.Point(296, 112);
+            this.lblRepetirContrasenya.Location = new System.Drawing.Point(297, 141);
             this.lblRepetirContrasenya.Name = "lblRepetirContrasenya";
             this.lblRepetirContrasenya.Size = new System.Drawing.Size(193, 20);
             this.lblRepetirContrasenya.TabIndex = 7;
             this.lblRepetirContrasenya.Text = "Repetir Contraseña:";
             // 
-            // txtCorreo
+            // btnRegistrarse
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(518, 147);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(143, 20);
-            this.txtCorreo.TabIndex = 10;
+            this.btnRegistrarse.Location = new System.Drawing.Point(452, 357);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(210, 36);
+            this.btnRegistrarse.TabIndex = 11;
+            this.btnRegistrarse.Text = "REGÍSTRATE";
+            this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
-            // lblCorreo
+            // btnCargarImagen
             // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(413, 145);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(76, 20);
-            this.lblCorreo.TabIndex = 9;
-            this.lblCorreo.Text = "Correo:";
+            this.btnCargarImagen.Location = new System.Drawing.Point(374, 190);
+            this.btnCargarImagen.Name = "btnCargarImagen";
+            this.btnCargarImagen.Size = new System.Drawing.Size(116, 36);
+            this.btnCargarImagen.TabIndex = 12;
+            this.btnCargarImagen.Text = "Cargar imagen";
+            this.btnCargarImagen.UseVisualStyleBackColor = true;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
-            // btnDarseDeAlta
+            // pcbImagenPerfil
             // 
-            this.btnDarseDeAlta.Location = new System.Drawing.Point(407, 179);
-            this.btnDarseDeAlta.Name = "btnDarseDeAlta";
-            this.btnDarseDeAlta.Size = new System.Drawing.Size(210, 36);
-            this.btnDarseDeAlta.TabIndex = 11;
-            this.btnDarseDeAlta.Text = "REGÍSTRATE";
-            this.btnDarseDeAlta.UseVisualStyleBackColor = true;
+            this.pcbImagenPerfil.Location = new System.Drawing.Point(519, 190);
+            this.pcbImagenPerfil.Name = "pcbImagenPerfil";
+            this.pcbImagenPerfil.Size = new System.Drawing.Size(143, 144);
+            this.pcbImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbImagenPerfil.TabIndex = 13;
+            this.pcbImagenPerfil.TabStop = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(519, 38);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(143, 20);
+            this.txtNombre.TabIndex = 15;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(404, 38);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(86, 20);
+            this.lblNombre.TabIndex = 14;
+            this.lblNombre.Text = "Nombre:";
             // 
             // FRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(726, 233);
-            this.Controls.Add(this.btnDarseDeAlta);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.lblCorreo);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(693, 422);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.pcbImagenPerfil);
+            this.Controls.Add(this.btnCargarImagen);
+            this.Controls.Add(this.btnRegistrarse);
+            this.Controls.Add(this.txtRepContrasenya);
             this.Controls.Add(this.lblRepetirContrasenya);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.lblNuevaContrasenya);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblNuevoUsuario);
-            this.Controls.Add(this.pictureBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Controls.Add(this.txtContrasenya);
+            this.Controls.Add(this.lblContrasenya);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.pcbLogo);
             this.Name = "FRegistro";
             this.Text = "FRegistro";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagenPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,15 +191,18 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblNuevoUsuario;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblNuevaContrasenya;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pcbLogo;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.TextBox txtContrasenya;
+        private System.Windows.Forms.Label lblContrasenya;
+        private System.Windows.Forms.TextBox txtRepContrasenya;
         private System.Windows.Forms.Label lblRepetirContrasenya;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.Button btnDarseDeAlta;
+        private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.Button btnCargarImagen;
+        private System.Windows.Forms.PictureBox pcbImagenPerfil;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

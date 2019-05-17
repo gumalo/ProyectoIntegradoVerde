@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace ProyectoEquipoVerde
@@ -69,9 +70,9 @@ namespace ProyectoEquipoVerde
             return lista;
         }
 
-        public static List<Pelicula> VerPelisPorFecha()
+        public static void VerPelisPorFecha()
         {
-
+            return;
         }
     }
 }

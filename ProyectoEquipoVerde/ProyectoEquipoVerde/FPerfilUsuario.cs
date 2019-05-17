@@ -16,5 +16,15 @@ namespace ProyectoEquipoVerde
         {
             InitializeComponent();
         }
+
+        private void ptcUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

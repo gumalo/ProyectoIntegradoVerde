@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace ProyectoEquipoVerde
 {
@@ -29,20 +30,74 @@ namespace ProyectoEquipoVerde
         public string Contrasenya { get => contrasenya; set => contrasenya = value; }
         public Image Imagen { get => imagen; set => imagen = value; }
 
-        public int AgregarUsuario(Usuario usu)
+        public static int AgregarUsuario(Usuario usu)
         {
             int retorno;
-            string consulta = String.Format("INSERT INTO usuarios (id,nombre,apellidos,email,edad,fecha_nac,cuota_inscr) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", usu.idUsuario, usu.nombre, usu.apellidos, usu.email, usu.edad,
-                usu.fechaNac.ToString("yyyy-MM-dd"), usu.cuotaInscr);
+
+            ImageConverter converter = new ImageConverter();
+            byte[] imagenByteArray = (byte[])converter.ConvertTo(usu.imagen, typeof(byte[]));
+            string imagenString = BitConverter.ToString(imagenByteArray).
+
+            BitConverter.ToString(imagenByteArray).Replace("-", "");
+
+            string consulta = String.Format("INSERT INTO `Usuario` (`id_usuario`, `nombre_usuario`, `nickname`, `contrasenya`, `foto_perfil`) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}')", null, usu.nombre, usu.nickname, usu.contrasenya, imagenString);
 
             MessageBox.Show(consulta);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
 
+            Conexion.AbrirConexion();
             retorno = comando.ExecuteNonQuery();
+            Conexion.CerrarConexion();
 
             return retorno;
+        }
+
+        public static bool ExisteUsuario(string usuario)
+        {
+            bool existe;
+
+            string consulta = String.Format("SELECT * FROM `Usuario` WHERE `nombre_usuario` LIKE '{0}'", usuario);
+
+            MessageBox.Show(consulta);
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+                existe = true;
+            else
+                existe = false;
+
+            Conexion.CerrarConexion();
+
+            return existe;
+        }
+
+        public static bool ExisteUsuario(string usuario, string contrasenya)
+        {
+            bool existe;
+
+            string consulta = String.Format("SELECT * FROM `Usuario` WHERE `nickname` LIKE '{0}' AND `contrasenya` LIKE '{1}'", usuario, contrasenya);
+
+            MessageBox.Show(consulta);
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+                existe = true;
+            else
+                existe = false;
+
+            Conexion.CerrarConexion();
+
+            return existe;
         }
     }
 }
