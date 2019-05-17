@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Critica.cs" />
     <Compile Include="FBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
