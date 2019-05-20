@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ProyectoEquipoVerde
 {
     class Critica
     {
-
-
         private int id_critica;
         private int valoracion;
         private string comentario;
@@ -18,6 +18,7 @@ namespace ProyectoEquipoVerde
         private int id_peli;
         private int id_usuario;
         private DateTime fecha;
+        private string nombre_peli;
 
 
 
@@ -25,9 +26,11 @@ namespace ProyectoEquipoVerde
         public int Valoracion { get { return valoracion; } set { valoracion = value; } }
         public string Comentario { get { return comentario; } set { comentario = value; } }
         public string Tag1 { get { return tag1; } set { tag1 = value; } }
-        public string Tag2 { get { return tag2; } set { tag2 = value; } }
+        public string Tag2 { get { return tag2; } set { tag2 = value; } } // En revisión
         public int Id_usuario { get { return id_usuario; } set { id_usuario = value; } }
         public DateTime Fecha { get { return fecha; } set { fecha = value; } }
+        public int Id_peli { get { return id_peli; } set { id_peli = value; } }
+        public string Nombre_peli { get { return nombre_peli; } set { nombre_peli = value; } } //Añado esta propiedad para poder mostrar el nombre de las películas en esta clase
 
 
         public Critica() { }
@@ -42,7 +45,6 @@ namespace ProyectoEquipoVerde
             this.id_usuario = id_usuario;
             this.fecha = fecha;
         }
-
 
 
         /// <summary>
@@ -71,6 +73,60 @@ namespace ProyectoEquipoVerde
 
             return retorno;
         }
+
+        public List<Critica> CalcularAfinidadCriticas(int id_usuario)
+        {
+            List<Critica> listaAfines = new List<Critica>();
+
+            //Aquí va un poco de estadística
+
+
+
+
+            return listaAfines;// Realmente debería devolver una lista de usuarios afines
+        }
+
+        public List<Critica> MostrarCriticasUsuario(int idUsuario)
+        {
+            List<Critica> listaCriticas = new List<Critica>();
+
+            string consulta = String.Format("SELECT Pelicula.nombre_peli, valoracion_critica, " +
+                "coment_critica, tag_1, fecha  " +
+                "FROM Critica LEFT JOIN Pelicula ON peli_critica = id_peli " +
+                "WHERE usu_critica=6 ORDER BY Critica.fecha DESC", idUsuario);
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Critica laCritica = new Critica();
+                    laCritica.Nombre_peli = reader.GetString(0);
+                    laCritica.Valoracion = reader.GetInt16(1);
+                    laCritica.Comentario = reader.GetString(2);
+                    laCritica.Tag1 = reader.GetString(3);
+                    laCritica.Fecha = reader.GetDateTime(4);
+
+                    listaCriticas.Add(laCritica);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se han encotrado críticas");
+            }
+            return listaCriticas;
+        }
+
+
+
+
+
+
+
+
+
+
 
     }
 }
