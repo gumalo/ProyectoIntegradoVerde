@@ -40,9 +40,6 @@ namespace ProyectoEquipoVerde
 
 
 
-        //Compañeros, o ¡qué diantre!, amigos, ante cierta obscuridad en el incierto desarrollo de esta la aplicación
-        //Voy a hacer esta función, que si bien es fea, cumple con devoción. También val para las novias
-
         public static List<Pelicula> VerInfoPeliPorNombre(string elNombre)
         {
             List<Pelicula> lista = new List<Pelicula>();
