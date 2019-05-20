@@ -44,36 +44,6 @@ footer{
  margin-top: -2;
  padding-bottom: 12px;
  }
- #menu2 {
- padding: 0;
- }
-
- #menu2 li {
- display: inline;
- }
- #menu2 li a {
- font-family: Arial;
- font-size: 15px;
- text-decoration: none;
- float: left;
- padding: 11px;
- padding-right: 83.65px;
- padding-left: 83.65px;
- background-color: #777777;
- color: #fff;
- border-style: double;
- border-color: #ffde59;
- border-top-width: 8px;
- border-left-width: 8px;
- border-bottom-width: 8px;
- border-right-width: 8px;
- }
- 
- #menu2 li a:hover {
- background-color: #ffbd59;
- margin-top: -2;
- padding-bottom: 12px;
- }
 
  #textoP{
  	font-family: sans-serif; 
@@ -111,21 +81,46 @@ footer{
 EQUIPO VERDE
 <br>
 <br>
-Utilidad: Aplicacion Orientada a Escritorio
-<br>
-Lenguaje: C#
-<br>
-Interfaz: Windows Forms
-</p>
+<script type="text/javascript">
+	
+usuarios=[ {"nombrecompleto" : "Alvaro Argüelles Delgado" ,	 "Rol" : "Programador", "NumeroContacto" : "5435345435"  },{
+	"nombrecompleto" : "Guillermo Martinez lozano", "Rol" : "Programador","NumeroContacto" : "534534534"},{
+		"nombrecompleto" : "Francisco Lobo García" , "Rol" : "Programador","NumeroContacto" : "345345345"},
+		{ "nombrecompleto" : "Carlos Tamarit Martinez", "Rol" : "Diseñador" , "NumeroContacto" : "654344243"},
+		{"nombrecompleto" : "Sergio Torromé Alonso","Rol" : "Programador Web","NumeroContacto" : "434535533"} ]
+		
 
-<ul id="menu2">
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<li><a href="equipo.html">Informacion Equipo Verde</a></li>
-</ul>
+document.write("<br>");
+document.write("<table border=1>");
+for(i=0;i<usuarios.length;i++){
+	document.write("<tr align=center>")
+
+	document.write("<td>"+usuarios[i].nombrecompleto+"</td>");
+	document.write("<td>"+usuarios[i].Rol+"</td>");
+	document.write("<td>"+usuarios[i].NumeroContacto+"</td>");
+	if(usuarios[i]==usuarios[0]) {
+		document.write("<td>"+"<img src='imagenes/alvaro.jpg' height='32px' width='35px'>"+"</td>");
+	}
+	else if(usuarios[i]==usuarios[1]) {
+		document.write("<td>"+"<img src='imagenes/guille.jpg'>"+"</td>");
+	}
+	else if(usuarios[i]==usuarios[2]) {
+		document.write("<td>"+"<img src='imagenes/fran.jpg'>"+"</td>");
+	}
+	else if(usuarios[i]==usuarios[3]) {
+		document.write("<td>"+"<img src='imagenes/carlos.jpg'>"+"</td>");
+	}
+	else if(usuarios[i]==usuarios[4]) {
+		document.write("<td>"+"<img src='imagenes/sergio.jpg'>"+"</td>");
+	}
+	
+	document.write("</tr>");
+
+}
+document.write("</table");
+
+</script>
+</p>
 <footer>
 	Prueba de footer
 	<br>
