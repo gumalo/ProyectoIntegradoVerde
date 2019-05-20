@@ -20,6 +20,8 @@ namespace ProyectoEquipoVerde
         private int id_peli;
         private int id_usuario;
         private DateTime fecha;
+        private string nom_peli; //atributo provisional
+
 
 
 
