@@ -31,15 +31,13 @@ namespace ProyectoEquipoVerde
             else
                 errorProvider1.Clear();
 
-            /*
-            if (Usuario.ExisteUsuario(txtUsuario.Text))
+            if (Usuario.ExisteUsuario(txtUsuario.Text) == true)
             {
                 ok = false;
                 errorProvider1.SetError(txtUsuario, "El usuario ya existe");
             }
             else
                 errorProvider1.Clear();
-            */
 
             if (txtNombre.Text == "")
             {
@@ -57,7 +55,7 @@ namespace ProyectoEquipoVerde
             else
                 errorProvider1.Clear();
 
-            if (txtRepContrasenya.Text == txtContrasenya.Text)
+            if (txtRepContrasenya.Text != txtContrasenya.Text)
             {
                 ok = false;
                 errorProvider1.SetError(txtRepContrasenya, "No coinciden los campos");
@@ -93,20 +91,21 @@ namespace ProyectoEquipoVerde
         {
             if (!ValidarDatos()) return;
 
-            var usuario = new Usuario(txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, imagen);
+            Usuario usuario = new Usuario(txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, imagen);
 
-            if (Usuario.AgregarUsuario(usuario) == -1)
-            {
-                MessageBox.Show("El registro ha fallado");
-                return;
-            }
+            Usuario.AgregarUsuario(usuario);
 
             LoginInfo.IniciarSesion(usuario.Nickname);
 
+            FMainPage frm2 = new FMainPage();
+            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
+            frm2.Show();
             this.Hide();
-            var form2 = new FMainPage();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
+        }
+
+        private void frm2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -21,17 +21,17 @@ namespace ProyectoEquipoVerde
         public int Id_pelicula { get { return id_pelicula; } set { id_pelicula = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public double Calificacion { get { return calificacion; } set { calificacion = value; } }
-        public int Anyo { get { return anyo; } set { anyo = value; } }
         public string Descripcion { get { return descripcion; } set { descripcion = value; } }
         public string Director { get { return director; } set { director = value; } }
 
+        public DateTime Fecha { get => fecha; set => fecha = value; }
 
         public Pelicula(int id_pelicula, string nombre, double calificacion, DateTime fecha, string descripcion, string director)
         {
             this.id_pelicula = id_pelicula;
             this.nombre = nombre;
             this.calificacion = calificacion;
-            this.fecha = anyo;
+            this.fecha = fecha;
             this.descripcion = descripcion;
             this.director = director;
         }
@@ -98,7 +98,7 @@ namespace ProyectoEquipoVerde
             return lista;
         }
 
-
+        /*
         public static List<Pelicula> VerPelisPorFecha(DateTime fecha)
         {
             string laFecha = fecha.ToString("yyyy-MM-dd");
@@ -114,9 +114,9 @@ namespace ProyectoEquipoVerde
                 //De momento dejo esto hasta ver cómo hacemos
                 while (reader.Read())
                 {
-                    Pelicula peli = new Pelicula(/*reader.GetInt16(0), reader.GetString(1), reader.GetString(2),
+                    //Pelicula peli = new Pelicula(reader.GetInt16(0), reader.GetString(1), reader.GetString(2),
                         reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetDouble(6), reader.GetString(7),
-                        reader.GetDateTime(8), reader.GetBoolean(9), reader.GetString(10), reader.GetInt16(11)*/);
+                        reader.GetDateTime(8), reader.GetBoolean(9), reader.GetString(10), reader.GetInt16(11));
                     lista.Add(peli);
                 }
             }
@@ -130,23 +130,23 @@ namespace ProyectoEquipoVerde
 
 
 
-
-        public List<Peliculas> VerTodas()
+        
+        public List<Pelicula> VerTodas()
         {
             return;
         }
 
-        public List<Peliculas> BuscarPeliculaPorFecha(DateTime fechaIni, DateTime fechaFin)
+        public List<Pelicula> BuscarPeliculaPorFecha(DateTime fechaIni, DateTime fechaFin)
         {
             return;
         }
 
-        public List<Peliculas> BuscarPorDirector(string nomDirector)
+        public List<Pelicula> BuscarPorDirector(string nomDirector)
         {
             return;
         }
 
-        public List<Peliculas> BuscarPorNombre(string nomPeli)
+        public List<Pelicula> BuscarPorNombre(string nomPeli)
         {
             return;
         }
@@ -171,6 +171,6 @@ namespace ProyectoEquipoVerde
             return;
         }
 
-
+        */
     }
 }
