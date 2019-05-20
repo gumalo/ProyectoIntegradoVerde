@@ -90,6 +90,7 @@
             // picboxBuscar
             // 
             this.picboxBuscar.BackColor = System.Drawing.Color.Gray;
+            this.picboxBuscar.Image = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
             this.picboxBuscar.Location = new System.Drawing.Point(372, 12);
             this.picboxBuscar.Name = "picboxBuscar";
             this.picboxBuscar.Size = new System.Drawing.Size(66, 66);

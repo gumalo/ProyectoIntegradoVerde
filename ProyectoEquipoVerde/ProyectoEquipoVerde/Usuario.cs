@@ -11,7 +11,7 @@ using System.Data;
 
 namespace ProyectoEquipoVerde
 {
-    public class Usuario
+    class Usuario
     {
         private string id;
         private string nombre;
@@ -42,8 +42,15 @@ namespace ProyectoEquipoVerde
             byte[] imagenByteArray = (byte[])converter.ConvertTo(usu.imagen, typeof(byte[]));
             string imagenString = BitConverter.ToString(imagenByteArray).Replace("-", "");
 
+            MemoryStream ms = new MemoryStream();
+            usu.imagen.Save(ms, usu.imagen.RawFormat);
+            byte[] img = ms.ToArray();
+            string stringByte = BitConverter.ToString(img);
+
+
+
             string consulta = String.Format("INSERT INTO `Usuario` (`id_usuario`, `nombre_usuario`, `nickname`, `contrasenya`, `foto_perfil`) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}')", null, usu.nombre, usu.nickname, usu.contrasenya, imagenString);
+                "('{0}','{1}','{2}','{3}','{4}')", null, usu.nombre, usu.nickname, usu.contrasenya, stringByte);
 
             MessageBox.Show(consulta);
 
