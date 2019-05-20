@@ -124,4 +124,31 @@
   <data name="palomitas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\palomitas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="grupo_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\grupo_w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-cierre-de-sesión-redondeado-hacia-la-izquierda-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\icons8-cierre-de-sesión-redondeado-hacia-la-izquierda-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-facebook-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\icons8-facebook-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-instagram-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\icons8-instagram-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-twitter-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\icons8-twitter-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="media-film-solid-search-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\media-film-solid-search-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Users-Find-User-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\Users-Find-User-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Users-Name-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\Users-Name-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

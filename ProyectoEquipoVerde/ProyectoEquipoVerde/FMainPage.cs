@@ -21,7 +21,7 @@ namespace ProyectoEquipoVerde
 
         private void PicBoxUsuario_MouseClick(object sender, MouseEventArgs e)
         {
-            FPerfilUsuario formUsu = new FPerfilUsuario();
+            FPerfilUsuario formUsu = new FPerfilUsuario(LoginInfo.IdUserLogged);
             formUsu.ShowDialog();
             this.Close();
         }
@@ -48,6 +48,14 @@ namespace ProyectoEquipoVerde
         private void FMainPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void PicBoxUsuario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form2 = new FBusqueda();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
     }
 }

@@ -1,10 +1,14 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using MySql.Data.MySqlClient;
+=======
+>>>>>>> e9c8640353389e55c786b5f4d4a935909c459b8d
 
 namespace ProyectoEquipoVerde
 {

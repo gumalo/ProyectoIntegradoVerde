@@ -74,7 +74,6 @@
             // 
             // picBoxClose
             // 
-            this.picBoxClose.Image = ((System.Drawing.Image)(resources.GetObject("picBoxClose.Image")));
             this.picBoxClose.Location = new System.Drawing.Point(811, 0);
             this.picBoxClose.Name = "picBoxClose";
             this.picBoxClose.Size = new System.Drawing.Size(20, 16);
@@ -84,7 +83,6 @@
             // picBoxLogo
             // 
             this.picBoxLogo.ErrorImage = null;
-            this.picBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxLogo.Image")));
             this.picBoxLogo.InitialImage = null;
             this.picBoxLogo.Location = new System.Drawing.Point(12, 12);
             this.picBoxLogo.Name = "picBoxLogo";
@@ -95,7 +93,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(783, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 16);

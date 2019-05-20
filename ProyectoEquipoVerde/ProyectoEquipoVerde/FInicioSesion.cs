@@ -48,24 +48,29 @@ namespace ProyectoEquipoVerde
             return ok;
         }
 
+        private void frm2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
+
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             if (!ValidarDatos()) return;
 
             LoginInfo.IniciarSesion(txtUsuario.Text);
 
+            FMainPage frm2 = new FMainPage();
+            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
+            frm2.Show();
             this.Hide();
-            var form2 = new FMainPage();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
+            FRegistro frm2 = new FRegistro();
+            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
+            frm2.Show();
             this.Hide();
-            var form2 = new FRegistro();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
         }
     }
 }

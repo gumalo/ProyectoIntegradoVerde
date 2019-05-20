@@ -27,11 +27,15 @@ namespace ProyectoEquipoVerde
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public Image Cartel { get { return cartel; } set { cartel = value; } }
         public double Calificacion { get { return calificacion; } set { calificacion = value; } }
+<<<<<<< HEAD
         public DateTime Anyo { get { return fecha; } set { fecha = value; } }
+=======
+>>>>>>> e9c8640353389e55c786b5f4d4a935909c459b8d
         public string Descripcion { get { return descripcion; } set { descripcion = value; } }
         public string Director { get { return director; } set { director = value; } }
         public double Valoracion { get { return valoracion; } set { valoracion = value; } }
 
+        public DateTime Fecha { get => fecha; set => fecha = value; }
 
         public Pelicula(int id_pelicula, string nombre, Image cartel, double calificacion, DateTime fecha, string descripcion, string director)
         {
@@ -127,7 +131,11 @@ namespace ProyectoEquipoVerde
             return lista;
         }
 
+
         public static List<Pelicula> VerPelisDesdeFecha(DateTime fecha)
+
+        /*
+
         {
             string laFecha = fecha.ToString("yyyy-MM-dd");
             List<Pelicula> lista = new List<Pelicula>();
@@ -140,10 +148,14 @@ namespace ProyectoEquipoVerde
             {
                 while (reader.Read())
                 {
+
                     Pelicula peli = new Pelicula();
                     peli.Id_pelicula = reader.GetInt16(0);
                     peli.Nombre = reader.GetString(1);
 
+
+                        reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetDouble(6), reader.GetString(7),
+                        reader.GetDateTime(8), reader.GetBoolean(9), reader.GetString(10), reader.GetInt16(11));
 
                     lista.Add(peli);
                 }
@@ -159,6 +171,11 @@ namespace ProyectoEquipoVerde
         public List<Pelicula> VerTodas()
         {
 
+
+
+        
+        public List<Pelicula> VerTodas()
+        {
 
             return;
         }
@@ -199,6 +216,7 @@ namespace ProyectoEquipoVerde
         }
 
 
+
         public double PuntuacionPeliculaEnPrograma(int idPeli)
         {
             int sumatorioPuntuaciones = 0;
@@ -234,6 +252,9 @@ namespace ProyectoEquipoVerde
            double puntuacion=
         }
 
+
+
+        */
 
     }
 }

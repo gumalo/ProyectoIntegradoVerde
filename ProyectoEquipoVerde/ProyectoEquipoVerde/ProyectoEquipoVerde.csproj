@@ -33,12 +33,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.16\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+=======
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.16\lib\net452\MySql.Data.dll</HintPath>
+>>>>>>> e9c8640353389e55c786b5f4d4a935909c459b8d
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -99,8 +117,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="FBusqueda.resx">
+      <DependentUpon>FBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FInicioSesion.resx">
       <DependentUpon>FInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMainPage.resx">
+      <DependentUpon>FMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPerfilUsuario.resx">
+      <DependentUpon>FPerfilUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRegistro.resx">
       <DependentUpon>FRegistro.cs</DependentUpon>
@@ -115,6 +142,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,6 +161,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imagenes\palomitas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\icons8-cierre-de-sesión-redondeado-hacia-la-izquierda-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\icons8-facebook-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\icons8-instagram-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\icons8-twitter-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\media-film-solid-search-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Users-Find-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Users-Name-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

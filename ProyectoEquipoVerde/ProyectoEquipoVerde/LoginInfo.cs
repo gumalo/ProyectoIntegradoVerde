@@ -23,7 +23,7 @@ namespace ProyectoEquipoVerde
 
         public static void IniciarSesion(string nomUsuario)
         {
-            string consulta = String.Format("SELECT `id_usuario` FROM `Usuario` WHERE `nombre_usuario` LIKE '{0}'", nomUsuario);
+            string consulta = String.Format("SELECT `id_usuario` FROM `Usuario` WHERE nickname LIKE '{0}'", nomUsuario);
 
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
 
