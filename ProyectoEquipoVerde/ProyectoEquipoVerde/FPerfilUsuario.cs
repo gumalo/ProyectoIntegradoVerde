@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace ProyectoEquipoVerde
@@ -64,17 +65,18 @@ namespace ProyectoEquipoVerde
 
         private void BtnHeaderFB_Click(object sender, EventArgs e)
         {
+            Process.Start("https://es-es.facebook.com/");
 
         }
 
         private void BtnHeaderInsta_Click(object sender, EventArgs e)
         {
-
+            Process.Start("https://www.instagram.com/?hl=es");
         }
 
         private void BtnHeaderTwitter_Click(object sender, EventArgs e)
         {
-
+            Process.Start("https://twitter.com/");
         }
 
         private void BtnHeaderBuscarPeli_Click(object sender, EventArgs e)
@@ -100,6 +102,11 @@ namespace ProyectoEquipoVerde
                 frm2.Show();
                 this.Hide();
             }
+        }
+
+        private void FPerfilUsuario_Load(object sender, EventArgs e)
+        {
+
         }
 
         /*

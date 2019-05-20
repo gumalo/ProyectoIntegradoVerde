@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace ProyectoEquipoVerde
@@ -56,6 +57,26 @@ namespace ProyectoEquipoVerde
             var form2 = new FBusqueda();
             form2.Closed += (s, args) => this.Close();
             form2.Show();
+        }
+
+        private void BtnHeaderFB_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://es-es.facebook.com/");
+        }
+
+        private void PnlHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnHeaderInsta_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.instagram.com/?hl=es");
+        }
+
+        private void BtnHeaderTwitter_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://twitter.com/");
         }
     }
 }

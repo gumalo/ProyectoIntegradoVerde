@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCriticaReciente = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvPeliculasUser = new System.Windows.Forms.DataGridView();
@@ -47,17 +47,17 @@
             this.lblNick = new System.Windows.Forms.Label();
             this.dgvCriticasUser = new System.Windows.Forms.DataGridView();
             this.lblPelis = new System.Windows.Forms.Label();
-            this.ptcUsuario = new System.Windows.Forms.PictureBox();
-            this.btnHeaderInicio = new System.Windows.Forms.Button();
-            this.btnHeaderFB = new System.Windows.Forms.Button();
-            this.btnHeaderInsta = new System.Windows.Forms.Button();
-            this.btnHeaderTwitter = new System.Windows.Forms.Button();
-            this.btnHeaderBuscarPeli = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnVerPerfil = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnVerPerfil = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnHeaderBuscarPeli = new System.Windows.Forms.Button();
+            this.btnHeaderTwitter = new System.Windows.Forms.Button();
+            this.btnHeaderInsta = new System.Windows.Forms.Button();
+            this.btnHeaderFB = new System.Windows.Forms.Button();
+            this.btnHeaderInicio = new System.Windows.Forms.Button();
+            this.ptcUsuario = new System.Windows.Forms.PictureBox();
             this.idpelis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crituser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crittext = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,10 +66,10 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculasUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCriticasUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptcUsuario)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCriticaReciente
@@ -102,17 +102,17 @@
             this.dgvPeliculasUser.AllowUserToDeleteRows = false;
             this.dgvPeliculasUser.AllowUserToResizeColumns = false;
             this.dgvPeliculasUser.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvPeliculasUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPeliculasUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPeliculasUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPeliculasUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPeliculasUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPeliculasUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeliculasUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -125,8 +125,8 @@
             this.dgvPeliculasUser.ReadOnly = true;
             this.dgvPeliculasUser.RowHeadersVisible = false;
             this.dgvPeliculasUser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.dgvPeliculasUser.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dgvPeliculasUser.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPeliculasUser.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvPeliculasUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeliculasUser.Size = new System.Drawing.Size(244, 496);
@@ -152,8 +152,8 @@
             // valoracion
             // 
             this.valoracion.DataPropertyName = "Puntuacion";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.valoracion.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.valoracion.DefaultCellStyle = dataGridViewCellStyle3;
             this.valoracion.HeaderText = "Valoración";
             this.valoracion.Name = "valoracion";
             this.valoracion.ReadOnly = true;
@@ -185,17 +185,17 @@
             this.dgvCriticasUser.AllowUserToDeleteRows = false;
             this.dgvCriticasUser.AllowUserToResizeColumns = false;
             this.dgvCriticasUser.AllowUserToResizeRows = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            this.dgvCriticasUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvCriticasUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCriticasUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCriticasUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCriticasUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCriticasUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCriticasUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpelis,
@@ -204,14 +204,14 @@
             this.tag,
             this.pelinom,
             this.fecha});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCriticasUser.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCriticasUser.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCriticasUser.EnableHeadersVisualStyles = false;
             this.dgvCriticasUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvCriticasUser.Location = new System.Drawing.Point(558, 158);
@@ -219,11 +219,11 @@
             this.dgvCriticasUser.ReadOnly = true;
             this.dgvCriticasUser.RowHeadersVisible = false;
             this.dgvCriticasUser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvCriticasUser.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCriticasUser.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCriticasUser.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvCriticasUser.RowTemplate.Height = 50;
             this.dgvCriticasUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -239,114 +239,6 @@
             this.lblPelis.Size = new System.Drawing.Size(186, 24);
             this.lblPelis.TabIndex = 22;
             this.lblPelis.Text = "PELÍCULAS VISTAS:";
-            // 
-            // ptcUsuario
-            // 
-            this.ptcUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptcUsuario.Location = new System.Drawing.Point(32, 125);
-            this.ptcUsuario.Name = "ptcUsuario";
-            this.ptcUsuario.Size = new System.Drawing.Size(200, 200);
-            this.ptcUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptcUsuario.TabIndex = 0;
-            this.ptcUsuario.TabStop = false;
-            // 
-            // btnHeaderInicio
-            // 
-            this.btnHeaderInicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderInicio.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
-            this.btnHeaderInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderInicio.FlatAppearance.BorderSize = 0;
-            this.btnHeaderInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderInicio.Location = new System.Drawing.Point(6, 6);
-            this.btnHeaderInicio.Name = "btnHeaderInicio";
-            this.btnHeaderInicio.Size = new System.Drawing.Size(77, 79);
-            this.btnHeaderInicio.TabIndex = 23;
-            this.btnHeaderInicio.UseVisualStyleBackColor = false;
-            this.btnHeaderInicio.Click += new System.EventHandler(this.BtnHeaderInicio_Click);
-            // 
-            // btnHeaderFB
-            // 
-            this.btnHeaderFB.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderFB.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_facebook_filled_100;
-            this.btnHeaderFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderFB.FlatAppearance.BorderSize = 0;
-            this.btnHeaderFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderFB.Location = new System.Drawing.Point(110, 20);
-            this.btnHeaderFB.Name = "btnHeaderFB";
-            this.btnHeaderFB.Size = new System.Drawing.Size(54, 54);
-            this.btnHeaderFB.TabIndex = 24;
-            this.btnHeaderFB.UseVisualStyleBackColor = false;
-            this.btnHeaderFB.Click += new System.EventHandler(this.BtnHeaderFB_Click);
-            // 
-            // btnHeaderInsta
-            // 
-            this.btnHeaderInsta.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderInsta.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_instagram_filled_100;
-            this.btnHeaderInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderInsta.FlatAppearance.BorderSize = 0;
-            this.btnHeaderInsta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderInsta.Location = new System.Drawing.Point(178, 20);
-            this.btnHeaderInsta.Name = "btnHeaderInsta";
-            this.btnHeaderInsta.Size = new System.Drawing.Size(54, 54);
-            this.btnHeaderInsta.TabIndex = 25;
-            this.btnHeaderInsta.UseVisualStyleBackColor = false;
-            this.btnHeaderInsta.Click += new System.EventHandler(this.BtnHeaderInsta_Click);
-            // 
-            // btnHeaderTwitter
-            // 
-            this.btnHeaderTwitter.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderTwitter.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_twitter_filled_100;
-            this.btnHeaderTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderTwitter.FlatAppearance.BorderSize = 0;
-            this.btnHeaderTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderTwitter.Location = new System.Drawing.Point(251, 20);
-            this.btnHeaderTwitter.Name = "btnHeaderTwitter";
-            this.btnHeaderTwitter.Size = new System.Drawing.Size(54, 54);
-            this.btnHeaderTwitter.TabIndex = 25;
-            this.btnHeaderTwitter.UseVisualStyleBackColor = false;
-            this.btnHeaderTwitter.Click += new System.EventHandler(this.BtnHeaderTwitter_Click);
-            // 
-            // btnHeaderBuscarPeli
-            // 
-            this.btnHeaderBuscarPeli.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderBuscarPeli.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.media_film_solid_search_512;
-            this.btnHeaderBuscarPeli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderBuscarPeli.FlatAppearance.BorderSize = 0;
-            this.btnHeaderBuscarPeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderBuscarPeli.Location = new System.Drawing.Point(676, 15);
-            this.btnHeaderBuscarPeli.Name = "btnHeaderBuscarPeli";
-            this.btnHeaderBuscarPeli.Size = new System.Drawing.Size(77, 65);
-            this.btnHeaderBuscarPeli.TabIndex = 26;
-            this.btnHeaderBuscarPeli.UseVisualStyleBackColor = false;
-            this.btnHeaderBuscarPeli.Click += new System.EventHandler(this.BtnHeaderBuscarPeli_Click);
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarSesion.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_filled_100;
-            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1279, 21);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(53, 53);
-            this.btnCerrarSesion.TabIndex = 28;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
-            // 
-            // btnVerPerfil
-            // 
-            this.btnVerPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnVerPerfil.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
-            this.btnVerPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVerPerfil.FlatAppearance.BorderSize = 0;
-            this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerPerfil.Location = new System.Drawing.Point(1197, 16);
-            this.btnVerPerfil.Name = "btnVerPerfil";
-            this.btnVerPerfil.Size = new System.Drawing.Size(62, 62);
-            this.btnVerPerfil.TabIndex = 29;
-            this.btnVerPerfil.UseVisualStyleBackColor = false;
-            this.btnVerPerfil.Click += new System.EventHandler(this.BtnVerPerfil_Click);
             // 
             // pnlHeader
             // 
@@ -382,6 +274,114 @@
             this.panel2.Size = new System.Drawing.Size(763, 42);
             this.panel2.TabIndex = 24;
             // 
+            // btnVerPerfil
+            // 
+            this.btnVerPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerPerfil.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
+            this.btnVerPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVerPerfil.FlatAppearance.BorderSize = 0;
+            this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerPerfil.Location = new System.Drawing.Point(1197, 16);
+            this.btnVerPerfil.Name = "btnVerPerfil";
+            this.btnVerPerfil.Size = new System.Drawing.Size(62, 62);
+            this.btnVerPerfil.TabIndex = 29;
+            this.btnVerPerfil.UseVisualStyleBackColor = false;
+            this.btnVerPerfil.Click += new System.EventHandler(this.BtnVerPerfil_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_filled_100;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1279, 21);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(53, 53);
+            this.btnCerrarSesion.TabIndex = 28;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            // 
+            // btnHeaderBuscarPeli
+            // 
+            this.btnHeaderBuscarPeli.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderBuscarPeli.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.media_film_solid_search_512;
+            this.btnHeaderBuscarPeli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderBuscarPeli.FlatAppearance.BorderSize = 0;
+            this.btnHeaderBuscarPeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderBuscarPeli.Location = new System.Drawing.Point(676, 15);
+            this.btnHeaderBuscarPeli.Name = "btnHeaderBuscarPeli";
+            this.btnHeaderBuscarPeli.Size = new System.Drawing.Size(77, 65);
+            this.btnHeaderBuscarPeli.TabIndex = 26;
+            this.btnHeaderBuscarPeli.UseVisualStyleBackColor = false;
+            this.btnHeaderBuscarPeli.Click += new System.EventHandler(this.BtnHeaderBuscarPeli_Click);
+            // 
+            // btnHeaderTwitter
+            // 
+            this.btnHeaderTwitter.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderTwitter.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_twitter_filled_100;
+            this.btnHeaderTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderTwitter.FlatAppearance.BorderSize = 0;
+            this.btnHeaderTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderTwitter.Location = new System.Drawing.Point(251, 20);
+            this.btnHeaderTwitter.Name = "btnHeaderTwitter";
+            this.btnHeaderTwitter.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderTwitter.TabIndex = 25;
+            this.btnHeaderTwitter.UseVisualStyleBackColor = false;
+            this.btnHeaderTwitter.Click += new System.EventHandler(this.BtnHeaderTwitter_Click);
+            // 
+            // btnHeaderInsta
+            // 
+            this.btnHeaderInsta.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderInsta.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_instagram_filled_100;
+            this.btnHeaderInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderInsta.FlatAppearance.BorderSize = 0;
+            this.btnHeaderInsta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderInsta.Location = new System.Drawing.Point(178, 20);
+            this.btnHeaderInsta.Name = "btnHeaderInsta";
+            this.btnHeaderInsta.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderInsta.TabIndex = 25;
+            this.btnHeaderInsta.UseVisualStyleBackColor = false;
+            this.btnHeaderInsta.Click += new System.EventHandler(this.BtnHeaderInsta_Click);
+            // 
+            // btnHeaderFB
+            // 
+            this.btnHeaderFB.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderFB.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_facebook_filled_100;
+            this.btnHeaderFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderFB.FlatAppearance.BorderSize = 0;
+            this.btnHeaderFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderFB.Location = new System.Drawing.Point(110, 20);
+            this.btnHeaderFB.Name = "btnHeaderFB";
+            this.btnHeaderFB.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderFB.TabIndex = 24;
+            this.btnHeaderFB.UseVisualStyleBackColor = false;
+            this.btnHeaderFB.Click += new System.EventHandler(this.BtnHeaderFB_Click);
+            // 
+            // btnHeaderInicio
+            // 
+            this.btnHeaderInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderInicio.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
+            this.btnHeaderInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderInicio.FlatAppearance.BorderSize = 0;
+            this.btnHeaderInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderInicio.Location = new System.Drawing.Point(6, 6);
+            this.btnHeaderInicio.Name = "btnHeaderInicio";
+            this.btnHeaderInicio.Size = new System.Drawing.Size(77, 79);
+            this.btnHeaderInicio.TabIndex = 23;
+            this.btnHeaderInicio.UseVisualStyleBackColor = false;
+            this.btnHeaderInicio.Click += new System.EventHandler(this.BtnHeaderInicio_Click);
+            // 
+            // ptcUsuario
+            // 
+            this.ptcUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptcUsuario.Location = new System.Drawing.Point(32, 125);
+            this.ptcUsuario.Name = "ptcUsuario";
+            this.ptcUsuario.Size = new System.Drawing.Size(200, 200);
+            this.ptcUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptcUsuario.TabIndex = 0;
+            this.ptcUsuario.TabStop = false;
+            // 
             // idpelis
             // 
             this.idpelis.DataPropertyName = "ID";
@@ -393,8 +393,8 @@
             // crituser
             // 
             this.crituser.DataPropertyName = "Puntuacion";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.crituser.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.crituser.DefaultCellStyle = dataGridViewCellStyle7;
             this.crituser.HeaderText = "Valoración";
             this.crituser.Name = "crituser";
             this.crituser.ReadOnly = true;
@@ -453,14 +453,15 @@
             this.Name = "FPerfilUsuario";
             this.Text = "Usuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FPerfilUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculasUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCriticasUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptcUsuario)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

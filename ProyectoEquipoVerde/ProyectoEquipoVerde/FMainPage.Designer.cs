@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picBoxUsuario = new System.Windows.Forms.PictureBox();
-            this.picBoxLogo = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,11 +39,14 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.picBoxClose = new System.Windows.Forms.PictureBox();
-            this.pcbBuscar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnVerPerfil = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnHeaderBuscarPeli = new System.Windows.Forms.Button();
+            this.btnHeaderTwitter = new System.Windows.Forms.Button();
+            this.btnHeaderInsta = new System.Windows.Forms.Button();
+            this.btnHeaderFB = new System.Windows.Forms.Button();
+            this.btnHeaderInicio = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,46 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbBuscar)).BeginInit();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // picBoxUsuario
-            // 
-            this.picBoxUsuario.ErrorImage = null;
-            this.picBoxUsuario.InitialImage = null;
-            this.picBoxUsuario.Location = new System.Drawing.Point(705, 12);
-            this.picBoxUsuario.Name = "picBoxUsuario";
-            this.picBoxUsuario.Size = new System.Drawing.Size(66, 66);
-            this.picBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxUsuario.TabIndex = 0;
-            this.picBoxUsuario.TabStop = false;
-            this.picBoxUsuario.Click += new System.EventHandler(this.PicBoxUsuario_Click);
-            this.picBoxUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PicBoxUsuario_MouseClick);
-            // 
-            // picBoxLogo
-            // 
-            this.picBoxLogo.ErrorImage = null;
-            this.picBoxLogo.InitialImage = null;
-            this.picBoxLogo.Location = new System.Drawing.Point(12, 12);
-            this.picBoxLogo.Name = "picBoxLogo";
-            this.picBoxLogo.Size = new System.Drawing.Size(66, 66);
-            this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxLogo.TabIndex = 1;
-            this.picBoxLogo.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.picBoxClose);
-            this.panel1.Controls.Add(this.pcbBuscar);
-            this.panel1.Controls.Add(this.picBoxLogo);
-            this.panel1.Controls.Add(this.picBoxUsuario);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 92);
-            this.panel1.TabIndex = 5;
             // 
             // panel2
             // 
@@ -200,26 +162,116 @@
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
-            // picBoxClose
+            // pnlHeader
             // 
-            this.picBoxClose.Location = new System.Drawing.Point(777, 3);
-            this.picBoxClose.Name = "picBoxClose";
-            this.picBoxClose.Size = new System.Drawing.Size(20, 16);
-            this.picBoxClose.TabIndex = 6;
-            this.picBoxClose.TabStop = false;
-            this.picBoxClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseClick);
+            this.pnlHeader.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pnlHeader.Controls.Add(this.btnVerPerfil);
+            this.pnlHeader.Controls.Add(this.btnCerrarSesion);
+            this.pnlHeader.Controls.Add(this.btnHeaderBuscarPeli);
+            this.pnlHeader.Controls.Add(this.btnHeaderTwitter);
+            this.pnlHeader.Controls.Add(this.btnHeaderInsta);
+            this.pnlHeader.Controls.Add(this.btnHeaderFB);
+            this.pnlHeader.Controls.Add(this.btnHeaderInicio);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(800, 92);
+            this.pnlHeader.TabIndex = 25;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlHeader_Paint);
             // 
-            // pcbBuscar
+            // btnVerPerfil
             // 
-            this.pcbBuscar.BackColor = System.Drawing.Color.Gray;
-            this.pcbBuscar.Image = global::ProyectoEquipoVerde.Properties.Resources.search;
-            this.pcbBuscar.Location = new System.Drawing.Point(372, 12);
-            this.pcbBuscar.Name = "pcbBuscar";
-            this.pcbBuscar.Size = new System.Drawing.Size(66, 66);
-            this.pcbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbBuscar.TabIndex = 2;
-            this.pcbBuscar.TabStop = false;
-            this.pcbBuscar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PicboxBuscar_MouseClick);
+            this.btnVerPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerPerfil.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
+            this.btnVerPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVerPerfil.FlatAppearance.BorderSize = 0;
+            this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerPerfil.Location = new System.Drawing.Point(1197, 16);
+            this.btnVerPerfil.Name = "btnVerPerfil";
+            this.btnVerPerfil.Size = new System.Drawing.Size(62, 62);
+            this.btnVerPerfil.TabIndex = 29;
+            this.btnVerPerfil.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_filled_100;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1279, 21);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(53, 53);
+            this.btnCerrarSesion.TabIndex = 28;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderBuscarPeli
+            // 
+            this.btnHeaderBuscarPeli.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderBuscarPeli.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.media_film_solid_search_512;
+            this.btnHeaderBuscarPeli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderBuscarPeli.FlatAppearance.BorderSize = 0;
+            this.btnHeaderBuscarPeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderBuscarPeli.Location = new System.Drawing.Point(676, 15);
+            this.btnHeaderBuscarPeli.Name = "btnHeaderBuscarPeli";
+            this.btnHeaderBuscarPeli.Size = new System.Drawing.Size(77, 65);
+            this.btnHeaderBuscarPeli.TabIndex = 26;
+            this.btnHeaderBuscarPeli.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderTwitter
+            // 
+            this.btnHeaderTwitter.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderTwitter.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_twitter_filled_100;
+            this.btnHeaderTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderTwitter.FlatAppearance.BorderSize = 0;
+            this.btnHeaderTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderTwitter.Location = new System.Drawing.Point(251, 20);
+            this.btnHeaderTwitter.Name = "btnHeaderTwitter";
+            this.btnHeaderTwitter.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderTwitter.TabIndex = 25;
+            this.btnHeaderTwitter.UseVisualStyleBackColor = false;
+            this.btnHeaderTwitter.Click += new System.EventHandler(this.BtnHeaderTwitter_Click);
+            // 
+            // btnHeaderInsta
+            // 
+            this.btnHeaderInsta.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderInsta.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_instagram_filled_100;
+            this.btnHeaderInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderInsta.FlatAppearance.BorderSize = 0;
+            this.btnHeaderInsta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderInsta.Location = new System.Drawing.Point(178, 20);
+            this.btnHeaderInsta.Name = "btnHeaderInsta";
+            this.btnHeaderInsta.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderInsta.TabIndex = 25;
+            this.btnHeaderInsta.UseVisualStyleBackColor = false;
+            this.btnHeaderInsta.Click += new System.EventHandler(this.BtnHeaderInsta_Click);
+            // 
+            // btnHeaderFB
+            // 
+            this.btnHeaderFB.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderFB.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_facebook_filled_100;
+            this.btnHeaderFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderFB.FlatAppearance.BorderSize = 0;
+            this.btnHeaderFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderFB.Location = new System.Drawing.Point(110, 20);
+            this.btnHeaderFB.Name = "btnHeaderFB";
+            this.btnHeaderFB.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderFB.TabIndex = 24;
+            this.btnHeaderFB.UseVisualStyleBackColor = false;
+            this.btnHeaderFB.Click += new System.EventHandler(this.BtnHeaderFB_Click);
+            // 
+            // btnHeaderInicio
+            // 
+            this.btnHeaderInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderInicio.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
+            this.btnHeaderInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderInicio.FlatAppearance.BorderSize = 0;
+            this.btnHeaderInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderInicio.Location = new System.Drawing.Point(6, 6);
+            this.btnHeaderInicio.Name = "btnHeaderInicio";
+            this.btnHeaderInicio.Size = new System.Drawing.Size(77, 79);
+            this.btnHeaderInicio.TabIndex = 23;
+            this.btnHeaderInicio.UseVisualStyleBackColor = false;
             // 
             // FMainPage
             // 
@@ -227,17 +279,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FMainPage";
             this.Text = "FMainPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FMainPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -249,19 +298,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbBuscar)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picBoxUsuario;
-        private System.Windows.Forms.PictureBox picBoxLogo;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pcbBuscar;
-        private System.Windows.Forms.PictureBox picBoxClose;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -273,5 +315,13 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Button btnVerPerfil;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnHeaderBuscarPeli;
+        private System.Windows.Forms.Button btnHeaderTwitter;
+        private System.Windows.Forms.Button btnHeaderInsta;
+        private System.Windows.Forms.Button btnHeaderFB;
+        private System.Windows.Forms.Button btnHeaderInicio;
     }
 }
