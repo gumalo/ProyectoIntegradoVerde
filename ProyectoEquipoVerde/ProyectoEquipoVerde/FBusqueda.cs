@@ -21,12 +21,12 @@ namespace ProyectoEquipoVerde
 
             dgvPelis.DataSource = Pelicula.CargarTodasPeliculas();
 
-            /*
-            foreach (DataGridViewRow row in dgvPelis.Rows)
-            {
-                row.Cells["tag"].Value = Pelicula.ObtenerTag(Convert.ToInt16(row.Cells["idpeli"].Value));
-            }
-            */
+            //foreach (DataGridViewRow row in dgvPelis.Rows)
+            //{
+            //    row.Cells["tag"].Value = Pelicula.ObtenerTag(Convert.ToInt16(row.Cells["idpeli"].Value));
+
+            //    //MessageBox.Show(Pelicula.ObtenerTag(Convert.ToInt16(row.Cells["idpeli"].Value)).ToString());
+            //}
 
             for (int i = 0; i < dgvPelis.Columns.Count; i++)
                 if (dgvPelis.Columns[i] is DataGridViewImageColumn)

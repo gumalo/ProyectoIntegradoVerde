@@ -212,5 +212,26 @@ namespace ProyectoEquipoVerde
 
             return lista;
         }
+
+        public static int ModificarUsuario(int id, string nickname, string nombre, string contrasenya, Image imagenPerfil)
+        {
+            int retorno;
+
+            MemoryStream ms = new MemoryStream();
+            imagenPerfil.Save(ms, ImageFormat.Jpeg);
+            byte[] img = ms.ToArray();
+
+            string consulta = String.Format("UPDATE `Usuario` SET `nombre_usuario` = '{0}', `nickname` = '{1}', `contrasenya` = '{2}'," +
+                " `foto_perfil` = @imagen WHERE id_usuario = {3}", nickname, nombre, contrasenya, id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+            comando.Parameters.AddWithValue("imagen", img);
+
+            Conexion.AbrirConexion();
+            retorno = comando.ExecuteNonQuery();
+            Conexion.CerrarConexion();
+
+            return retorno;
+        }
     }
 }

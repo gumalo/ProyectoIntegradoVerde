@@ -44,6 +44,7 @@
             this.chbContr = new System.Windows.Forms.CheckBox();
             this.btnCargarImagen = new System.Windows.Forms.Button();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagenPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -182,6 +183,21 @@
             this.btnRegistrarse.UseVisualStyleBackColor = false;
             this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click_1);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.AutoSize = true;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(456, 359);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(206, 34);
+            this.btnModificar.TabIndex = 30;
+            this.btnModificar.Text = "GUARDAR MODIFICACIÓN";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Visible = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // FRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +205,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(756, 422);
             this.Controls.Add(this.btnRegistrarse);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCargarImagen);
             this.Controls.Add(this.chbContr);
             this.Controls.Add(this.txtNombre);
@@ -227,5 +244,6 @@
         private System.Windows.Forms.CheckBox chbContr;
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Button btnCargarImagen;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

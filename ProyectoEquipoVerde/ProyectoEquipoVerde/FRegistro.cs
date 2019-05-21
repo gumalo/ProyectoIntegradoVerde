@@ -19,7 +19,7 @@ namespace ProyectoEquipoVerde
             InitializeComponent();
         }
 
-        public FRegistro(string editar)
+        public FRegistro(int iduser)
         {
             InitializeComponent();
 
@@ -30,7 +30,8 @@ namespace ProyectoEquipoVerde
             txtContrasenya.Text = usuario.Contrasenya;
             pcbImagenPerfil.Image = usuario.Imagen;
 
-
+            btnRegistrarse.Visible = false;
+            btnModificar.Visible = true;
         }
 
         private bool ValidarDatos()
@@ -136,6 +137,13 @@ namespace ProyectoEquipoVerde
             frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
             frm2.Show();
             this.Hide();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Usuario.ModificarUsuario(LoginInfo.IdUserLogged, txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, pcbImagenPerfil.Image);
+
+            Dispose();
         }
     }
 }

@@ -28,27 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pnlUsuarios = new System.Windows.Forms.Panel();
-            this.lblUsuarios = new System.Windows.Forms.Label();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.pnlPelis = new System.Windows.Forms.Panel();
-            this.lblPelis = new System.Windows.Forms.Label();
-            this.dgvPelis = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.criticas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnVerPerfil = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnHeaderBuscarPeli = new System.Windows.Forms.Button();
@@ -56,7 +47,17 @@
             this.btnHeaderInsta = new System.Windows.Forms.Button();
             this.btnHeaderFB = new System.Windows.Forms.Button();
             this.btnHeaderInicio = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
+            this.pnlUsuarios = new System.Windows.Forms.Panel();
+            this.lblUsuarios = new System.Windows.Forms.Label();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.criticas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlPelis = new System.Windows.Forms.Panel();
+            this.lblPelis = new System.Windows.Forms.Label();
+            this.dgvPelis = new System.Windows.Forms.DataGridView();
+            this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.idpeli = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.portada = new System.Windows.Forms.DataGridViewImageColumn();
             this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +65,6 @@
             this.director = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.punt_media = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -97,157 +97,19 @@
             this.pnlHeader.Size = new System.Drawing.Size(1344, 92);
             this.pnlHeader.TabIndex = 25;
             // 
-            // pnlUsuarios
+            // btnRefresh
             // 
-            this.pnlUsuarios.BackColor = System.Drawing.Color.Gray;
-            this.pnlUsuarios.Controls.Add(this.lblUsuarios);
-            this.pnlUsuarios.Location = new System.Drawing.Point(29, 177);
-            this.pnlUsuarios.Name = "pnlUsuarios";
-            this.pnlUsuarios.Size = new System.Drawing.Size(268, 42);
-            this.pnlUsuarios.TabIndex = 27;
-            // 
-            // lblUsuarios
-            // 
-            this.lblUsuarios.AutoSize = true;
-            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarios.Location = new System.Drawing.Point(3, 9);
-            this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(105, 24);
-            this.lblUsuarios.TabIndex = 22;
-            this.lblUsuarios.Text = "USUARIOS";
-            // 
-            // dgvUsuarios
-            // 
-            this.dgvUsuarios.AllowUserToAddRows = false;
-            this.dgvUsuarios.AllowUserToDeleteRows = false;
-            this.dgvUsuarios.AllowUserToResizeColumns = false;
-            this.dgvUsuarios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
-            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nickname,
-            this.nombre,
-            this.criticas});
-            this.dgvUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvUsuarios.GridColor = System.Drawing.Color.DarkOrange;
-            this.dgvUsuarios.Location = new System.Drawing.Point(29, 219);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.ReadOnly = true;
-            this.dgvUsuarios.RowHeadersVisible = false;
-            this.dgvUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle22;
-            this.dgvUsuarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(268, 430);
-            this.dgvUsuarios.TabIndex = 26;
-            this.dgvUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPeliculasUser_CellDoubleClick);
-            // 
-            // pnlPelis
-            // 
-            this.pnlPelis.BackColor = System.Drawing.Color.Gray;
-            this.pnlPelis.Controls.Add(this.lblPelis);
-            this.pnlPelis.Location = new System.Drawing.Point(357, 177);
-            this.pnlPelis.Name = "pnlPelis";
-            this.pnlPelis.Size = new System.Drawing.Size(600, 42);
-            this.pnlPelis.TabIndex = 29;
-            // 
-            // lblPelis
-            // 
-            this.lblPelis.AutoSize = true;
-            this.lblPelis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPelis.Location = new System.Drawing.Point(3, 9);
-            this.lblPelis.Name = "lblPelis";
-            this.lblPelis.Size = new System.Drawing.Size(110, 24);
-            this.lblPelis.TabIndex = 22;
-            this.lblPelis.Text = "PELÍCULAS";
-            // 
-            // dgvPelis
-            // 
-            this.dgvPelis.AllowUserToAddRows = false;
-            this.dgvPelis.AllowUserToDeleteRows = false;
-            this.dgvPelis.AllowUserToResizeColumns = false;
-            this.dgvPelis.AllowUserToResizeRows = false;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            this.dgvPelis.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
-            this.dgvPelis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPelis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.dgvPelis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPelis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idpeli,
-            this.portada,
-            this.titulo,
-            this.fecha,
-            this.director,
-            this.punt_media,
-            this.tag});
-            this.dgvPelis.EnableHeadersVisualStyles = false;
-            this.dgvPelis.GridColor = System.Drawing.Color.DarkOrange;
-            this.dgvPelis.Location = new System.Drawing.Point(357, 219);
-            this.dgvPelis.Name = "dgvPelis";
-            this.dgvPelis.ReadOnly = true;
-            this.dgvPelis.RowHeadersVisible = false;
-            this.dgvPelis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.dgvPelis.RowsDefaultCellStyle = dataGridViewCellStyle27;
-            this.dgvPelis.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dgvPelis.RowTemplate.Height = 90;
-            this.dgvPelis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPelis.Size = new System.Drawing.Size(600, 430);
-            this.dgvPelis.TabIndex = 28;
-            this.dgvPelis.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPelis_CellDoubleClick);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // nickname
-            // 
-            this.nickname.DataPropertyName = "Nick";
-            this.nickname.HeaderText = "Nickname";
-            this.nickname.Name = "nickname";
-            this.nickname.ReadOnly = true;
-            this.nickname.Width = 90;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "Nombre";
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 120;
-            // 
-            // criticas
-            // 
-            this.criticas.DataPropertyName = "Criticas";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.criticas.DefaultCellStyle = dataGridViewCellStyle21;
-            this.criticas.HeaderText = "Críticas";
-            this.criticas.Name = "criticas";
-            this.criticas.ReadOnly = true;
-            this.criticas.Width = 55;
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.refresh;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Location = new System.Drawing.Point(1127, 24);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(46, 46);
+            this.btnRefresh.TabIndex = 32;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // btnVerPerfil
             // 
@@ -347,19 +209,172 @@
             this.btnHeaderInicio.UseVisualStyleBackColor = false;
             this.btnHeaderInicio.Click += new System.EventHandler(this.BtnHeaderInicio_Click);
             // 
-            // btnRefresh
+            // pnlUsuarios
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.refresh;
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(1127, 24);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(46, 46);
-            this.btnRefresh.TabIndex = 32;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            this.pnlUsuarios.BackColor = System.Drawing.Color.Gray;
+            this.pnlUsuarios.Controls.Add(this.lblUsuarios);
+            this.pnlUsuarios.Location = new System.Drawing.Point(29, 177);
+            this.pnlUsuarios.Name = "pnlUsuarios";
+            this.pnlUsuarios.Size = new System.Drawing.Size(268, 42);
+            this.pnlUsuarios.TabIndex = 27;
+            // 
+            // lblUsuarios
+            // 
+            this.lblUsuarios.AutoSize = true;
+            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.Location = new System.Drawing.Point(3, 9);
+            this.lblUsuarios.Name = "lblUsuarios";
+            this.lblUsuarios.Size = new System.Drawing.Size(105, 24);
+            this.lblUsuarios.TabIndex = 22;
+            this.lblUsuarios.Text = "USUARIOS";
+            // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.AllowUserToResizeColumns = false;
+            this.dgvUsuarios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.nickname,
+            this.nombre,
+            this.criticas});
+            this.dgvUsuarios.EnableHeadersVisualStyles = false;
+            this.dgvUsuarios.GridColor = System.Drawing.Color.DarkOrange;
+            this.dgvUsuarios.Location = new System.Drawing.Point(29, 219);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
+            this.dgvUsuarios.RowHeadersVisible = false;
+            this.dgvUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvUsuarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsuarios.Size = new System.Drawing.Size(268, 430);
+            this.dgvUsuarios.TabIndex = 26;
+            this.dgvUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPeliculasUser_CellDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // nickname
+            // 
+            this.nickname.DataPropertyName = "Nick";
+            this.nickname.HeaderText = "Nickname";
+            this.nickname.Name = "nickname";
+            this.nickname.ReadOnly = true;
+            this.nickname.Width = 90;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "Nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 120;
+            // 
+            // criticas
+            // 
+            this.criticas.DataPropertyName = "Criticas";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.criticas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.criticas.HeaderText = "Críticas";
+            this.criticas.Name = "criticas";
+            this.criticas.ReadOnly = true;
+            this.criticas.Width = 55;
+            // 
+            // pnlPelis
+            // 
+            this.pnlPelis.BackColor = System.Drawing.Color.Gray;
+            this.pnlPelis.Controls.Add(this.lblPelis);
+            this.pnlPelis.Location = new System.Drawing.Point(357, 177);
+            this.pnlPelis.Name = "pnlPelis";
+            this.pnlPelis.Size = new System.Drawing.Size(600, 42);
+            this.pnlPelis.TabIndex = 29;
+            // 
+            // lblPelis
+            // 
+            this.lblPelis.AutoSize = true;
+            this.lblPelis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPelis.Location = new System.Drawing.Point(3, 9);
+            this.lblPelis.Name = "lblPelis";
+            this.lblPelis.Size = new System.Drawing.Size(110, 24);
+            this.lblPelis.TabIndex = 22;
+            this.lblPelis.Text = "PELÍCULAS";
+            // 
+            // dgvPelis
+            // 
+            this.dgvPelis.AllowUserToAddRows = false;
+            this.dgvPelis.AllowUserToDeleteRows = false;
+            this.dgvPelis.AllowUserToResizeColumns = false;
+            this.dgvPelis.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvPelis.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPelis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPelis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPelis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPelis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idpeli,
+            this.portada,
+            this.titulo,
+            this.fecha,
+            this.director,
+            this.punt_media,
+            this.tag});
+            this.dgvPelis.EnableHeadersVisualStyles = false;
+            this.dgvPelis.GridColor = System.Drawing.Color.DarkOrange;
+            this.dgvPelis.Location = new System.Drawing.Point(357, 219);
+            this.dgvPelis.Name = "dgvPelis";
+            this.dgvPelis.ReadOnly = true;
+            this.dgvPelis.RowHeadersVisible = false;
+            this.dgvPelis.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dgvPelis.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvPelis.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvPelis.RowTemplate.Height = 90;
+            this.dgvPelis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPelis.Size = new System.Drawing.Size(600, 430);
+            this.dgvPelis.TabIndex = 28;
+            this.dgvPelis.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPelis_CellDoubleClick);
+            // 
+            // btnBuscarUsuario
+            // 
+            this.btnBuscarUsuario.AutoSize = true;
+            this.btnBuscarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBuscarUsuario.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.search;
+            this.btnBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarUsuario.Location = new System.Drawing.Point(269, 122);
+            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
+            this.btnBuscarUsuario.Size = new System.Drawing.Size(28, 29);
+            this.btnBuscarUsuario.TabIndex = 28;
+            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.BtnBuscarUsuario_Click);
             // 
             // idpeli
             // 
@@ -388,8 +403,8 @@
             // fecha
             // 
             this.fecha.DataPropertyName = "Fecha";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.fecha.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.fecha.DefaultCellStyle = dataGridViewCellStyle7;
             this.fecha.HeaderText = "Fecha";
             this.fecha.Name = "fecha";
             this.fecha.ReadOnly = true;
@@ -405,9 +420,9 @@
             // punt_media
             // 
             this.punt_media.DataPropertyName = "Puntuacion";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.punt_media.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.punt_media.DefaultCellStyle = dataGridViewCellStyle8;
             this.punt_media.HeaderText = "Punt. Media";
             this.punt_media.Name = "punt_media";
             this.punt_media.ReadOnly = true;
@@ -415,26 +430,11 @@
             // 
             // tag
             // 
+            this.tag.DataPropertyName = "tag";
             this.tag.HeaderText = "Tag";
             this.tag.Name = "tag";
             this.tag.ReadOnly = true;
-            this.tag.Visible = false;
             this.tag.Width = 70;
-            // 
-            // btnBuscarUsuario
-            // 
-            this.btnBuscarUsuario.AutoSize = true;
-            this.btnBuscarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBuscarUsuario.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.search;
-            this.btnBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(269, 122);
-            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
-            this.btnBuscarUsuario.Size = new System.Drawing.Size(28, 29);
-            this.btnBuscarUsuario.TabIndex = 28;
-            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
-            this.btnBuscarUsuario.Click += new System.EventHandler(this.BtnBuscarUsuario_Click);
             // 
             // FBusqueda
             // 
@@ -488,6 +488,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn criticas;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnBuscarUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpeli;
         private System.Windows.Forms.DataGridViewImageColumn portada;
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
@@ -495,6 +496,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn director;
         private System.Windows.Forms.DataGridViewTextBoxColumn punt_media;
         private System.Windows.Forms.DataGridViewTextBoxColumn tag;
-        private System.Windows.Forms.Button btnBuscarUsuario;
     }
 }

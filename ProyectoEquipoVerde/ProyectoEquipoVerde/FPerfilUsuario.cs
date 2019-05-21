@@ -114,6 +114,12 @@ namespace ProyectoEquipoVerde
             Refresh();
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRegistro frm2 = new FRegistro(LoginInfo.IdUserLogged);
+            frm2.Show();
+        }
+
         /*
         private void DgvCriticasUser_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
