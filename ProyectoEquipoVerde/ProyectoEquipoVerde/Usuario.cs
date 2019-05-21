@@ -8,6 +8,7 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.IO;
 using System.Data;
+using System.Drawing.Imaging;
 
 namespace ProyectoEquipoVerde
 {
@@ -38,23 +39,17 @@ namespace ProyectoEquipoVerde
         {
             int retorno;
 
-            ImageConverter converter = new ImageConverter();
-            byte[] imagenByteArray = (byte[])converter.ConvertTo(usu.imagen, typeof(byte[]));
-            string imagenString = BitConverter.ToString(imagenByteArray).Replace("-", "");
-
             MemoryStream ms = new MemoryStream();
-            usu.imagen.Save(ms, usu.imagen.RawFormat);
+            usu.Imagen.Save(ms, ImageFormat.Jpeg);
             byte[] img = ms.ToArray();
-            string stringByte = BitConverter.ToString(img);
-
-
 
             string consulta = String.Format("INSERT INTO `Usuario` (`id_usuario`, `nombre_usuario`, `nickname`, `contrasenya`, `foto_perfil`) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}')", null, usu.nombre, usu.nickname, usu.contrasenya, stringByte);
+                "('{0}','{1}','{2}','{3}',@imagen)", null, usu.nombre, usu.nickname, usu.contrasenya);
 
             MessageBox.Show(consulta);
 
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+            comando.Parameters.AddWithValue("imagen", img);
 
             Conexion.AbrirConexion();
             retorno = comando.ExecuteNonQuery();
@@ -119,15 +114,19 @@ namespace ProyectoEquipoVerde
             {
                 while (reader.Read())
                 {
-                    byte[] num = (byte[])reader[4];
-                    MemoryStream ms = new MemoryStream(num);
-                    Image returnImage = Image.FromStream(ms);
-                    Image image = returnImage;
+                    //byte[] num = (byte[])reader[4];
+                    //MemoryStream ms = new MemoryStream(num);
+                    //Image returnImage = Image.FromStream(ms);
+                    //Image image = returnImage;
+
+                    byte[] img = (byte[])reader[4];
+                    MemoryStream ms = new MemoryStream(img);
+                    Image foto = Image.FromStream(ms);
 
                     usuario.Nombre = reader.GetString(1);
                     usuario.Nickname = reader.GetString(2);
                     usuario.Contrasenya = reader.GetString(3);
-                    usuario.Imagen = image;
+                    usuario.Imagen = foto;
                 }
             }
             Conexion.CerrarConexion();
@@ -137,7 +136,28 @@ namespace ProyectoEquipoVerde
 
         public static DataTable CargarTodosUsuarios()
         {
-            string consulta = String.Format("SELECT `Usuario`.`id_usuario` AS ID, `Usuario`.`nickname` AS Nick, `Usuario`.`nombre_usuario` AS Nombre, (SELECT COUNT(*) FROM Critica WHERE Usuario.id_usuario = Critica.usu_critica) AS Criticas FROM `Usuario` LEFT JOIN Critica ON Usuario.id_usuario = Critica.usu_critica GROUP BY Usuario.id_usuario");
+            string consulta = String.Format("SELECT `Usuario`.`id_usuario` AS ID, `Usuario`.`nickname` AS Nick, `Usuario`.`nombre_usuario` AS Nombre, (SELECT COUNT(*) FROM Critica WHERE Usuario.id_usuario = Critica.usu_critica) AS Criticas " +
+                "FROM `Usuario` LEFT JOIN Critica ON Usuario.id_usuario = Critica.usu_critica GROUP BY Usuario.id_usuario");
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            DataTable lista = new DataTable();
+            if (reader.HasRows)
+            {
+                lista.Load(reader);
+            }
+            Conexion.CerrarConexion();
+
+            return lista;
+        }
+
+        public static DataTable BuscarUsuarios(string busqueda)
+        {
+            string consulta = String.Format("SELECT `Usuario`.`id_usuario` AS ID, `Usuario`.`nickname` AS Nick, `Usuario`.`nombre_usuario` AS Nombre, (SELECT COUNT(*) FROM Critica WHERE Usuario.id_usuario = Critica.usu_critica) AS Criticas " +
+                "FROM `Usuario` LEFT JOIN Critica ON Usuario.id_usuario = Critica.usu_critica WHERE nickname LIKE '%{0}%' OR nombre_usuario LIKE '%{0}%' GROUP BY Usuario.id_usuario", busqueda);
 
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
 
@@ -175,7 +195,8 @@ namespace ProyectoEquipoVerde
 
         public static DataTable CargarCriticasUsuario(int id)
         {
-            string consulta = String.Format("SELECT id_critica AS ID, valoracion_critica AS Puntuacion, coment_critica AS Critica, tag_1 AS Tag, Pelicula.nombre_peli AS Pelicula, fecha AS Fecha FROM `Critica` INNER JOIN Pelicula ON peli_critica = Pelicula.id_peli WHERE usu_critica = {0}", id);
+            string consulta = String.Format("SELECT id_critica AS ID, valoracion_critica AS Puntuacion, coment_critica AS Critica, tag_1 AS Tag, Pelicula.nombre_peli AS Pelicula, fecha AS Fecha" +
+                " FROM `Critica` INNER JOIN Pelicula ON peli_critica = Pelicula.id_peli WHERE usu_critica = {0}", id);
 
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
 
