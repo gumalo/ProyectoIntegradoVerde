@@ -33,11 +33,11 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasenya = new System.Windows.Forms.TextBox();
             this.lblContrasenya = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.btnInicioSesion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -78,26 +78,6 @@
             this.lblContrasenya.TabIndex = 3;
             this.lblContrasenya.Text = "Contraseña:";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(209, 326);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(115, 32);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "LOGIN";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(209, 364);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(115, 32);
-            this.btnRegister.TabIndex = 6;
-            this.btnRegister.Text = "REGÍSTRATE";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
@@ -122,14 +102,42 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.AutoSize = true;
+            this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarse.Location = new System.Drawing.Point(204, 354);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(123, 34);
+            this.btnRegistrarse.TabIndex = 30;
+            this.btnRegistrarse.Text = "REGÍSTRATE";
+            this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
+            // 
+            // btnInicioSesion
+            // 
+            this.btnInicioSesion.AutoSize = true;
+            this.btnInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicioSesion.Location = new System.Drawing.Point(204, 314);
+            this.btnInicioSesion.Name = "btnInicioSesion";
+            this.btnInicioSesion.Size = new System.Drawing.Size(123, 34);
+            this.btnInicioSesion.TabIndex = 31;
+            this.btnInicioSesion.Text = "INICIA SESIÓN";
+            this.btnInicioSesion.UseVisualStyleBackColor = false;
+            this.btnInicioSesion.Click += new System.EventHandler(this.btnInicioSesion_Click);
+            // 
             // FInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(531, 408);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnInicioSesion);
+            this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.txtContrasenya);
             this.Controls.Add(this.lblContrasenya);
             this.Controls.Add(this.txtUsuario);
@@ -153,9 +161,9 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasenya;
         private System.Windows.Forms.Label lblContrasenya;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnInicioSesion;
+        private System.Windows.Forms.Button btnRegistrarse;
     }
 }

@@ -53,7 +53,7 @@ namespace ProyectoEquipoVerde
             this.Close();
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
+        private void btnInicioSesion_Click(object sender, EventArgs e)
         {
             if (!ValidarDatos()) return;
 
@@ -65,7 +65,7 @@ namespace ProyectoEquipoVerde
             this.Hide();
         }
 
-        private void BtnRegister_Click(object sender, EventArgs e)
+        private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             FRegistro frm2 = new FRegistro();
             frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);

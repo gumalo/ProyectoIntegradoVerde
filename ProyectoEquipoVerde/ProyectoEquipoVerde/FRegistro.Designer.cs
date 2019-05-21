@@ -114,6 +114,7 @@
             // 
             // pcbImagenPerfil
             // 
+            this.pcbImagenPerfil.Image = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
             this.pcbImagenPerfil.Location = new System.Drawing.Point(519, 190);
             this.pcbImagenPerfil.Name = "pcbImagenPerfil";
             this.pcbImagenPerfil.Size = new System.Drawing.Size(143, 144);
@@ -165,6 +166,7 @@
             this.btnCargarImagen.TabIndex = 28;
             this.btnCargarImagen.Text = "Cargar imagen";
             this.btnCargarImagen.UseVisualStyleBackColor = false;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click_1);
             // 
             // btnRegistrarse
             // 
@@ -178,6 +180,7 @@
             this.btnRegistrarse.TabIndex = 29;
             this.btnRegistrarse.Text = "REGÍSTRATE";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click_1);
             // 
             // FRegistro
             // 

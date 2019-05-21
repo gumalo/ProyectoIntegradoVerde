@@ -90,35 +90,6 @@ namespace ProyectoEquipoVerde
             return ok;
         }
 
-        private void btnCargarImagen_Click(object sender, EventArgs e)
-        {
-            var open = new OpenFileDialog();
-
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                imagen = new Bitmap(open.FileName);
-                pcbImagenPerfil.Image = imagen;
-            }
-        }
-
-        private void btnRegistrarse_Click(object sender, EventArgs e)
-        {
-            if (!ValidarDatos()) return;
-
-            Usuario usuario = new Usuario(txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, imagen);
-
-            Usuario.AgregarUsuario(usuario);
-
-            LoginInfo.IniciarSesion(usuario.Nickname);
-
-            FMainPage frm2 = new FMainPage();
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
-            this.Hide();
-        }
-
         private void frm2_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
@@ -136,6 +107,35 @@ namespace ProyectoEquipoVerde
                 txtContrasenya.UseSystemPasswordChar = false;
                 txtRepContrasenya.UseSystemPasswordChar = false;
             }
+        }
+
+        private void btnCargarImagen_Click_1(object sender, EventArgs e)
+        {
+            var open = new OpenFileDialog();
+
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                imagen = new Bitmap(open.FileName);
+                pcbImagenPerfil.Image = imagen;
+            }
+        }
+
+        private void btnRegistrarse_Click_1(object sender, EventArgs e)
+        {
+            if (!ValidarDatos()) return;
+
+            Usuario usuario = new Usuario(txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, imagen);
+
+            Usuario.AgregarUsuario(usuario);
+
+            LoginInfo.IniciarSesion(usuario.Nickname);
+
+            FMainPage frm2 = new FMainPage();
+            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
+            frm2.Show();
+            this.Hide();
         }
     }
 }
