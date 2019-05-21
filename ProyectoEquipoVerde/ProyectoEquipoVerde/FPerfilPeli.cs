@@ -13,29 +13,58 @@ namespace ProyectoEquipoVerde
 {
     public partial class FPerfilPeli : Form
     {
-        public FPerfilPeli()
+        private Pelicula pelicula = new Pelicula();
+        int idPeli;
+
+        public FPerfilPeli(int idPeli)
         {
             InitializeComponent();
+
+            this.idPeli = idPeli;
+
+            pelicula = Pelicula.BuscarPelicula(idPeli);
+
+            dgvCriticasPeli.DataSource = Pelicula.CargarCriticasPeli(idPeli);
+
+            pcbPortada.Image = pelicula.Cartel;
+
+            if (Pelicula.ObtenerValoracionMedia(idPeli) != -1)
+                lblRating.Text = Pelicula.ObtenerValoracionMedia(idPeli).ToString();
+            else
+                lblRating.Text = "n/a";
+
+            pcbTag.Image = ObtenerTagImagen(Pelicula.ObtenerTag(idPeli));
+            lblTitulo.Text = pelicula.Nombre;
+            lblDirector.Text = pelicula.Director;
+            lblValorAnyo.Text = pelicula.Fecha.ToString("dd-MM-yyyy");
+            txtDescr.Text = pelicula.Descripcion;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private Bitmap ObtenerTagImagen(int numtag)
         {
-
-        }
-
-        private void FPerfilPeli_Load(object sender, EventArgs e)
-        {
-
+            switch (numtag)
+            {
+                case 1:
+                    return new Bitmap(ProyectoEquipoVerde.Properties.Resources.brainwash);
+                case 2:
+                    return new Bitmap(ProyectoEquipoVerde.Properties.Resources.icons8_grupos_de_usuarios_100);
+                case 3:
+                    return new Bitmap(ProyectoEquipoVerde.Properties.Resources.icons8_boleto_100);
+                case 4:
+                    return new Bitmap(ProyectoEquipoVerde.Properties.Resources.icons8_hombres_lgbt_100);
+                case 5:
+                    return new Bitmap(ProyectoEquipoVerde.Properties.Resources.labyrinth);
+                default:
+                    return new Bitmap(ProyectoEquipoVerde.Properties.Resources.undefined_document_256);
+            }
         }
 
         private void BtnHeaderInicio_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void PnlHeader_Paint(object sender, PaintEventArgs e)
-        {
-
+            FMainPage form = new FMainPage();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
 
         private void BtnHeaderFB_Click(object sender, EventArgs e)
@@ -51,6 +80,43 @@ namespace ProyectoEquipoVerde
         private void BtnHeaderTwitter_Click(object sender, EventArgs e)
         {
             Process.Start("https://twitter.com/");
+        }
+
+        private void BtnCritica_Click(object sender, EventArgs e)
+        {
+            FCritica openForm = new FCritica(idPeli);
+            openForm.Show();
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void BtnHeaderBuscarPeli_Click(object sender, EventArgs e)
+        {
+            FBusqueda form = new FBusqueda();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
+        }
+
+        private void BtnVerPerfil_Click(object sender, EventArgs e)
+        {
+            FPerfilUsuario form = new FPerfilUsuario(LoginInfo.IdUserLogged);
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
+        }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            LoginInfo.CerrarSesion();
+
+            FInicioSesion form = new FInicioSesion();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
     }
 }

@@ -37,12 +37,13 @@
             this.lblContrasenya = new System.Windows.Forms.Label();
             this.txtRepContrasenya = new System.Windows.Forms.TextBox();
             this.lblRepetirContrasenya = new System.Windows.Forms.Label();
-            this.btnRegistrarse = new System.Windows.Forms.Button();
-            this.btnCargarImagen = new System.Windows.Forms.Button();
             this.pcbImagenPerfil = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.chbContr = new System.Windows.Forms.CheckBox();
+            this.btnCargarImagen = new System.Windows.Forms.Button();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagenPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -111,26 +112,6 @@
             this.lblRepetirContrasenya.TabIndex = 7;
             this.lblRepetirContrasenya.Text = "Repetir Contraseña:";
             // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(452, 357);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(210, 36);
-            this.btnRegistrarse.TabIndex = 11;
-            this.btnRegistrarse.Text = "REGÍSTRATE";
-            this.btnRegistrarse.UseVisualStyleBackColor = true;
-            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
-            // 
-            // btnCargarImagen
-            // 
-            this.btnCargarImagen.Location = new System.Drawing.Point(374, 190);
-            this.btnCargarImagen.Name = "btnCargarImagen";
-            this.btnCargarImagen.Size = new System.Drawing.Size(116, 36);
-            this.btnCargarImagen.TabIndex = 12;
-            this.btnCargarImagen.Text = "Cargar imagen";
-            this.btnCargarImagen.UseVisualStyleBackColor = true;
-            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
-            // 
             // pcbImagenPerfil
             // 
             this.pcbImagenPerfil.Location = new System.Drawing.Point(519, 190);
@@ -161,17 +142,55 @@
             this.lblNombre.TabIndex = 14;
             this.lblNombre.Text = "Nombre:";
             // 
+            // chbContr
+            // 
+            this.chbContr.AutoSize = true;
+            this.chbContr.Location = new System.Drawing.Point(669, 108);
+            this.chbContr.Name = "chbContr";
+            this.chbContr.Size = new System.Drawing.Size(87, 17);
+            this.chbContr.TabIndex = 16;
+            this.chbContr.Text = "Hacer visible";
+            this.chbContr.UseVisualStyleBackColor = true;
+            this.chbContr.CheckedChanged += new System.EventHandler(this.ChbContr_CheckedChanged);
+            // 
+            // btnCargarImagen
+            // 
+            this.btnCargarImagen.AutoSize = true;
+            this.btnCargarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCargarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarImagen.Location = new System.Drawing.Point(374, 190);
+            this.btnCargarImagen.Name = "btnCargarImagen";
+            this.btnCargarImagen.Size = new System.Drawing.Size(122, 34);
+            this.btnCargarImagen.TabIndex = 28;
+            this.btnCargarImagen.Text = "Cargar imagen";
+            this.btnCargarImagen.UseVisualStyleBackColor = false;
+            // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.AutoSize = true;
+            this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarse.Location = new System.Drawing.Point(545, 359);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(117, 34);
+            this.btnRegistrarse.TabIndex = 29;
+            this.btnRegistrarse.Text = "REGÍSTRATE";
+            this.btnRegistrarse.UseVisualStyleBackColor = false;
+            // 
             // FRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(693, 422);
+            this.ClientSize = new System.Drawing.Size(756, 422);
+            this.Controls.Add(this.btnRegistrarse);
+            this.Controls.Add(this.btnCargarImagen);
+            this.Controls.Add(this.chbContr);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pcbImagenPerfil);
-            this.Controls.Add(this.btnCargarImagen);
-            this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.txtRepContrasenya);
             this.Controls.Add(this.lblRepetirContrasenya);
             this.Controls.Add(this.txtContrasenya);
@@ -198,11 +217,12 @@
         private System.Windows.Forms.Label lblContrasenya;
         private System.Windows.Forms.TextBox txtRepContrasenya;
         private System.Windows.Forms.Label lblRepetirContrasenya;
-        private System.Windows.Forms.Button btnRegistrarse;
-        private System.Windows.Forms.Button btnCargarImagen;
         private System.Windows.Forms.PictureBox pcbImagenPerfil;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.CheckBox chbContr;
+        private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.Button btnCargarImagen;
     }
 }

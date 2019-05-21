@@ -34,9 +34,9 @@ namespace ProyectoEquipoVerde
 
         private void BtnVerPerfil_Click(object sender, EventArgs e)
         {
-            FPerfilUsuario frm2 = new FPerfilUsuario(LoginInfo.IdUserLogged);
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
+            FPerfilUsuario form = new FPerfilUsuario(LoginInfo.IdUserLogged);
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
 
@@ -49,17 +49,17 @@ namespace ProyectoEquipoVerde
         {
             LoginInfo.CerrarSesion();
 
-            FInicioSesion frm2 = new FInicioSesion();
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
+            FInicioSesion form = new FInicioSesion();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
 
         private void BtnHeaderInicio_Click(object sender, EventArgs e)
         {
-            FMainPage frm2 = new FMainPage();
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
+            FMainPage form = new FMainPage();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
 
@@ -81,9 +81,9 @@ namespace ProyectoEquipoVerde
 
         private void BtnHeaderBuscarPeli_Click(object sender, EventArgs e)
         {
-            FBusqueda frm2 = new FBusqueda();
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
+            FBusqueda form = new FBusqueda();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
 
@@ -97,7 +97,7 @@ namespace ProyectoEquipoVerde
 
                 int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
 
-                FPerfilPeli frm2 = new FPerfilPeli();
+                FPerfilPeli frm2 = new FPerfilPeli(id);
                 frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
                 frm2.Show();
                 this.Hide();
@@ -107,6 +107,11 @@ namespace ProyectoEquipoVerde
         private void FPerfilUsuario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
 
         /*

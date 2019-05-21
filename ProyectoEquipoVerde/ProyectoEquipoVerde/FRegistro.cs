@@ -19,6 +19,20 @@ namespace ProyectoEquipoVerde
             InitializeComponent();
         }
 
+        public FRegistro(string editar)
+        {
+            InitializeComponent();
+
+            Usuario usuario = Usuario.BuscarUsuario(LoginInfo.IdUserLogged);
+
+            txtUsuario.Text = usuario.Nickname;
+            txtNombre.Text = usuario.Nombre;
+            txtContrasenya.Text = usuario.Contrasenya;
+            pcbImagenPerfil.Image = usuario.Imagen;
+
+
+        }
+
         private bool ValidarDatos()
         {
             bool ok = true;
@@ -31,6 +45,7 @@ namespace ProyectoEquipoVerde
             else
                 errorProvider1.Clear();
 
+            /*
             if (Usuario.ExisteUsuario(txtUsuario.Text) == true)
             {
                 ok = false;
@@ -38,6 +53,7 @@ namespace ProyectoEquipoVerde
             }
             else
                 errorProvider1.Clear();
+            */
 
             if (txtNombre.Text == "")
             {
@@ -106,6 +122,20 @@ namespace ProyectoEquipoVerde
         private void frm2_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
+        }
+
+        private void ChbContr_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbContr.Checked == false)
+            {
+                txtContrasenya.UseSystemPasswordChar = true;
+                txtRepContrasenya.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtContrasenya.UseSystemPasswordChar = false;
+                txtRepContrasenya.UseSystemPasswordChar = false;
+            }
         }
     }
 }

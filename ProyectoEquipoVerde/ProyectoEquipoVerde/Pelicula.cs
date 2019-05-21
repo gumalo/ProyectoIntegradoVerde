@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace ProyectoEquipoVerde
 {
@@ -16,68 +17,28 @@ namespace ProyectoEquipoVerde
     {
         private int id_pelicula;
         private string nombre;
-        private double calificacion;
         private DateTime fecha;
         private string descripcion;
         private string director;
         private Image cartel;
-        private double valoracion;
-
-
 
         public int Id_pelicula { get { return id_pelicula; } set { id_pelicula = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
-        public double Calificacion { get { return calificacion; } set { calificacion = value; } }
         public string Descripcion { get { return descripcion; } set { descripcion = value; } }
         public string Director { get { return director; } set { director = value; } }
         public Image Cartel { get { return cartel; } set { cartel = value; } }
         public DateTime Fecha { get => fecha; set => fecha = value; }
-        public double Valoracion { get { return valoracion; } set { valoracion = value; } }
 
         public Pelicula(int id_pelicula, string nombre, double calificacion, DateTime fecha, string descripcion, string director)
         {
             this.id_pelicula = id_pelicula;
             this.nombre = nombre;
-            this.calificacion = calificacion;
             this.fecha = fecha;
             this.descripcion = descripcion;
             this.director = director;
         }
 
         public Pelicula() { }
-
-
-
-        public static Pelicula VerInfoPeliPorNombre(string elNombre)
-        {
-            
-            string consulta = string.Format("SELECT * FROM Pelicula WHERE nombre_peli LIKE '{0}'", elNombre);
-
-            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
-            MySqlDataReader reader = comando.ExecuteReader();
-            Pelicula peli = new Pelicula();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    byte[] img = (byte[])reader["portada"];
-                    MemoryStream ms = new MemoryStream(img);
-                    Image foto = Image.FromStream(ms);
-                    
-                    peli.id_pelicula = reader.GetInt16(0);
-                    peli.nombre = reader.GetString(1);
-                    peli.fecha = reader.GetDateTime(3); //la columna 2 es la de la imagen
-                    peli.descripcion = reader.GetString(4);
-                    peli.director = reader.GetString(5);                             
-                    peli.cartel = Image.FromStream(ms);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se han encotrado películas con ese nombre");
-            }
-            return peli;
-        }
 
 
 
@@ -116,49 +77,6 @@ namespace ProyectoEquipoVerde
             return lista;
         }
 
-
-        public List<Pelicula> VerTodas()
-        {
-            string laFecha = fecha.ToString("yyyy-MM-dd");
-            List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT Pelicula.nombre_peli, Pelicula.anyo_peli, " +
-                "Pelicula.desc_peli, Pelicula.director_peli, " +
-                "AVG(Critica.valoracion_critica) " +
-                "AS media_valoracion, Pelicula.portada " +
-                "FROM Pelicula RIGHT JOIN Critica ON Critica.peli_critica=Pelicula.id_peli " +
-                "GROUP by Critica.peli_critica;";
-
-            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    Pelicula peli = new Pelicula();
-                    byte[] img = (byte[])reader["portada"];
-                    MemoryStream ms = new MemoryStream(img);
-                    Image foto = Image.FromStream(ms);
-
-                    //peli.id_pelicula = reader.GetInt16(0);
-                    peli.nombre = reader.GetString(0);
-                    peli.fecha = reader.GetDateTime(1); //la columna 2 es la de la imagen
-                    peli.descripcion = reader.GetString(2);
-                    peli.director = reader.GetString(3);
-                    double lavaloracion = reader.GetDouble(4);
-                    peli.valoracion = Math.Round(lavaloracion,1);
-                    peli.cartel = Image.FromStream(ms);
-
-                    lista.Add(peli);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se han podido cargar películas");
-            }
-            return lista;
-            
-        }
 
         public List<Pelicula> BuscarPeliculaPorFecha(DateTime fechaIni, DateTime fechaFin)
         {
@@ -212,7 +130,6 @@ namespace ProyectoEquipoVerde
                     byte[] img = (byte[])reader["portada"];
                     MemoryStream ms = new MemoryStream(img);
                     Image foto = Image.FromStream(ms);
-
                     peli.id_pelicula = reader.GetInt16(0);
                     peli.nombre = reader.GetString(1);
                     peli.fecha = reader.GetDateTime(3); //la columna 2 es la de la imagen
@@ -241,35 +158,40 @@ namespace ProyectoEquipoVerde
 
         public static double ObtenerValoracionMedia(int idPeli)
         {
-            double valoracionMedia = 0;
-            double valoracion = 0;
-            string consulta = String.Format("SELECT AVG (valoracion_critica) FROM Critica WHERE peli_critica={0} AND valoracion_critica IS NOT NULL;", idPeli);
+            int valoracion = -1;
+            string consulta = String.Format("SELECT ROUND(AVG(valoracion_critica), 0) AS Puntuacion FROM Critica WHERE peli_critica = {0}", idPeli);
+
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    valoracion = reader.GetDouble(0);
+                    if (!reader.IsDBNull(0))
+                        valoracion = reader.GetInt16("Puntuacion");
                 }
             }
             else
             {
                 MessageBox.Show("No se han encotrado valoraciones de esa película");
             }
-            valoracionMedia = Math.Round(valoracion,1);
-            return valoracionMedia;
+            Conexion.CerrarConexion();
+
+            return valoracion;
         }
 
-
-        public static double ObtenerValoracionesMediasOrdenadas()
+        public static DataTable ObtenerValoracionesMediasOrdenadas()
         {
-
+            DataTable tabla = new DataTable();
             string consulta = "SELECT Pelicula.nombre_peli, " +
                 "ROUND(AVG(Critica.valoracion_critica),1) as " +
                 "media_valoracion FROM Critica left join Pelicula ON" +
                 " Critica.peli_critica = Pelicula.id_peli GROUP BY peli_critica;";
+
+            Conexion.AbrirConexion();
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -277,48 +199,133 @@ namespace ProyectoEquipoVerde
             {
                 while (reader.Read())
                 {
-                   // Pendiente ver qué devuelve esta función
+                    tabla.Load(reader);
                 }
             }
-            else
-            {
-                MessageBox.Show("No se han encotrado valoraciones de esa película");
-            }
-            //double valoracionMedia = Math.Round(valoracion, 1);
-            /return valoracionMedia;
+            Conexion.CerrarConexion();
+            return tabla;
+
         }
 
-        public int ObtenerTagPelicula(int idPeli)
+        public static DataTable CargarTodasPeliculas()
         {
-            //Necesitamos determinar qué tag corresponde a cada número
-            string consulta = string.Format("SELECT tag_1 from Critica where peli_critica={0};", idPeli);
+            string consulta = String.Format("SELECT portada AS Portada, id_peli AS ID, nombre_peli AS Titulo, anyo_peli AS Fecha, director_peli AS Director," +
+                " (SELECT ROUND(AVG(Critica.valoracion_critica), 0) FROM Critica WHERE Pelicula.id_peli = Critica.peli_critica) AS Puntuacion FROM `Pelicula`" +
+                " LEFT JOIN Critica ON Pelicula.id_peli = Critica.peli_critica GROUP BY Pelicula.id_peli");
+
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
             MySqlDataReader reader = comando.ExecuteReader();
 
+            DataTable lista = new DataTable();
+            if (reader.HasRows)
+            {
+                lista.Load(reader);
+            }
+            Conexion.CerrarConexion();
+
+            return lista;
+        }
+
+        public static DataTable BuscarPeliculas(string busqueda)
+        {
+            string consulta = String.Format("SELECT portada AS Portada, id_peli AS ID, nombre_peli AS Titulo, anyo_peli AS Fecha, director_peli AS Director, " +
+                "(SELECT ROUND(AVG(Critica.valoracion_critica), 0) FROM Critica WHERE Pelicula.id_peli = Critica.peli_critica) AS Puntuacion FROM `Pelicula` " +
+                "LEFT JOIN CriticaON Pelicula.id_peli = Critica.peli_criticaWHERE director_peli LIKE '%{0}%' OR nombre_peli LIKE '%{0}%'GROUP BY Pelicula.id_peli", busqueda);
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            DataTable lista = new DataTable();
+            if (reader.HasRows)
+            {
+                lista.Load(reader);
+            }
+            Conexion.CerrarConexion();
+
+            return lista;
+        }
+
+        public static Pelicula BuscarPelicula(int id)
+        {
+            string consulta = String.Format("SELECT * FROM `Pelicula` WHERE `id_peli` = {0}", id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            Pelicula pelicula = new Pelicula();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    int elTag = reader.GetInt32(0);
-                    switch (elTag)
-                    {
-                        case 1
-                    }
+                    byte[] num = (byte[])reader[2];
+                    MemoryStream ms = new MemoryStream(num);
+                    Image returnImage = Image.FromStream(ms);
+                    Image image = returnImage;
+
+                    pelicula.Nombre = reader.GetString(1);
+                    pelicula.Cartel = image;
+                    pelicula.Fecha = Convert.ToDateTime(reader.GetString(3));
+
+                    if (!reader.IsDBNull(4))
+                        pelicula.Descripcion = reader.GetString(4);
+
+                    pelicula.Director = reader.GetString(5);
                 }
             }
-            else
-            {
-                MessageBox.Show("No se han encotrado valoraciones de esa película");
-            }
-            valoracionMedia = Math.Round(valoracion, 1);
+            Conexion.CerrarConexion();
 
+            return pelicula;
         }
 
+        public static int ObtenerTag(int idpeli)
+        {
+            int tag = 0;
 
+            string consulta = String.Format("SELECT Critica.tag_1 AS tag, COUNT(*) AS magnitude FROM Critica WHERE Critica.peli_critica = {0} GROUP BY tag_1 ORDER BY magnitude DESC LIMIT 1", idpeli);
 
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
 
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
 
+            DataTable lista = new DataTable();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    tag = reader.GetInt16(0);
+                }
+            }
+            Conexion.CerrarConexion();
 
+            return tag;
+        }
+
+        public static DataTable CargarCriticasPeli(int id)
+        {
+            string consulta = String.Format("SELECT id_critica AS ID, valoracion_critica AS Puntuacion, coment_critica AS Critica, tag_1 AS Tag, Usuario.nickname AS Usuario, " +
+                "fecha AS Fecha FROM `Critica` INNER JOIN Usuario ON Critica.usu_critica = Usuario.id_usuario WHERE Critica.peli_critica = {0}", id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            DataTable lista = new DataTable();
+            if (reader.HasRows)
+            {
+                lista.Load(reader);
+            }
+            Conexion.CerrarConexion();
+
+            return lista;
+        }
 
     }
 }

@@ -41,24 +41,6 @@ namespace ProyectoEquipoVerde
             this.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FMainPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PicBoxUsuario_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form2 = new FBusqueda();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
-        }
-
         private void BtnHeaderFB_Click(object sender, EventArgs e)
         {
             Process.Start("https://es-es.facebook.com/");
@@ -77,6 +59,42 @@ namespace ProyectoEquipoVerde
         private void BtnHeaderTwitter_Click(object sender, EventArgs e)
         {
             Process.Start("https://twitter.com/");
+        }
+
+        private void BtnHeaderBuscarPeli_Click(object sender, EventArgs e)
+        {
+            FBusqueda form = new FBusqueda();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
+        }
+
+        private void BtnHeaderInicio_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void BtnVerPerfil_Click(object sender, EventArgs e)
+        {
+            FPerfilUsuario form = new FPerfilUsuario(LoginInfo.IdUserLogged);
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
+        }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            LoginInfo.CerrarSesion();
+
+            FInicioSesion form = new FInicioSesion();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }
