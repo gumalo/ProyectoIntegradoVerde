@@ -105,12 +105,18 @@ namespace ProyectoEquipoVerde
 
         private void BtnHeaderBuscarPeli_Click(object sender, EventArgs e)
         {
-            Refresh();
+            FBusqueda form = new FBusqueda();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            Refresh();
+            FBusqueda form = new FBusqueda();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
 
         private void BtnVerPerfil_Click(object sender, EventArgs e)

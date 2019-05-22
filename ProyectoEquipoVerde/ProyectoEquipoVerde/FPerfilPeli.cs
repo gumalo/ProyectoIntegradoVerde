@@ -96,7 +96,10 @@ namespace ProyectoEquipoVerde
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            Refresh();
+            FPerfilPeli form = new FPerfilPeli(idPeli);
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
 
         private void BtnHeaderBuscarPeli_Click(object sender, EventArgs e)

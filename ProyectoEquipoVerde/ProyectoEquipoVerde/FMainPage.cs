@@ -78,7 +78,10 @@ namespace ProyectoEquipoVerde
 
         private void BtnHeaderInicio_Click(object sender, EventArgs e)
         {
-            Refresh();
+            FMainPage form = new FMainPage();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
 
         private void BtnVerPerfil_Click(object sender, EventArgs e)
@@ -101,7 +104,10 @@ namespace ProyectoEquipoVerde
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            Refresh();
+            FMainPage form = new FMainPage();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
 
         private void BtnDerecha_Click(object sender, EventArgs e)

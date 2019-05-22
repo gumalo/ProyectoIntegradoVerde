@@ -604,7 +604,6 @@
             this.Controls.Add(this.txtBuscarUsuario);
             this.Name = "FBusqueda";
             this.Text = "FBusqueda";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlHeader.ResumeLayout(false);
             this.pnlUsuarios.ResumeLayout(false);
             this.pnlUsuarios.PerformLayout();

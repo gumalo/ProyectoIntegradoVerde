@@ -36,8 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPerfilUsuario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPerfilUsuario));
             this.lblCriticaReciente = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvPeliculasUser = new System.Windows.Forms.DataGridView();
@@ -47,6 +47,12 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNick = new System.Windows.Forms.Label();
             this.dgvCriticasUser = new System.Windows.Forms.DataGridView();
+            this.idpelis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crituser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crittext = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pelinom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPelis = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -60,12 +66,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptcUsuario = new System.Windows.Forms.PictureBox();
-            this.idpelis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crituser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crittext = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pelinom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pcbTagCrit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculasUser)).BeginInit();
@@ -237,6 +237,57 @@
             this.dgvCriticasUser.TabIndex = 21;
             this.dgvCriticasUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCriticasUser_CellClick);
             // 
+            // idpelis
+            // 
+            this.idpelis.DataPropertyName = "ID";
+            this.idpelis.HeaderText = "ID";
+            this.idpelis.Name = "idpelis";
+            this.idpelis.ReadOnly = true;
+            this.idpelis.Visible = false;
+            // 
+            // crituser
+            // 
+            this.crituser.DataPropertyName = "Puntuacion";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.crituser.DefaultCellStyle = dataGridViewCellStyle7;
+            this.crituser.HeaderText = "Valoración";
+            this.crituser.Name = "crituser";
+            this.crituser.ReadOnly = true;
+            this.crituser.Width = 60;
+            // 
+            // crittext
+            // 
+            this.crittext.DataPropertyName = "Critica";
+            this.crittext.HeaderText = "Texto de la crítica";
+            this.crittext.Name = "crittext";
+            this.crittext.ReadOnly = true;
+            this.crittext.Width = 300;
+            // 
+            // tag
+            // 
+            this.tag.DataPropertyName = "Tag";
+            this.tag.HeaderText = "Tag";
+            this.tag.Name = "tag";
+            this.tag.ReadOnly = true;
+            this.tag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tag.Visible = false;
+            // 
+            // pelinom
+            // 
+            this.pelinom.DataPropertyName = "Pelicula";
+            this.pelinom.HeaderText = "Película";
+            this.pelinom.Name = "pelinom";
+            this.pelinom.ReadOnly = true;
+            this.pelinom.Width = 170;
+            // 
+            // fecha
+            // 
+            this.fecha.DataPropertyName = "Fecha";
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 130;
+            // 
             // lblPelis
             // 
             this.lblPelis.AutoSize = true;
@@ -405,57 +456,6 @@
             this.ptcUsuario.TabIndex = 0;
             this.ptcUsuario.TabStop = false;
             // 
-            // idpelis
-            // 
-            this.idpelis.DataPropertyName = "ID";
-            this.idpelis.HeaderText = "ID";
-            this.idpelis.Name = "idpelis";
-            this.idpelis.ReadOnly = true;
-            this.idpelis.Visible = false;
-            // 
-            // crituser
-            // 
-            this.crituser.DataPropertyName = "Puntuacion";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.crituser.DefaultCellStyle = dataGridViewCellStyle7;
-            this.crituser.HeaderText = "Valoración";
-            this.crituser.Name = "crituser";
-            this.crituser.ReadOnly = true;
-            this.crituser.Width = 60;
-            // 
-            // crittext
-            // 
-            this.crittext.DataPropertyName = "Critica";
-            this.crittext.HeaderText = "Texto de la crítica";
-            this.crittext.Name = "crittext";
-            this.crittext.ReadOnly = true;
-            this.crittext.Width = 300;
-            // 
-            // tag
-            // 
-            this.tag.DataPropertyName = "Tag";
-            this.tag.HeaderText = "Tag";
-            this.tag.Name = "tag";
-            this.tag.ReadOnly = true;
-            this.tag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tag.Visible = false;
-            // 
-            // pelinom
-            // 
-            this.pelinom.DataPropertyName = "Pelicula";
-            this.pelinom.HeaderText = "Película";
-            this.pelinom.Name = "pelinom";
-            this.pelinom.ReadOnly = true;
-            this.pelinom.Width = 170;
-            // 
-            // fecha
-            // 
-            this.fecha.DataPropertyName = "Fecha";
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 130;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -499,7 +499,6 @@
             this.MinimizeBox = false;
             this.Name = "FPerfilUsuario";
             this.Text = "Usuario";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculasUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCriticasUser)).EndInit();
             this.pnlHeader.ResumeLayout(false);

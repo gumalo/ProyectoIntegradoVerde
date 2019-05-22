@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPerfilPeli));
             this.lblTit = new System.Windows.Forms.Label();
             this.lblDirec = new System.Windows.Forms.Label();
@@ -58,15 +58,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCriticaReciente = new System.Windows.Forms.Label();
             this.dgvCriticasPeli = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pcbTag = new System.Windows.Forms.PictureBox();
-            this.pcbPortada = new System.Windows.Forms.PictureBox();
             this.idpelis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crituser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crittext = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pcbTag = new System.Windows.Forms.PictureBox();
+            this.pcbPortada = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pcbTagCrit = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
@@ -83,7 +83,7 @@
             // 
             this.lblTit.AutoSize = true;
             this.lblTit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTit.Location = new System.Drawing.Point(232, 25);
+            this.lblTit.Location = new System.Drawing.Point(216, 25);
             this.lblTit.Name = "lblTit";
             this.lblTit.Size = new System.Drawing.Size(68, 24);
             this.lblTit.TabIndex = 8;
@@ -93,7 +93,7 @@
             // 
             this.lblDirec.AutoSize = true;
             this.lblDirec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblDirec.Location = new System.Drawing.Point(232, 77);
+            this.lblDirec.Location = new System.Drawing.Point(216, 77);
             this.lblDirec.Name = "lblDirec";
             this.lblDirec.Size = new System.Drawing.Size(89, 24);
             this.lblDirec.TabIndex = 9;
@@ -103,7 +103,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Location = new System.Drawing.Point(232, 131);
+            this.lblFecha.Location = new System.Drawing.Point(216, 131);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(75, 24);
             this.lblFecha.TabIndex = 10;
@@ -113,7 +113,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblDescripcion.Location = new System.Drawing.Point(232, 184);
+            this.lblDescripcion.Location = new System.Drawing.Point(216, 180);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(127, 24);
             this.lblDescripcion.TabIndex = 11;
@@ -122,7 +122,7 @@
             // txtDescr
             // 
             this.txtDescr.Enabled = false;
-            this.txtDescr.Location = new System.Drawing.Point(236, 211);
+            this.txtDescr.Location = new System.Drawing.Point(220, 211);
             this.txtDescr.Multiline = true;
             this.txtDescr.Name = "txtDescr";
             this.txtDescr.Size = new System.Drawing.Size(244, 80);
@@ -132,7 +132,7 @@
             // 
             this.lblValorAnyo.AutoSize = true;
             this.lblValorAnyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblValorAnyo.Location = new System.Drawing.Point(327, 131);
+            this.lblValorAnyo.Location = new System.Drawing.Point(314, 131);
             this.lblValorAnyo.Name = "lblValorAnyo";
             this.lblValorAnyo.Size = new System.Drawing.Size(83, 24);
             this.lblValorAnyo.TabIndex = 18;
@@ -142,17 +142,18 @@
             // 
             this.lblRating.AutoSize = true;
             this.lblRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRating.Location = new System.Drawing.Point(9, 8);
+            this.lblRating.Location = new System.Drawing.Point(10, 8);
             this.lblRating.Name = "lblRating";
             this.lblRating.Size = new System.Drawing.Size(32, 33);
             this.lblRating.TabIndex = 19;
             this.lblRating.Text = "0";
+            this.lblRating.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDirector
             // 
             this.lblDirector.AutoSize = true;
             this.lblDirector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblDirector.Location = new System.Drawing.Point(327, 77);
+            this.lblDirector.Location = new System.Drawing.Point(314, 77);
             this.lblDirector.Name = "lblDirector";
             this.lblDirector.Size = new System.Drawing.Size(83, 24);
             this.lblDirector.TabIndex = 20;
@@ -162,7 +163,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(327, 25);
+            this.lblTitulo.Location = new System.Drawing.Point(314, 25);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(62, 24);
             this.lblTitulo.TabIndex = 21;
@@ -355,17 +356,17 @@
             this.dgvCriticasPeli.AllowUserToDeleteRows = false;
             this.dgvCriticasPeli.AllowUserToResizeColumns = false;
             this.dgvCriticasPeli.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvCriticasPeli.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvCriticasPeli.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvCriticasPeli.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCriticasPeli.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCriticasPeli.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCriticasPeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCriticasPeli.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpelis,
@@ -374,14 +375,14 @@
             this.tag,
             this.usuario,
             this.fecha});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCriticasPeli.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCriticasPeli.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvCriticasPeli.EnableHeadersVisualStyles = false;
             this.dgvCriticasPeli.GridColor = System.Drawing.Color.DarkOrange;
             this.dgvCriticasPeli.Location = new System.Drawing.Point(548, 155);
@@ -389,17 +390,68 @@
             this.dgvCriticasPeli.ReadOnly = true;
             this.dgvCriticasPeli.RowHeadersVisible = false;
             this.dgvCriticasPeli.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvCriticasPeli.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCriticasPeli.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvCriticasPeli.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvCriticasPeli.RowTemplate.Height = 50;
             this.dgvCriticasPeli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCriticasPeli.Size = new System.Drawing.Size(684, 496);
             this.dgvCriticasPeli.TabIndex = 29;
             this.dgvCriticasPeli.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCriticasPeli_CellClick);
+            // 
+            // idpelis
+            // 
+            this.idpelis.DataPropertyName = "ID";
+            this.idpelis.HeaderText = "ID";
+            this.idpelis.Name = "idpelis";
+            this.idpelis.ReadOnly = true;
+            this.idpelis.Visible = false;
+            // 
+            // crituser
+            // 
+            this.crituser.DataPropertyName = "Puntuacion";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.crituser.DefaultCellStyle = dataGridViewCellStyle13;
+            this.crituser.HeaderText = "Valoración";
+            this.crituser.Name = "crituser";
+            this.crituser.ReadOnly = true;
+            this.crituser.Width = 60;
+            // 
+            // crittext
+            // 
+            this.crittext.DataPropertyName = "Critica";
+            this.crittext.HeaderText = "Texto de la crítica";
+            this.crittext.Name = "crittext";
+            this.crittext.ReadOnly = true;
+            this.crittext.Width = 300;
+            // 
+            // tag
+            // 
+            this.tag.DataPropertyName = "Tag";
+            this.tag.HeaderText = "Tag";
+            this.tag.Name = "tag";
+            this.tag.ReadOnly = true;
+            this.tag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tag.Visible = false;
+            // 
+            // usuario
+            // 
+            this.usuario.DataPropertyName = "Usuario";
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            this.usuario.Width = 170;
+            // 
+            // fecha
+            // 
+            this.fecha.DataPropertyName = "Fecha";
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 130;
             // 
             // panel3
             // 
@@ -440,57 +492,6 @@
             this.pcbPortada.TabIndex = 25;
             this.pcbPortada.TabStop = false;
             // 
-            // idpelis
-            // 
-            this.idpelis.DataPropertyName = "ID";
-            this.idpelis.HeaderText = "ID";
-            this.idpelis.Name = "idpelis";
-            this.idpelis.ReadOnly = true;
-            this.idpelis.Visible = false;
-            // 
-            // crituser
-            // 
-            this.crituser.DataPropertyName = "Puntuacion";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.crituser.DefaultCellStyle = dataGridViewCellStyle3;
-            this.crituser.HeaderText = "Valoración";
-            this.crituser.Name = "crituser";
-            this.crituser.ReadOnly = true;
-            this.crituser.Width = 60;
-            // 
-            // crittext
-            // 
-            this.crittext.DataPropertyName = "Critica";
-            this.crittext.HeaderText = "Texto de la crítica";
-            this.crittext.Name = "crittext";
-            this.crittext.ReadOnly = true;
-            this.crittext.Width = 300;
-            // 
-            // tag
-            // 
-            this.tag.DataPropertyName = "Tag";
-            this.tag.HeaderText = "Tag";
-            this.tag.Name = "tag";
-            this.tag.ReadOnly = true;
-            this.tag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tag.Visible = false;
-            // 
-            // usuario
-            // 
-            this.usuario.DataPropertyName = "Usuario";
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            this.usuario.Width = 170;
-            // 
-            // fecha
-            // 
-            this.fecha.DataPropertyName = "Fecha";
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 130;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -528,7 +529,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FPerfilPeli";
             this.Text = "FPerfilPeli";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlHeader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

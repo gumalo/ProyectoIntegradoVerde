@@ -553,7 +553,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FMainPage";
             this.Text = "FMainPage";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlPelis.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlUsuarios.ResumeLayout(false);

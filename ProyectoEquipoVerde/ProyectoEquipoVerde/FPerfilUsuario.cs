@@ -106,7 +106,10 @@ namespace ProyectoEquipoVerde
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            Refresh();
+            FPerfilUsuario form = new FPerfilUsuario(usuario.Id);
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
