@@ -39,7 +39,7 @@
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -85,12 +85,6 @@
     </Compile>
     <Compile Include="FMainPage.Designer.cs">
       <DependentUpon>FMainPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FPerfilPeli.cs">
       <SubType>Form</SubType>
@@ -213,6 +207,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imagenes\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\arrowhead-thin-outline-to-the-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\arrow-point-to-right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

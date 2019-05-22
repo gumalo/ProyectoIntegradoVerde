@@ -56,8 +56,10 @@ namespace ProyectoEquipoVerde
 
                 int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
 
-                FPerfilUsuario frm2 = new FPerfilUsuario(id);
-                frm2.Show();
+                FPerfilUsuario form = new FPerfilUsuario(id);
+                form.Show();
+                form.FormClosing += (obj, args) => { this.Close(); };
+                this.Hide();
             }
         }
 
@@ -71,8 +73,10 @@ namespace ProyectoEquipoVerde
 
                 int id = Convert.ToInt32(selectedRow.Cells["idpeli"].Value);
 
-                FPerfilPeli frm2 = new FPerfilPeli(id);
-                frm2.Show();
+                FPerfilPeli form = new FPerfilPeli(id);
+                form.Show();
+                form.FormClosing += (obj, args) => { this.Close(); };
+                this.Hide();
             }
         }
 
@@ -132,7 +136,87 @@ namespace ProyectoEquipoVerde
             if (txtBuscarUsuario.Text == "") return;
 
             dgvUsuarios.DataSource = Usuario.BuscarUsuarios(txtBuscarUsuario.Text);
-            dgvPelis.DataSource = Pelicula.BuscarPeliculas(txtBuscarUsuario.Text);
+        }
+
+        private void DgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvUsuarios.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgvUsuarios.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dgvUsuarios.Rows[selectedrowindex];
+
+                int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+
+                Usuario usuario = Usuario.BuscarUsuario(id);
+
+                pcbUsuario.Image = usuario.Imagen;
+            }
+        }
+
+        private void DgvPelis_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvPelis.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgvPelis.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dgvPelis.Rows[selectedrowindex];
+
+                int id = Convert.ToInt32(selectedRow.Cells["idpeli"].Value);
+
+                Pelicula pelicula = Pelicula.BuscarPelicula(id);
+
+                pcbPortada.Image = pelicula.Cartel;
+
+                int numTag = Pelicula.ObtenerTag(id);
+
+                switch (numTag)
+                {
+                    case 1:
+                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.brainwash;
+                        break;
+                    case 2:
+                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.icons8_grupos_de_usuarios_100;
+                        break;
+                    case 3:
+                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.icons8_boleto_100;
+                        break;
+                    case 4:
+                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.icons8_hombres_lgbt_100;
+                        break;
+                    case 5:
+                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.labyrinth;
+                        break;
+                    default:
+                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.undefined_document_256;
+                        break;
+                }
+            }
+        }
+
+        private void BtnPeli_Click(object sender, EventArgs e)
+        {
+            if (txtBuscarPeli.Text == "") return;
+
+            dgvPelis.DataSource = Pelicula.BuscarPeliculas(txtBuscarPeli.Text);
+        }
+
+        private void TrbAnyo1_Scroll(object sender, EventArgs e)
+        {
+            lblAnyo1.Text = trbAnyo1.Value.ToString();
+        }
+
+        private void TrbAnyo2_Scroll(object sender, EventArgs e)
+        {
+            lblAnyo2.Text = trbAnyo2.Value.ToString();
+        }
+
+        private void BtnBuscarFecha_Click(object sender, EventArgs e)
+        {
+            if (trbAnyo1.Value < trbAnyo2.Value)
+                dgvPelis.DataSource = Pelicula.BuscarPeliculasPorAnyo(trbAnyo1.Value, trbAnyo2.Value);
+            else
+                dgvPelis.DataSource = Pelicula.BuscarPeliculasPorAnyo(trbAnyo2.Value, trbAnyo1.Value);
         }
     }
 }

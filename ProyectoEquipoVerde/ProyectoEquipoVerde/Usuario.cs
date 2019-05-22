@@ -14,7 +14,7 @@ namespace ProyectoEquipoVerde
 {
     class Usuario
     {
-        private string id;
+        private int id;
         private string nombre;
         private string nickname;
         private string contrasenya;
@@ -34,6 +34,7 @@ namespace ProyectoEquipoVerde
         public string Nickname { get => nickname; set => nickname = value; }
         public string Contrasenya { get => contrasenya; set => contrasenya = value; }
         public Image Imagen { get => imagen; set => imagen = value; }
+        public int Id { get => id; set => id = value; }
 
         public static int AgregarUsuario(Usuario usu)
         {
@@ -114,11 +115,6 @@ namespace ProyectoEquipoVerde
             {
                 while (reader.Read())
                 {
-                    //byte[] num = (byte[])reader[4];
-                    //MemoryStream ms = new MemoryStream(num);
-                    //Image returnImage = Image.FromStream(ms);
-                    //Image image = returnImage;
-
                     byte[] img = (byte[])reader[4];
                     MemoryStream ms = new MemoryStream(img);
                     Image foto = Image.FromStream(ms);
@@ -232,6 +228,41 @@ namespace ProyectoEquipoVerde
             Conexion.CerrarConexion();
 
             return retorno;
+        }
+
+        public static List<Usuario> CargarUsuariosPorNumCriticas()
+        {
+            string consulta = String.Format("SELECT `Usuario`.`id_usuario` AS ID, foto_perfil AS Imagen, (SELECT COUNT(*) FROM Critica WHERE Usuario.id_usuario = Critica.usu_critica) AS Criticas " +
+                "FROM `Usuario` LEFT JOIN Critica ON Usuario.id_usuario = Critica.usu_critica GROUP BY Usuario.id_usuario ORDER BY Criticas DESC");
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            List<Usuario> lista = new List<Usuario>();
+
+            Usuario usuarioTemp;
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    byte[] num = (byte[])reader[1];
+                    MemoryStream ms = new MemoryStream(num);
+                    Image returnImage = Image.FromStream(ms);
+                    Image image = returnImage;
+
+                    usuarioTemp = new Usuario();
+                    usuarioTemp.id = reader.GetInt32(0);
+                    usuarioTemp.imagen = image;
+
+                    lista.Add(usuarioTemp);
+                }
+            }
+            Conexion.CerrarConexion();
+
+            return lista;
         }
     }
 }

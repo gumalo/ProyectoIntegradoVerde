@@ -104,11 +104,6 @@ namespace ProyectoEquipoVerde
             }
         }
 
-        private void FPerfilUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
             Refresh();
@@ -120,22 +115,38 @@ namespace ProyectoEquipoVerde
             frm2.Show();
         }
 
-        /*
-        private void DgvCriticasUser_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void DgvCriticasUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvCriticasUser.Columns[e.ColumnIndex].Name == "tag")
+            if (dgvCriticasUser.SelectedCells.Count > 0)
             {
-                if (e.Value.ToString() == "1")
+                int selectedrowindex = dgvCriticasUser.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dgvCriticasUser.Rows[selectedrowindex];
+
+                int tag = Convert.ToInt32(selectedRow.Cells["tag"].Value);
+
+                switch (tag)
                 {
-                    Bitmap tag1 = (Bitmap)Bitmap.FromFile(@"C:\Users\guill\Desktop\ProyectoIntegradoVerde-master\ProyectoEquipoVerde\ProyectoEquipoVerde\imagenes\grupo_w.png");
-
-                    DataGridViewImageCell iCell = new DataGridViewImageCell();
-                    iCell.Value = tag1;
-
-                    e.Value = iCell;
+                    case 1:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.brainwash;
+                        break;
+                    case 2:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.icons8_grupos_de_usuarios_100;
+                        break;
+                    case 3:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.icons8_boleto_100;
+                        break;
+                    case 4:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.icons8_hombres_lgbt_100;
+                        break;
+                    case 5:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.labyrinth;
+                        break;
+                    default:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.undefined_document_256;
+                        break;
                 }
             }
         }
-        */
     }
 }

@@ -63,6 +63,26 @@ namespace ProyectoEquipoVerde.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_point_to_right {
+            get {
+                object obj = ResourceManager.GetObject("arrow-point-to-right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrowhead_thin_outline_to_the_left {
+            get {
+                object obj = ResourceManager.GetObject("arrowhead-thin-outline-to-the-left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brainwash {
             get {
                 object obj = ResourceManager.GetObject("brainwash", resourceCulture);

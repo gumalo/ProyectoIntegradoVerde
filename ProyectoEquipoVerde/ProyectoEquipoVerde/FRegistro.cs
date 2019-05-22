@@ -12,8 +12,6 @@ namespace ProyectoEquipoVerde
 {
     public partial class FRegistro : Form
     {
-        Bitmap imagen;
-
         public FRegistro()
         {
             InitializeComponent();
@@ -46,16 +44,6 @@ namespace ProyectoEquipoVerde
             else
                 errorProvider1.Clear();
 
-            /*
-            if (Usuario.ExisteUsuario(txtUsuario.Text) == true)
-            {
-                ok = false;
-                errorProvider1.SetError(txtUsuario, "El usuario ya existe");
-            }
-            else
-                errorProvider1.Clear();
-            */
-
             if (txtNombre.Text == "")
             {
                 ok = false;
@@ -76,14 +64,6 @@ namespace ProyectoEquipoVerde
             {
                 ok = false;
                 errorProvider1.SetError(txtRepContrasenya, "No coinciden los campos");
-            }
-            else
-                errorProvider1.Clear();
-
-            if (imagen == null)
-            {
-                ok = false;
-                errorProvider1.SetError(pcbImagenPerfil, "No se ha añadido una imagen");
             }
             else
                 errorProvider1.Clear();
@@ -118,8 +98,7 @@ namespace ProyectoEquipoVerde
 
             if (open.ShowDialog() == DialogResult.OK)
             {
-                imagen = new Bitmap(open.FileName);
-                pcbImagenPerfil.Image = imagen;
+                pcbImagenPerfil.Image = new Bitmap(open.FileName);
             }
         }
 
@@ -127,15 +106,30 @@ namespace ProyectoEquipoVerde
         {
             if (!ValidarDatos()) return;
 
-            Usuario usuario = new Usuario(txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, imagen);
+            if (Usuario.ExisteUsuario(txtUsuario.Text))
+            {
+                var result = MessageBox.Show("¿Quieres iniciar sesión con ese usuario?", "Usuario ya registrado", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    FInicioSesion form2 = new FInicioSesion(txtUsuario.Text);
+                    form2.Show();
+                    form2.FormClosing += (obj, args) => { this.Close(); };
+                    this.Hide();
+                }
+
+                return;
+            }
+
+            Usuario usuario = new Usuario(txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, pcbImagenPerfil.Image);
 
             Usuario.AgregarUsuario(usuario);
 
             LoginInfo.IniciarSesion(usuario.Nickname);
 
-            FMainPage frm2 = new FMainPage();
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
+            FMainPage form = new FMainPage();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
 

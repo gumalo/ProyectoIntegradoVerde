@@ -84,7 +84,13 @@ namespace ProyectoEquipoVerde
 
         private void BtnCritica_Click(object sender, EventArgs e)
         {
-            FCritica openForm = new FCritica(idPeli);
+            FCritica openForm;
+
+            if (!Critica.ExisteCritica(LoginInfo.IdUserLogged, idPeli))
+                openForm = new FCritica(idPeli);
+            else
+                openForm = new FCritica(idPeli, LoginInfo.IdUserLogged);
+
             openForm.Show();
         }
 
@@ -117,6 +123,40 @@ namespace ProyectoEquipoVerde
             form.Show();
             form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
+        }
+
+        private void DgvCriticasPeli_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCriticasPeli.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgvCriticasPeli.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dgvCriticasPeli.Rows[selectedrowindex];
+
+                int tag = Convert.ToInt32(selectedRow.Cells["tag"].Value);
+
+                switch (tag)
+                {
+                    case 1:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.brainwash;
+                        break;
+                    case 2:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.icons8_grupos_de_usuarios_100;
+                        break;
+                    case 3:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.icons8_boleto_100;
+                        break;
+                    case 4:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.icons8_hombres_lgbt_100;
+                        break;
+                    case 5:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.labyrinth;
+                        break;
+                    default:
+                        pcbTagCrit.Image = ProyectoEquipoVerde.Properties.Resources.undefined_document_256;
+                        break;
+                }
+            }
         }
     }
 }

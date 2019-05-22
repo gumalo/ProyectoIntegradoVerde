@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBusqueda));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -57,19 +58,35 @@
             this.pnlPelis = new System.Windows.Forms.Panel();
             this.lblPelis = new System.Windows.Forms.Label();
             this.dgvPelis = new System.Windows.Forms.DataGridView();
-            this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.idpeli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portada = new System.Windows.Forms.DataGridViewImageColumn();
             this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.director = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.punt_media = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscarUsuario = new System.Windows.Forms.Button();
+            this.pcbUsuario = new System.Windows.Forms.PictureBox();
+            this.btnPeli = new System.Windows.Forms.Button();
+            this.txtBuscarPeli = new System.Windows.Forms.TextBox();
+            this.pcbPortada = new System.Windows.Forms.PictureBox();
+            this.pcbTag = new System.Windows.Forms.PictureBox();
+            this.trbAnyo2 = new System.Windows.Forms.TrackBar();
+            this.trbAnyo1 = new System.Windows.Forms.TrackBar();
+            this.btnBuscarFecha = new System.Windows.Forms.Button();
+            this.lblAnyo1 = new System.Windows.Forms.Label();
+            this.lblAnyo2 = new System.Windows.Forms.Label();
+            this.lblPortada = new System.Windows.Forms.Label();
+            this.lblTag = new System.Windows.Forms.Label();
+            this.lblImagenPerfil = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.pnlPelis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPelis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbPortada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbAnyo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbAnyo1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscarUsuario
@@ -77,7 +94,7 @@
             this.txtBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarUsuario.Location = new System.Drawing.Point(29, 122);
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
-            this.txtBuscarUsuario.Size = new System.Drawing.Size(234, 29);
+            this.txtBuscarUsuario.Size = new System.Drawing.Size(251, 29);
             this.txtBuscarUsuario.TabIndex = 7;
             // 
             // pnlHeader
@@ -100,7 +117,7 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.refresh;
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -114,7 +131,7 @@
             // btnVerPerfil
             // 
             this.btnVerPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnVerPerfil.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
+            this.btnVerPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerPerfil.BackgroundImage")));
             this.btnVerPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVerPerfil.FlatAppearance.BorderSize = 0;
             this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -128,7 +145,7 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarSesion.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_filled_100;
+            this.btnCerrarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.BackgroundImage")));
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -142,7 +159,7 @@
             // btnHeaderBuscarPeli
             // 
             this.btnHeaderBuscarPeli.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderBuscarPeli.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.media_film_solid_search_512;
+            this.btnHeaderBuscarPeli.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderBuscarPeli.BackgroundImage")));
             this.btnHeaderBuscarPeli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHeaderBuscarPeli.FlatAppearance.BorderSize = 0;
             this.btnHeaderBuscarPeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -156,7 +173,7 @@
             // btnHeaderTwitter
             // 
             this.btnHeaderTwitter.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderTwitter.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_twitter_filled_100;
+            this.btnHeaderTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderTwitter.BackgroundImage")));
             this.btnHeaderTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHeaderTwitter.FlatAppearance.BorderSize = 0;
             this.btnHeaderTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -170,7 +187,7 @@
             // btnHeaderInsta
             // 
             this.btnHeaderInsta.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderInsta.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_instagram_filled_100;
+            this.btnHeaderInsta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderInsta.BackgroundImage")));
             this.btnHeaderInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHeaderInsta.FlatAppearance.BorderSize = 0;
             this.btnHeaderInsta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -184,7 +201,7 @@
             // btnHeaderFB
             // 
             this.btnHeaderFB.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderFB.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_facebook_filled_100;
+            this.btnHeaderFB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderFB.BackgroundImage")));
             this.btnHeaderFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHeaderFB.FlatAppearance.BorderSize = 0;
             this.btnHeaderFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -198,7 +215,7 @@
             // btnHeaderInicio
             // 
             this.btnHeaderInicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderInicio.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
+            this.btnHeaderInicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderInicio.BackgroundImage")));
             this.btnHeaderInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHeaderInicio.FlatAppearance.BorderSize = 0;
             this.btnHeaderInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,7 +232,7 @@
             this.pnlUsuarios.Controls.Add(this.lblUsuarios);
             this.pnlUsuarios.Location = new System.Drawing.Point(29, 177);
             this.pnlUsuarios.Name = "pnlUsuarios";
-            this.pnlUsuarios.Size = new System.Drawing.Size(268, 42);
+            this.pnlUsuarios.Size = new System.Drawing.Size(285, 42);
             this.pnlUsuarios.TabIndex = 27;
             // 
             // lblUsuarios
@@ -261,9 +278,11 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUsuarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvUsuarios.RowTemplate.Height = 40;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(268, 430);
+            this.dgvUsuarios.Size = new System.Drawing.Size(285, 430);
             this.dgvUsuarios.TabIndex = 26;
+            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
             this.dgvUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPeliculasUser_CellDoubleClick);
             // 
             // ID
@@ -304,9 +323,9 @@
             // 
             this.pnlPelis.BackColor = System.Drawing.Color.Gray;
             this.pnlPelis.Controls.Add(this.lblPelis);
-            this.pnlPelis.Location = new System.Drawing.Point(357, 177);
+            this.pnlPelis.Location = new System.Drawing.Point(511, 177);
             this.pnlPelis.Name = "pnlPelis";
-            this.pnlPelis.Size = new System.Drawing.Size(600, 42);
+            this.pnlPelis.Size = new System.Drawing.Size(449, 42);
             this.pnlPelis.TabIndex = 29;
             // 
             // lblPelis
@@ -339,15 +358,13 @@
             this.dgvPelis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPelis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpeli,
-            this.portada,
             this.titulo,
             this.fecha,
             this.director,
-            this.punt_media,
-            this.tag});
+            this.punt_media});
             this.dgvPelis.EnableHeadersVisualStyles = false;
             this.dgvPelis.GridColor = System.Drawing.Color.DarkOrange;
-            this.dgvPelis.Location = new System.Drawing.Point(357, 219);
+            this.dgvPelis.Location = new System.Drawing.Point(511, 219);
             this.dgvPelis.Name = "dgvPelis";
             this.dgvPelis.ReadOnly = true;
             this.dgvPelis.RowHeadersVisible = false;
@@ -355,26 +372,12 @@
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dgvPelis.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPelis.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dgvPelis.RowTemplate.Height = 90;
+            this.dgvPelis.RowTemplate.Height = 40;
             this.dgvPelis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPelis.Size = new System.Drawing.Size(600, 430);
+            this.dgvPelis.Size = new System.Drawing.Size(449, 430);
             this.dgvPelis.TabIndex = 28;
+            this.dgvPelis.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPelis_CellClick);
             this.dgvPelis.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPelis_CellDoubleClick);
-            // 
-            // btnBuscarUsuario
-            // 
-            this.btnBuscarUsuario.AutoSize = true;
-            this.btnBuscarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBuscarUsuario.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.search;
-            this.btnBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(269, 122);
-            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
-            this.btnBuscarUsuario.Size = new System.Drawing.Size(28, 29);
-            this.btnBuscarUsuario.TabIndex = 28;
-            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
-            this.btnBuscarUsuario.Click += new System.EventHandler(this.BtnBuscarUsuario_Click);
             // 
             // idpeli
             // 
@@ -383,14 +386,6 @@
             this.idpeli.Name = "idpeli";
             this.idpeli.ReadOnly = true;
             this.idpeli.Visible = false;
-            // 
-            // portada
-            // 
-            this.portada.DataPropertyName = "Portada";
-            this.portada.HeaderText = "Portada";
-            this.portada.Name = "portada";
-            this.portada.ReadOnly = true;
-            this.portada.Width = 70;
             // 
             // titulo
             // 
@@ -428,13 +423,158 @@
             this.punt_media.ReadOnly = true;
             this.punt_media.Width = 89;
             // 
-            // tag
+            // btnBuscarUsuario
             // 
-            this.tag.DataPropertyName = "tag";
-            this.tag.HeaderText = "Tag";
-            this.tag.Name = "tag";
-            this.tag.ReadOnly = true;
-            this.tag.Width = 70;
+            this.btnBuscarUsuario.AutoSize = true;
+            this.btnBuscarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBuscarUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarUsuario.BackgroundImage")));
+            this.btnBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarUsuario.Location = new System.Drawing.Point(286, 122);
+            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
+            this.btnBuscarUsuario.Size = new System.Drawing.Size(28, 29);
+            this.btnBuscarUsuario.TabIndex = 28;
+            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.BtnBuscarUsuario_Click);
+            // 
+            // pcbUsuario
+            // 
+            this.pcbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbUsuario.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pcbUsuario.ErrorImage")));
+            this.pcbUsuario.Location = new System.Drawing.Point(330, 219);
+            this.pcbUsuario.Name = "pcbUsuario";
+            this.pcbUsuario.Size = new System.Drawing.Size(120, 118);
+            this.pcbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbUsuario.TabIndex = 30;
+            this.pcbUsuario.TabStop = false;
+            // 
+            // btnPeli
+            // 
+            this.btnPeli.AutoSize = true;
+            this.btnPeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPeli.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPeli.BackgroundImage")));
+            this.btnPeli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeli.Location = new System.Drawing.Point(932, 122);
+            this.btnPeli.Name = "btnPeli";
+            this.btnPeli.Size = new System.Drawing.Size(28, 29);
+            this.btnPeli.TabIndex = 32;
+            this.btnPeli.UseVisualStyleBackColor = false;
+            this.btnPeli.Click += new System.EventHandler(this.BtnPeli_Click);
+            // 
+            // txtBuscarPeli
+            // 
+            this.txtBuscarPeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarPeli.Location = new System.Drawing.Point(511, 122);
+            this.txtBuscarPeli.Name = "txtBuscarPeli";
+            this.txtBuscarPeli.Size = new System.Drawing.Size(415, 29);
+            this.txtBuscarPeli.TabIndex = 31;
+            // 
+            // pcbPortada
+            // 
+            this.pcbPortada.Location = new System.Drawing.Point(981, 219);
+            this.pcbPortada.Name = "pcbPortada";
+            this.pcbPortada.Size = new System.Drawing.Size(131, 181);
+            this.pcbPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbPortada.TabIndex = 33;
+            this.pcbPortada.TabStop = false;
+            // 
+            // pcbTag
+            // 
+            this.pcbTag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbTag.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pcbTag.ErrorImage")));
+            this.pcbTag.Location = new System.Drawing.Point(1139, 219);
+            this.pcbTag.Name = "pcbTag";
+            this.pcbTag.Size = new System.Drawing.Size(120, 118);
+            this.pcbTag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTag.TabIndex = 34;
+            this.pcbTag.TabStop = false;
+            // 
+            // trbAnyo2
+            // 
+            this.trbAnyo2.Location = new System.Drawing.Point(981, 486);
+            this.trbAnyo2.Maximum = 2020;
+            this.trbAnyo2.Minimum = 1900;
+            this.trbAnyo2.Name = "trbAnyo2";
+            this.trbAnyo2.Size = new System.Drawing.Size(300, 45);
+            this.trbAnyo2.TabIndex = 35;
+            this.trbAnyo2.Value = 2020;
+            this.trbAnyo2.Scroll += new System.EventHandler(this.TrbAnyo2_Scroll);
+            // 
+            // trbAnyo1
+            // 
+            this.trbAnyo1.Location = new System.Drawing.Point(981, 435);
+            this.trbAnyo1.Maximum = 2020;
+            this.trbAnyo1.Minimum = 1900;
+            this.trbAnyo1.Name = "trbAnyo1";
+            this.trbAnyo1.Size = new System.Drawing.Size(300, 45);
+            this.trbAnyo1.TabIndex = 36;
+            this.trbAnyo1.Value = 1900;
+            this.trbAnyo1.Scroll += new System.EventHandler(this.TrbAnyo1_Scroll);
+            // 
+            // btnBuscarFecha
+            // 
+            this.btnBuscarFecha.AutoSize = true;
+            this.btnBuscarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarFecha.Location = new System.Drawing.Point(981, 537);
+            this.btnBuscarFecha.Name = "btnBuscarFecha";
+            this.btnBuscarFecha.Size = new System.Drawing.Size(137, 34);
+            this.btnBuscarFecha.TabIndex = 37;
+            this.btnBuscarFecha.Text = "Buscar por fecha";
+            this.btnBuscarFecha.UseVisualStyleBackColor = false;
+            this.btnBuscarFecha.Click += new System.EventHandler(this.BtnBuscarFecha_Click);
+            // 
+            // lblAnyo1
+            // 
+            this.lblAnyo1.AutoSize = true;
+            this.lblAnyo1.Location = new System.Drawing.Point(1287, 446);
+            this.lblAnyo1.Name = "lblAnyo1";
+            this.lblAnyo1.Size = new System.Drawing.Size(31, 13);
+            this.lblAnyo1.TabIndex = 38;
+            this.lblAnyo1.Text = "1900";
+            // 
+            // lblAnyo2
+            // 
+            this.lblAnyo2.AutoSize = true;
+            this.lblAnyo2.Location = new System.Drawing.Point(1287, 496);
+            this.lblAnyo2.Name = "lblAnyo2";
+            this.lblAnyo2.Size = new System.Drawing.Size(31, 13);
+            this.lblAnyo2.TabIndex = 39;
+            this.lblAnyo2.Text = "2020";
+            // 
+            // lblPortada
+            // 
+            this.lblPortada.AutoSize = true;
+            this.lblPortada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPortada.Location = new System.Drawing.Point(977, 186);
+            this.lblPortada.Name = "lblPortada";
+            this.lblPortada.Size = new System.Drawing.Size(101, 24);
+            this.lblPortada.TabIndex = 23;
+            this.lblPortada.Text = "PORTADA";
+            // 
+            // lblTag
+            // 
+            this.lblTag.AutoSize = true;
+            this.lblTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTag.Location = new System.Drawing.Point(1135, 186);
+            this.lblTag.Name = "lblTag";
+            this.lblTag.Size = new System.Drawing.Size(49, 24);
+            this.lblTag.TabIndex = 40;
+            this.lblTag.Text = "TAG";
+            // 
+            // lblImagenPerfil
+            // 
+            this.lblImagenPerfil.AutoSize = true;
+            this.lblImagenPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagenPerfil.Location = new System.Drawing.Point(326, 186);
+            this.lblImagenPerfil.Name = "lblImagenPerfil";
+            this.lblImagenPerfil.Size = new System.Drawing.Size(113, 24);
+            this.lblImagenPerfil.TabIndex = 41;
+            this.lblImagenPerfil.Text = "IMG PERFIL";
             // 
             // FBusqueda
             // 
@@ -442,6 +582,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(1344, 681);
+            this.Controls.Add(this.lblImagenPerfil);
+            this.Controls.Add(this.lblTag);
+            this.Controls.Add(this.lblPortada);
+            this.Controls.Add(this.lblAnyo2);
+            this.Controls.Add(this.lblAnyo1);
+            this.Controls.Add(this.btnBuscarFecha);
+            this.Controls.Add(this.trbAnyo1);
+            this.Controls.Add(this.trbAnyo2);
+            this.Controls.Add(this.pcbTag);
+            this.Controls.Add(this.pcbPortada);
+            this.Controls.Add(this.btnPeli);
+            this.Controls.Add(this.txtBuscarPeli);
+            this.Controls.Add(this.pcbUsuario);
             this.Controls.Add(this.btnBuscarUsuario);
             this.Controls.Add(this.pnlPelis);
             this.Controls.Add(this.dgvPelis);
@@ -459,6 +612,11 @@
             this.pnlPelis.ResumeLayout(false);
             this.pnlPelis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPelis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbPortada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbAnyo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbAnyo1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,11 +648,22 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnBuscarUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpeli;
-        private System.Windows.Forms.DataGridViewImageColumn portada;
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn director;
         private System.Windows.Forms.DataGridViewTextBoxColumn punt_media;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tag;
+        private System.Windows.Forms.PictureBox pcbUsuario;
+        private System.Windows.Forms.Button btnPeli;
+        private System.Windows.Forms.TextBox txtBuscarPeli;
+        private System.Windows.Forms.PictureBox pcbPortada;
+        private System.Windows.Forms.PictureBox pcbTag;
+        private System.Windows.Forms.TrackBar trbAnyo2;
+        private System.Windows.Forms.TrackBar trbAnyo1;
+        private System.Windows.Forms.Button btnBuscarFecha;
+        private System.Windows.Forms.Label lblAnyo1;
+        private System.Windows.Forms.Label lblAnyo2;
+        private System.Windows.Forms.Label lblPortada;
+        private System.Windows.Forms.Label lblTag;
+        private System.Windows.Forms.Label lblImagenPerfil;
     }
 }

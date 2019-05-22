@@ -124,14 +124,14 @@
   <data name="palomitas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\palomitas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="media-film-solid-search-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\media-film-solid-search-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-cierre-de-sesión-redondeado-hacia-la-izquierda-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\icons8-cierre-de-sesión-redondeado-hacia-la-izquierda-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Users-Find-User-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\Users-Find-User-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="labyrinth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\labyrinth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-hombres-lgbt-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\icons8-hombres-lgbt-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +148,17 @@
   <data name="brainwash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\brainwash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-grupos-de-usuarios-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-grupos-de-usuarios-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Users-Name-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\Users-Name-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="labyrinth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\labyrinth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-grupos-de-usuarios-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\icons8-grupos-de-usuarios-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="grupo_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\grupo_w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,13 +166,16 @@
   <data name="icons8-twitter-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\icons8-twitter-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Users-Name-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\Users-Name-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="media-film-solid-search-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\media-film-solid-search-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="undefined-document-256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\undefined-document-256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrowhead-thin-outline-to-the-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\arrowhead-thin-outline-to-the-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow-point-to-right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\arrow-point-to-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

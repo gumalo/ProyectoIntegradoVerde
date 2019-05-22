@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPerfilUsuario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCriticaReciente = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -46,12 +47,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNick = new System.Windows.Forms.Label();
             this.dgvCriticasUser = new System.Windows.Forms.DataGridView();
-            this.idpelis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crituser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crittext = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pelinom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPelis = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -65,12 +60,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptcUsuario = new System.Windows.Forms.PictureBox();
+            this.idpelis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crituser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crittext = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pelinom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pcbTagCrit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculasUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCriticasUser)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptcUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTagCrit)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCriticaReciente
@@ -215,7 +219,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCriticasUser.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCriticasUser.EnableHeadersVisualStyles = false;
-            this.dgvCriticasUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvCriticasUser.GridColor = System.Drawing.Color.DarkOrange;
             this.dgvCriticasUser.Location = new System.Drawing.Point(558, 158);
             this.dgvCriticasUser.Name = "dgvCriticasUser";
             this.dgvCriticasUser.ReadOnly = true;
@@ -223,14 +227,183 @@
             this.dgvCriticasUser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvCriticasUser.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCriticasUser.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvCriticasUser.RowTemplate.Height = 50;
             this.dgvCriticasUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCriticasUser.Size = new System.Drawing.Size(763, 496);
+            this.dgvCriticasUser.Size = new System.Drawing.Size(683, 496);
             this.dgvCriticasUser.TabIndex = 21;
+            this.dgvCriticasUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCriticasUser_CellClick);
+            // 
+            // lblPelis
+            // 
+            this.lblPelis.AutoSize = true;
+            this.lblPelis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPelis.Location = new System.Drawing.Point(3, 9);
+            this.lblPelis.Name = "lblPelis";
+            this.lblPelis.Size = new System.Drawing.Size(186, 24);
+            this.lblPelis.TabIndex = 22;
+            this.lblPelis.Text = "PELÍCULAS VISTAS:";
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pnlHeader.Controls.Add(this.btnRefresh);
+            this.pnlHeader.Controls.Add(this.btnVerPerfil);
+            this.pnlHeader.Controls.Add(this.btnCerrarSesion);
+            this.pnlHeader.Controls.Add(this.btnHeaderBuscarPeli);
+            this.pnlHeader.Controls.Add(this.btnHeaderTwitter);
+            this.pnlHeader.Controls.Add(this.btnHeaderInsta);
+            this.pnlHeader.Controls.Add(this.btnHeaderFB);
+            this.pnlHeader.Controls.Add(this.btnHeaderInicio);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1344, 92);
+            this.pnlHeader.TabIndex = 20;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Location = new System.Drawing.Point(1129, 24);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(46, 46);
+            this.btnRefresh.TabIndex = 31;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            // 
+            // btnVerPerfil
+            // 
+            this.btnVerPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerPerfil.BackgroundImage")));
+            this.btnVerPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVerPerfil.FlatAppearance.BorderSize = 0;
+            this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerPerfil.Location = new System.Drawing.Point(1197, 16);
+            this.btnVerPerfil.Name = "btnVerPerfil";
+            this.btnVerPerfil.Size = new System.Drawing.Size(62, 62);
+            this.btnVerPerfil.TabIndex = 29;
+            this.btnVerPerfil.UseVisualStyleBackColor = false;
+            this.btnVerPerfil.Click += new System.EventHandler(this.BtnVerPerfil_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.BackgroundImage")));
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1279, 21);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(53, 53);
+            this.btnCerrarSesion.TabIndex = 28;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            // 
+            // btnHeaderBuscarPeli
+            // 
+            this.btnHeaderBuscarPeli.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderBuscarPeli.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderBuscarPeli.BackgroundImage")));
+            this.btnHeaderBuscarPeli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderBuscarPeli.FlatAppearance.BorderSize = 0;
+            this.btnHeaderBuscarPeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderBuscarPeli.Location = new System.Drawing.Point(676, 15);
+            this.btnHeaderBuscarPeli.Name = "btnHeaderBuscarPeli";
+            this.btnHeaderBuscarPeli.Size = new System.Drawing.Size(77, 65);
+            this.btnHeaderBuscarPeli.TabIndex = 26;
+            this.btnHeaderBuscarPeli.UseVisualStyleBackColor = false;
+            this.btnHeaderBuscarPeli.Click += new System.EventHandler(this.BtnHeaderBuscarPeli_Click);
+            // 
+            // btnHeaderTwitter
+            // 
+            this.btnHeaderTwitter.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderTwitter.BackgroundImage")));
+            this.btnHeaderTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderTwitter.FlatAppearance.BorderSize = 0;
+            this.btnHeaderTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderTwitter.Location = new System.Drawing.Point(251, 20);
+            this.btnHeaderTwitter.Name = "btnHeaderTwitter";
+            this.btnHeaderTwitter.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderTwitter.TabIndex = 25;
+            this.btnHeaderTwitter.UseVisualStyleBackColor = false;
+            this.btnHeaderTwitter.Click += new System.EventHandler(this.BtnHeaderTwitter_Click);
+            // 
+            // btnHeaderInsta
+            // 
+            this.btnHeaderInsta.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderInsta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderInsta.BackgroundImage")));
+            this.btnHeaderInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderInsta.FlatAppearance.BorderSize = 0;
+            this.btnHeaderInsta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderInsta.Location = new System.Drawing.Point(178, 20);
+            this.btnHeaderInsta.Name = "btnHeaderInsta";
+            this.btnHeaderInsta.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderInsta.TabIndex = 25;
+            this.btnHeaderInsta.UseVisualStyleBackColor = false;
+            this.btnHeaderInsta.Click += new System.EventHandler(this.BtnHeaderInsta_Click);
+            // 
+            // btnHeaderFB
+            // 
+            this.btnHeaderFB.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderFB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderFB.BackgroundImage")));
+            this.btnHeaderFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderFB.FlatAppearance.BorderSize = 0;
+            this.btnHeaderFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderFB.Location = new System.Drawing.Point(110, 20);
+            this.btnHeaderFB.Name = "btnHeaderFB";
+            this.btnHeaderFB.Size = new System.Drawing.Size(54, 54);
+            this.btnHeaderFB.TabIndex = 24;
+            this.btnHeaderFB.UseVisualStyleBackColor = false;
+            this.btnHeaderFB.Click += new System.EventHandler(this.BtnHeaderFB_Click);
+            // 
+            // btnHeaderInicio
+            // 
+            this.btnHeaderInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnHeaderInicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHeaderInicio.BackgroundImage")));
+            this.btnHeaderInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeaderInicio.FlatAppearance.BorderSize = 0;
+            this.btnHeaderInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderInicio.Location = new System.Drawing.Point(6, 6);
+            this.btnHeaderInicio.Name = "btnHeaderInicio";
+            this.btnHeaderInicio.Size = new System.Drawing.Size(77, 79);
+            this.btnHeaderInicio.TabIndex = 23;
+            this.btnHeaderInicio.UseVisualStyleBackColor = false;
+            this.btnHeaderInicio.Click += new System.EventHandler(this.BtnHeaderInicio_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.lblPelis);
+            this.panel1.Location = new System.Drawing.Point(278, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(244, 42);
+            this.panel1.TabIndex = 23;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Controls.Add(this.lblCriticaReciente);
+            this.panel2.Location = new System.Drawing.Point(558, 116);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(683, 42);
+            this.panel2.TabIndex = 24;
+            // 
+            // ptcUsuario
+            // 
+            this.ptcUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptcUsuario.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ptcUsuario.ErrorImage")));
+            this.ptcUsuario.Location = new System.Drawing.Point(32, 125);
+            this.ptcUsuario.Name = "ptcUsuario";
+            this.ptcUsuario.Size = new System.Drawing.Size(200, 200);
+            this.ptcUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptcUsuario.TabIndex = 0;
+            this.ptcUsuario.TabStop = false;
             // 
             // idpelis
             // 
@@ -265,6 +438,7 @@
             this.tag.Name = "tag";
             this.tag.ReadOnly = true;
             this.tag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tag.Visible = false;
             // 
             // pelinom
             // 
@@ -282,173 +456,26 @@
             this.fecha.ReadOnly = true;
             this.fecha.Width = 130;
             // 
-            // lblPelis
+            // label1
             // 
-            this.lblPelis.AutoSize = true;
-            this.lblPelis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPelis.Location = new System.Drawing.Point(3, 9);
-            this.lblPelis.Name = "lblPelis";
-            this.lblPelis.Size = new System.Drawing.Size(186, 24);
-            this.lblPelis.TabIndex = 22;
-            this.lblPelis.Text = "PELÍCULAS VISTAS:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1247, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 24);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "TAG";
             // 
-            // pnlHeader
+            // pcbTagCrit
             // 
-            this.pnlHeader.BackColor = System.Drawing.SystemColors.GrayText;
-            this.pnlHeader.Controls.Add(this.btnRefresh);
-            this.pnlHeader.Controls.Add(this.btnVerPerfil);
-            this.pnlHeader.Controls.Add(this.btnCerrarSesion);
-            this.pnlHeader.Controls.Add(this.btnHeaderBuscarPeli);
-            this.pnlHeader.Controls.Add(this.btnHeaderTwitter);
-            this.pnlHeader.Controls.Add(this.btnHeaderInsta);
-            this.pnlHeader.Controls.Add(this.btnHeaderFB);
-            this.pnlHeader.Controls.Add(this.btnHeaderInicio);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1344, 92);
-            this.pnlHeader.TabIndex = 20;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.refresh;
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(1129, 24);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(46, 46);
-            this.btnRefresh.TabIndex = 31;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
-            // 
-            // btnVerPerfil
-            // 
-            this.btnVerPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnVerPerfil.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
-            this.btnVerPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVerPerfil.FlatAppearance.BorderSize = 0;
-            this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerPerfil.Location = new System.Drawing.Point(1197, 16);
-            this.btnVerPerfil.Name = "btnVerPerfil";
-            this.btnVerPerfil.Size = new System.Drawing.Size(62, 62);
-            this.btnVerPerfil.TabIndex = 29;
-            this.btnVerPerfil.UseVisualStyleBackColor = false;
-            this.btnVerPerfil.Click += new System.EventHandler(this.BtnVerPerfil_Click);
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarSesion.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_filled_100;
-            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1279, 21);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(53, 53);
-            this.btnCerrarSesion.TabIndex = 28;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
-            // 
-            // btnHeaderBuscarPeli
-            // 
-            this.btnHeaderBuscarPeli.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderBuscarPeli.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.media_film_solid_search_512;
-            this.btnHeaderBuscarPeli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderBuscarPeli.FlatAppearance.BorderSize = 0;
-            this.btnHeaderBuscarPeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderBuscarPeli.Location = new System.Drawing.Point(676, 15);
-            this.btnHeaderBuscarPeli.Name = "btnHeaderBuscarPeli";
-            this.btnHeaderBuscarPeli.Size = new System.Drawing.Size(77, 65);
-            this.btnHeaderBuscarPeli.TabIndex = 26;
-            this.btnHeaderBuscarPeli.UseVisualStyleBackColor = false;
-            this.btnHeaderBuscarPeli.Click += new System.EventHandler(this.BtnHeaderBuscarPeli_Click);
-            // 
-            // btnHeaderTwitter
-            // 
-            this.btnHeaderTwitter.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderTwitter.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_twitter_filled_100;
-            this.btnHeaderTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderTwitter.FlatAppearance.BorderSize = 0;
-            this.btnHeaderTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderTwitter.Location = new System.Drawing.Point(251, 20);
-            this.btnHeaderTwitter.Name = "btnHeaderTwitter";
-            this.btnHeaderTwitter.Size = new System.Drawing.Size(54, 54);
-            this.btnHeaderTwitter.TabIndex = 25;
-            this.btnHeaderTwitter.UseVisualStyleBackColor = false;
-            this.btnHeaderTwitter.Click += new System.EventHandler(this.BtnHeaderTwitter_Click);
-            // 
-            // btnHeaderInsta
-            // 
-            this.btnHeaderInsta.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderInsta.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_instagram_filled_100;
-            this.btnHeaderInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderInsta.FlatAppearance.BorderSize = 0;
-            this.btnHeaderInsta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderInsta.Location = new System.Drawing.Point(178, 20);
-            this.btnHeaderInsta.Name = "btnHeaderInsta";
-            this.btnHeaderInsta.Size = new System.Drawing.Size(54, 54);
-            this.btnHeaderInsta.TabIndex = 25;
-            this.btnHeaderInsta.UseVisualStyleBackColor = false;
-            this.btnHeaderInsta.Click += new System.EventHandler(this.BtnHeaderInsta_Click);
-            // 
-            // btnHeaderFB
-            // 
-            this.btnHeaderFB.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderFB.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.icons8_facebook_filled_100;
-            this.btnHeaderFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderFB.FlatAppearance.BorderSize = 0;
-            this.btnHeaderFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderFB.Location = new System.Drawing.Point(110, 20);
-            this.btnHeaderFB.Name = "btnHeaderFB";
-            this.btnHeaderFB.Size = new System.Drawing.Size(54, 54);
-            this.btnHeaderFB.TabIndex = 24;
-            this.btnHeaderFB.UseVisualStyleBackColor = false;
-            this.btnHeaderFB.Click += new System.EventHandler(this.BtnHeaderFB_Click);
-            // 
-            // btnHeaderInicio
-            // 
-            this.btnHeaderInicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnHeaderInicio.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
-            this.btnHeaderInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHeaderInicio.FlatAppearance.BorderSize = 0;
-            this.btnHeaderInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHeaderInicio.Location = new System.Drawing.Point(6, 6);
-            this.btnHeaderInicio.Name = "btnHeaderInicio";
-            this.btnHeaderInicio.Size = new System.Drawing.Size(77, 79);
-            this.btnHeaderInicio.TabIndex = 23;
-            this.btnHeaderInicio.UseVisualStyleBackColor = false;
-            this.btnHeaderInicio.Click += new System.EventHandler(this.BtnHeaderInicio_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.lblPelis);
-            this.panel1.Location = new System.Drawing.Point(278, 116);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 42);
-            this.panel1.TabIndex = 23;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Controls.Add(this.lblCriticaReciente);
-            this.panel2.Location = new System.Drawing.Point(558, 116);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(763, 42);
-            this.panel2.TabIndex = 24;
-            // 
-            // ptcUsuario
-            // 
-            this.ptcUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptcUsuario.ErrorImage = global::ProyectoEquipoVerde.Properties.Resources.Users_Name_icon;
-            this.ptcUsuario.Location = new System.Drawing.Point(32, 125);
-            this.ptcUsuario.Name = "ptcUsuario";
-            this.ptcUsuario.Size = new System.Drawing.Size(200, 200);
-            this.ptcUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptcUsuario.TabIndex = 0;
-            this.ptcUsuario.TabStop = false;
+            this.pcbTagCrit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbTagCrit.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pcbTagCrit.ErrorImage")));
+            this.pcbTagCrit.Location = new System.Drawing.Point(1251, 157);
+            this.pcbTagCrit.Name = "pcbTagCrit";
+            this.pcbTagCrit.Size = new System.Drawing.Size(80, 77);
+            this.pcbTagCrit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTagCrit.TabIndex = 43;
+            this.pcbTagCrit.TabStop = false;
             // 
             // FPerfilUsuario
             // 
@@ -458,6 +485,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(1344, 681);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pcbTagCrit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPeliculasUser);
@@ -471,7 +500,6 @@
             this.Name = "FPerfilUsuario";
             this.Text = "Usuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FPerfilUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculasUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCriticasUser)).EndInit();
             this.pnlHeader.ResumeLayout(false);
@@ -480,6 +508,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptcUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTagCrit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,12 +537,14 @@
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpelis;
         private System.Windows.Forms.DataGridViewTextBoxColumn crituser;
         private System.Windows.Forms.DataGridViewTextBoxColumn crittext;
         private System.Windows.Forms.DataGridViewTextBoxColumn tag;
         private System.Windows.Forms.DataGridViewTextBoxColumn pelinom;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pcbTagCrit;
     }
 }

@@ -17,6 +17,13 @@ namespace ProyectoEquipoVerde
             InitializeComponent();
         }
 
+        public FInicioSesion(string nickname)
+        {
+            InitializeComponent();
+
+            txtUsuario.Text = nickname;
+        }
+
         private bool ValidarDatos()
         {
             bool ok = true;
@@ -59,17 +66,17 @@ namespace ProyectoEquipoVerde
 
             LoginInfo.IniciarSesion(txtUsuario.Text);
 
-            FMainPage frm2 = new FMainPage();
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
+            FMainPage form = new FMainPage();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            FRegistro frm2 = new FRegistro();
-            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
-            frm2.Show();
+            FRegistro form = new FRegistro();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
     }

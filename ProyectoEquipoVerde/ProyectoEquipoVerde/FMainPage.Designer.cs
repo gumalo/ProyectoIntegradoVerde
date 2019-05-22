@@ -28,9 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlPelis = new System.Windows.Forms.Panel();
+            this.btnIzquierda = new System.Windows.Forms.Button();
+            this.btnDerecha = new System.Windows.Forms.Button();
+            this.btnPeli10 = new System.Windows.Forms.Button();
+            this.btnPeli9 = new System.Windows.Forms.Button();
+            this.btnPeli8 = new System.Windows.Forms.Button();
+            this.btnPeli7 = new System.Windows.Forms.Button();
+            this.btnPeli6 = new System.Windows.Forms.Button();
+            this.btnPeli5 = new System.Windows.Forms.Button();
+            this.btnPeli4 = new System.Windows.Forms.Button();
+            this.btnPeli3 = new System.Windows.Forms.Button();
+            this.btnPeli2 = new System.Windows.Forms.Button();
+            this.btnPeli1 = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnVerPerfil = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnHeaderBuscarPeli = new System.Windows.Forms.Button();
@@ -38,54 +50,178 @@
             this.btnHeaderInsta = new System.Windows.Forms.Button();
             this.btnHeaderFB = new System.Windows.Forms.Button();
             this.btnHeaderInicio = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlUsuarios = new System.Windows.Forms.Panel();
+            this.btnIzquierdaUsers = new System.Windows.Forms.Button();
+            this.btnDerechaUsers = new System.Windows.Forms.Button();
+            this.btnUser10 = new System.Windows.Forms.Button();
+            this.btnUser9 = new System.Windows.Forms.Button();
+            this.btnUser8 = new System.Windows.Forms.Button();
+            this.btnUser7 = new System.Windows.Forms.Button();
+            this.btnUser6 = new System.Windows.Forms.Button();
+            this.btnUser5 = new System.Windows.Forms.Button();
+            this.btnUser4 = new System.Windows.Forms.Button();
+            this.btnUser3 = new System.Windows.Forms.Button();
+            this.btnUser2 = new System.Windows.Forms.Button();
+            this.btnUser1 = new System.Windows.Forms.Button();
+            this.pnlPelisMejorValoradas = new System.Windows.Forms.Panel();
+            this.lblPelisMejorValoradas = new System.Windows.Forms.Label();
+            this.pnlUsuariosActivos = new System.Windows.Forms.Panel();
+            this.lblUsuariosActivos = new System.Windows.Forms.Label();
+            this.pnlPelis.SuspendLayout();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pnlUsuarios.SuspendLayout();
+            this.pnlPelisMejorValoradas.SuspendLayout();
+            this.pnlUsuariosActivos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlPelis
             // 
-            this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Controls.Add(this.pictureBox9);
-            this.panel2.Controls.Add(this.pictureBox8);
-            this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Location = new System.Drawing.Point(0, 151);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 92);
-            this.panel2.TabIndex = 6;
+            this.pnlPelis.BackColor = System.Drawing.Color.Coral;
+            this.pnlPelis.Controls.Add(this.btnIzquierda);
+            this.pnlPelis.Controls.Add(this.btnDerecha);
+            this.pnlPelis.Controls.Add(this.btnPeli10);
+            this.pnlPelis.Controls.Add(this.btnPeli9);
+            this.pnlPelis.Controls.Add(this.btnPeli8);
+            this.pnlPelis.Controls.Add(this.btnPeli7);
+            this.pnlPelis.Controls.Add(this.btnPeli6);
+            this.pnlPelis.Controls.Add(this.btnPeli5);
+            this.pnlPelis.Controls.Add(this.btnPeli4);
+            this.pnlPelis.Controls.Add(this.btnPeli3);
+            this.pnlPelis.Controls.Add(this.btnPeli2);
+            this.pnlPelis.Controls.Add(this.btnPeli1);
+            this.pnlPelis.Location = new System.Drawing.Point(0, 177);
+            this.pnlPelis.Name = "pnlPelis";
+            this.pnlPelis.Size = new System.Drawing.Size(1344, 156);
+            this.pnlPelis.TabIndex = 6;
             // 
-            // panel3
+            // btnIzquierda
             // 
-            this.panel3.BackColor = System.Drawing.Color.Coral;
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(0, 282);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 92);
-            this.panel3.TabIndex = 7;
+            this.btnIzquierda.BackColor = System.Drawing.Color.Transparent;
+            this.btnIzquierda.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.arrowhead_thin_outline_to_the_left;
+            this.btnIzquierda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIzquierda.FlatAppearance.BorderSize = 0;
+            this.btnIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzquierda.Location = new System.Drawing.Point(0, 57);
+            this.btnIzquierda.Name = "btnIzquierda";
+            this.btnIzquierda.Size = new System.Drawing.Size(40, 40);
+            this.btnIzquierda.TabIndex = 33;
+            this.btnIzquierda.UseVisualStyleBackColor = false;
+            this.btnIzquierda.Visible = false;
+            this.btnIzquierda.Click += new System.EventHandler(this.BtnIzquierda_Click);
+            // 
+            // btnDerecha
+            // 
+            this.btnDerecha.BackColor = System.Drawing.Color.Transparent;
+            this.btnDerecha.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.arrow_point_to_right;
+            this.btnDerecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDerecha.FlatAppearance.BorderSize = 0;
+            this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDerecha.Location = new System.Drawing.Point(1303, 57);
+            this.btnDerecha.Name = "btnDerecha";
+            this.btnDerecha.Size = new System.Drawing.Size(40, 40);
+            this.btnDerecha.TabIndex = 32;
+            this.btnDerecha.UseVisualStyleBackColor = false;
+            this.btnDerecha.Click += new System.EventHandler(this.BtnDerecha_Click);
+            // 
+            // btnPeli10
+            // 
+            this.btnPeli10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli10.Location = new System.Drawing.Point(1207, 17);
+            this.btnPeli10.Name = "btnPeli10";
+            this.btnPeli10.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli10.TabIndex = 32;
+            this.btnPeli10.UseVisualStyleBackColor = true;
+            this.btnPeli10.Click += new System.EventHandler(this.BtnPeli10_Click);
+            // 
+            // btnPeli9
+            // 
+            this.btnPeli9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli9.Location = new System.Drawing.Point(1078, 17);
+            this.btnPeli9.Name = "btnPeli9";
+            this.btnPeli9.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli9.TabIndex = 31;
+            this.btnPeli9.UseVisualStyleBackColor = true;
+            this.btnPeli9.Click += new System.EventHandler(this.BtnPeli9_Click);
+            // 
+            // btnPeli8
+            // 
+            this.btnPeli8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli8.Location = new System.Drawing.Point(949, 17);
+            this.btnPeli8.Name = "btnPeli8";
+            this.btnPeli8.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli8.TabIndex = 30;
+            this.btnPeli8.UseVisualStyleBackColor = true;
+            this.btnPeli8.Click += new System.EventHandler(this.BtnPeli8_Click);
+            // 
+            // btnPeli7
+            // 
+            this.btnPeli7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli7.Location = new System.Drawing.Point(820, 17);
+            this.btnPeli7.Name = "btnPeli7";
+            this.btnPeli7.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli7.TabIndex = 29;
+            this.btnPeli7.UseVisualStyleBackColor = true;
+            this.btnPeli7.Click += new System.EventHandler(this.BtnPeli7_Click);
+            // 
+            // btnPeli6
+            // 
+            this.btnPeli6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli6.Location = new System.Drawing.Point(691, 17);
+            this.btnPeli6.Name = "btnPeli6";
+            this.btnPeli6.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli6.TabIndex = 28;
+            this.btnPeli6.UseVisualStyleBackColor = true;
+            this.btnPeli6.Click += new System.EventHandler(this.BtnPeli6_Click);
+            // 
+            // btnPeli5
+            // 
+            this.btnPeli5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli5.Location = new System.Drawing.Point(562, 17);
+            this.btnPeli5.Name = "btnPeli5";
+            this.btnPeli5.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli5.TabIndex = 27;
+            this.btnPeli5.UseVisualStyleBackColor = true;
+            this.btnPeli5.Click += new System.EventHandler(this.BtnPeli5_Click);
+            // 
+            // btnPeli4
+            // 
+            this.btnPeli4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli4.Location = new System.Drawing.Point(433, 17);
+            this.btnPeli4.Name = "btnPeli4";
+            this.btnPeli4.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli4.TabIndex = 26;
+            this.btnPeli4.UseVisualStyleBackColor = true;
+            this.btnPeli4.Click += new System.EventHandler(this.BtnPeli4_Click);
+            // 
+            // btnPeli3
+            // 
+            this.btnPeli3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli3.Location = new System.Drawing.Point(304, 17);
+            this.btnPeli3.Name = "btnPeli3";
+            this.btnPeli3.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli3.TabIndex = 2;
+            this.btnPeli3.UseVisualStyleBackColor = true;
+            this.btnPeli3.Click += new System.EventHandler(this.BtnPeli3_Click);
+            // 
+            // btnPeli2
+            // 
+            this.btnPeli2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli2.Location = new System.Drawing.Point(175, 17);
+            this.btnPeli2.Name = "btnPeli2";
+            this.btnPeli2.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli2.TabIndex = 1;
+            this.btnPeli2.UseVisualStyleBackColor = true;
+            this.btnPeli2.Click += new System.EventHandler(this.BtnPeli2_Click);
+            // 
+            // btnPeli1
+            // 
+            this.btnPeli1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPeli1.Location = new System.Drawing.Point(46, 17);
+            this.btnPeli1.Name = "btnPeli1";
+            this.btnPeli1.Size = new System.Drawing.Size(90, 121);
+            this.btnPeli1.TabIndex = 0;
+            this.btnPeli1.UseVisualStyleBackColor = true;
+            this.btnPeli1.Click += new System.EventHandler(this.BtnPeli1_Click);
             // 
             // pnlHeader
             // 
@@ -103,7 +239,20 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1344, 92);
             this.pnlHeader.TabIndex = 25;
-            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlHeader_Paint);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.refresh;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Location = new System.Drawing.Point(1128, 24);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(46, 46);
+            this.btnRefresh.TabIndex = 31;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // btnVerPerfil
             // 
@@ -203,95 +352,192 @@
             this.btnHeaderInicio.UseVisualStyleBackColor = false;
             this.btnHeaderInicio.Click += new System.EventHandler(this.BtnHeaderInicio_Click);
             // 
-            // pictureBox1
+            // pnlUsuarios
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pnlUsuarios.BackColor = System.Drawing.Color.Coral;
+            this.pnlUsuarios.Controls.Add(this.btnIzquierdaUsers);
+            this.pnlUsuarios.Controls.Add(this.btnDerechaUsers);
+            this.pnlUsuarios.Controls.Add(this.btnUser10);
+            this.pnlUsuarios.Controls.Add(this.btnUser9);
+            this.pnlUsuarios.Controls.Add(this.btnUser8);
+            this.pnlUsuarios.Controls.Add(this.btnUser7);
+            this.pnlUsuarios.Controls.Add(this.btnUser6);
+            this.pnlUsuarios.Controls.Add(this.btnUser5);
+            this.pnlUsuarios.Controls.Add(this.btnUser4);
+            this.pnlUsuarios.Controls.Add(this.btnUser3);
+            this.pnlUsuarios.Controls.Add(this.btnUser2);
+            this.pnlUsuarios.Controls.Add(this.btnUser1);
+            this.pnlUsuarios.Location = new System.Drawing.Point(0, 439);
+            this.pnlUsuarios.Name = "pnlUsuarios";
+            this.pnlUsuarios.Size = new System.Drawing.Size(1344, 156);
+            this.pnlUsuarios.TabIndex = 34;
             // 
-            // pictureBox4
+            // btnIzquierdaUsers
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(451, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.btnIzquierdaUsers.BackColor = System.Drawing.Color.Transparent;
+            this.btnIzquierdaUsers.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.arrowhead_thin_outline_to_the_left;
+            this.btnIzquierdaUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIzquierdaUsers.FlatAppearance.BorderSize = 0;
+            this.btnIzquierdaUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzquierdaUsers.Location = new System.Drawing.Point(0, 57);
+            this.btnIzquierdaUsers.Name = "btnIzquierdaUsers";
+            this.btnIzquierdaUsers.Size = new System.Drawing.Size(40, 40);
+            this.btnIzquierdaUsers.TabIndex = 33;
+            this.btnIzquierdaUsers.UseVisualStyleBackColor = false;
+            this.btnIzquierdaUsers.Visible = false;
+            this.btnIzquierdaUsers.Click += new System.EventHandler(this.BtnIzquierdaUsers_Click);
             // 
-            // pictureBox3
+            // btnDerechaUsers
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(308, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.btnDerechaUsers.BackColor = System.Drawing.Color.Transparent;
+            this.btnDerechaUsers.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.arrow_point_to_right;
+            this.btnDerechaUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDerechaUsers.FlatAppearance.BorderSize = 0;
+            this.btnDerechaUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDerechaUsers.Location = new System.Drawing.Point(1303, 57);
+            this.btnDerechaUsers.Name = "btnDerechaUsers";
+            this.btnDerechaUsers.Size = new System.Drawing.Size(40, 40);
+            this.btnDerechaUsers.TabIndex = 32;
+            this.btnDerechaUsers.UseVisualStyleBackColor = false;
+            this.btnDerechaUsers.Click += new System.EventHandler(this.BtnDerechaUsers_Click);
             // 
-            // pictureBox2
+            // btnUser10
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(171, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.btnUser10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser10.Location = new System.Drawing.Point(1195, 27);
+            this.btnUser10.Name = "btnUser10";
+            this.btnUser10.Size = new System.Drawing.Size(100, 100);
+            this.btnUser10.TabIndex = 32;
+            this.btnUser10.UseVisualStyleBackColor = true;
+            this.btnUser10.Click += new System.EventHandler(this.BtnUser10_Click);
             // 
-            // pictureBox9
+            // btnUser9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(573, 13);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox9.TabIndex = 4;
-            this.pictureBox9.TabStop = false;
+            this.btnUser9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser9.Location = new System.Drawing.Point(1067, 27);
+            this.btnUser9.Name = "btnUser9";
+            this.btnUser9.Size = new System.Drawing.Size(100, 100);
+            this.btnUser9.TabIndex = 31;
+            this.btnUser9.UseVisualStyleBackColor = true;
+            this.btnUser9.Click += new System.EventHandler(this.BtnUser9_Click);
             // 
-            // pictureBox8
+            // btnUser8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(436, 13);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
+            this.btnUser8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser8.Location = new System.Drawing.Point(939, 27);
+            this.btnUser8.Name = "btnUser8";
+            this.btnUser8.Size = new System.Drawing.Size(100, 100);
+            this.btnUser8.TabIndex = 30;
+            this.btnUser8.UseVisualStyleBackColor = true;
+            this.btnUser8.Click += new System.EventHandler(this.BtnUser8_Click);
             // 
-            // pictureBox7
+            // btnUser7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(308, 13);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox7.TabIndex = 2;
-            this.pictureBox7.TabStop = false;
+            this.btnUser7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser7.Location = new System.Drawing.Point(811, 27);
+            this.btnUser7.Name = "btnUser7";
+            this.btnUser7.Size = new System.Drawing.Size(100, 100);
+            this.btnUser7.TabIndex = 29;
+            this.btnUser7.UseVisualStyleBackColor = true;
+            this.btnUser7.Click += new System.EventHandler(this.BtnUser7_Click);
             // 
-            // pictureBox6
+            // btnUser6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(171, 13);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
+            this.btnUser6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser6.Location = new System.Drawing.Point(683, 27);
+            this.btnUser6.Name = "btnUser6";
+            this.btnUser6.Size = new System.Drawing.Size(100, 100);
+            this.btnUser6.TabIndex = 28;
+            this.btnUser6.UseVisualStyleBackColor = true;
+            this.btnUser6.Click += new System.EventHandler(this.BtnUser6_Click);
             // 
-            // pictureBox5
+            // btnUser5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(29, 13);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(66, 66);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.btnUser5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser5.Location = new System.Drawing.Point(555, 27);
+            this.btnUser5.Name = "btnUser5";
+            this.btnUser5.Size = new System.Drawing.Size(100, 100);
+            this.btnUser5.TabIndex = 27;
+            this.btnUser5.UseVisualStyleBackColor = true;
+            this.btnUser5.Click += new System.EventHandler(this.BtnUser5_Click);
             // 
-            // btnRefresh
+            // btnUser4
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImage = global::ProyectoEquipoVerde.Properties.Resources.refresh;
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(1128, 24);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(46, 46);
-            this.btnRefresh.TabIndex = 31;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            this.btnUser4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser4.Location = new System.Drawing.Point(427, 27);
+            this.btnUser4.Name = "btnUser4";
+            this.btnUser4.Size = new System.Drawing.Size(100, 100);
+            this.btnUser4.TabIndex = 26;
+            this.btnUser4.UseVisualStyleBackColor = true;
+            this.btnUser4.Click += new System.EventHandler(this.BtnUser4_Click);
+            // 
+            // btnUser3
+            // 
+            this.btnUser3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser3.Location = new System.Drawing.Point(299, 27);
+            this.btnUser3.Name = "btnUser3";
+            this.btnUser3.Size = new System.Drawing.Size(100, 100);
+            this.btnUser3.TabIndex = 2;
+            this.btnUser3.UseVisualStyleBackColor = true;
+            this.btnUser3.Click += new System.EventHandler(this.BtnUser3_Click);
+            // 
+            // btnUser2
+            // 
+            this.btnUser2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser2.Location = new System.Drawing.Point(171, 27);
+            this.btnUser2.Name = "btnUser2";
+            this.btnUser2.Size = new System.Drawing.Size(100, 100);
+            this.btnUser2.TabIndex = 1;
+            this.btnUser2.UseVisualStyleBackColor = true;
+            this.btnUser2.Click += new System.EventHandler(this.BtnUser2_Click);
+            // 
+            // btnUser1
+            // 
+            this.btnUser1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUser1.Location = new System.Drawing.Point(43, 27);
+            this.btnUser1.Name = "btnUser1";
+            this.btnUser1.Size = new System.Drawing.Size(100, 100);
+            this.btnUser1.TabIndex = 0;
+            this.btnUser1.UseVisualStyleBackColor = true;
+            this.btnUser1.Click += new System.EventHandler(this.BtnUser1_Click);
+            // 
+            // pnlPelisMejorValoradas
+            // 
+            this.pnlPelisMejorValoradas.BackColor = System.Drawing.Color.Gray;
+            this.pnlPelisMejorValoradas.Controls.Add(this.lblPelisMejorValoradas);
+            this.pnlPelisMejorValoradas.Location = new System.Drawing.Point(0, 142);
+            this.pnlPelisMejorValoradas.Name = "pnlPelisMejorValoradas";
+            this.pnlPelisMejorValoradas.Size = new System.Drawing.Size(274, 36);
+            this.pnlPelisMejorValoradas.TabIndex = 35;
+            // 
+            // lblPelisMejorValoradas
+            // 
+            this.lblPelisMejorValoradas.AutoSize = true;
+            this.lblPelisMejorValoradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPelisMejorValoradas.Location = new System.Drawing.Point(5, 8);
+            this.lblPelisMejorValoradas.Name = "lblPelisMejorValoradas";
+            this.lblPelisMejorValoradas.Size = new System.Drawing.Size(262, 20);
+            this.lblPelisMejorValoradas.TabIndex = 36;
+            this.lblPelisMejorValoradas.Text = "PELÍCULAS MEJOR VALORADAS";
+            // 
+            // pnlUsuariosActivos
+            // 
+            this.pnlUsuariosActivos.BackColor = System.Drawing.Color.Gray;
+            this.pnlUsuariosActivos.Controls.Add(this.lblUsuariosActivos);
+            this.pnlUsuariosActivos.Location = new System.Drawing.Point(0, 403);
+            this.pnlUsuariosActivos.Name = "pnlUsuariosActivos";
+            this.pnlUsuariosActivos.Size = new System.Drawing.Size(220, 36);
+            this.pnlUsuariosActivos.TabIndex = 37;
+            // 
+            // lblUsuariosActivos
+            // 
+            this.lblUsuariosActivos.AutoSize = true;
+            this.lblUsuariosActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuariosActivos.Location = new System.Drawing.Point(5, 8);
+            this.lblUsuariosActivos.Name = "lblUsuariosActivos";
+            this.lblUsuariosActivos.Size = new System.Drawing.Size(208, 20);
+            this.lblUsuariosActivos.TabIndex = 36;
+            this.lblUsuariosActivos.Text = "USUARIOS MÁS ACTIVOS";
             // 
             // FMainPage
             // 
@@ -299,41 +545,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(1344, 681);
+            this.Controls.Add(this.pnlUsuariosActivos);
+            this.Controls.Add(this.pnlPelisMejorValoradas);
+            this.Controls.Add(this.pnlUsuarios);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlPelis);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FMainPage";
             this.Text = "FMainPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.pnlPelis.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.pnlUsuarios.ResumeLayout(false);
+            this.pnlPelisMejorValoradas.ResumeLayout(false);
+            this.pnlPelisMejorValoradas.PerformLayout();
+            this.pnlUsuariosActivos.ResumeLayout(false);
+            this.pnlUsuariosActivos.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel pnlPelis;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Button btnCerrarSesion;
@@ -343,5 +576,34 @@
         private System.Windows.Forms.Button btnHeaderFB;
         private System.Windows.Forms.Button btnHeaderInicio;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnPeli10;
+        private System.Windows.Forms.Button btnPeli9;
+        private System.Windows.Forms.Button btnPeli8;
+        private System.Windows.Forms.Button btnPeli7;
+        private System.Windows.Forms.Button btnPeli6;
+        private System.Windows.Forms.Button btnPeli5;
+        private System.Windows.Forms.Button btnPeli4;
+        private System.Windows.Forms.Button btnPeli3;
+        private System.Windows.Forms.Button btnPeli2;
+        private System.Windows.Forms.Button btnPeli1;
+        private System.Windows.Forms.Button btnIzquierda;
+        private System.Windows.Forms.Button btnDerecha;
+        private System.Windows.Forms.Panel pnlUsuarios;
+        private System.Windows.Forms.Button btnIzquierdaUsers;
+        private System.Windows.Forms.Button btnDerechaUsers;
+        private System.Windows.Forms.Button btnUser10;
+        private System.Windows.Forms.Button btnUser9;
+        private System.Windows.Forms.Button btnUser8;
+        private System.Windows.Forms.Button btnUser7;
+        private System.Windows.Forms.Button btnUser6;
+        private System.Windows.Forms.Button btnUser5;
+        private System.Windows.Forms.Button btnUser4;
+        private System.Windows.Forms.Button btnUser3;
+        private System.Windows.Forms.Button btnUser2;
+        private System.Windows.Forms.Button btnUser1;
+        private System.Windows.Forms.Panel pnlPelisMejorValoradas;
+        private System.Windows.Forms.Label lblPelisMejorValoradas;
+        private System.Windows.Forms.Panel pnlUsuariosActivos;
+        private System.Windows.Forms.Label lblUsuariosActivos;
     }
 }

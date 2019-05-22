@@ -29,7 +29,7 @@ namespace ProyectoEquipoVerde
         public Image Cartel { get { return cartel; } set { cartel = value; } }
         public DateTime Fecha { get => fecha; set => fecha = value; }
 
-        public Pelicula(int id_pelicula, string nombre, double calificacion, DateTime fecha, string descripcion, string director)
+        public Pelicula(int id_pelicula, string nombre, DateTime fecha, string descripcion, string director)
         {
             this.id_pelicula = id_pelicula;
             this.nombre = nombre;
@@ -209,7 +209,7 @@ namespace ProyectoEquipoVerde
 
         public static DataTable CargarTodasPeliculas()
         {
-            string consulta = String.Format("SELECT portada AS Portada, id_peli AS ID, nombre_peli AS Titulo, anyo_peli AS Fecha, director_peli AS Director," +
+            string consulta = String.Format("SELECT id_peli AS ID, nombre_peli AS Titulo, anyo_peli AS Fecha, director_peli AS Director," +
                 " (SELECT ROUND(AVG(Critica.valoracion_critica), 0) FROM Critica WHERE Pelicula.id_peli = Critica.peli_critica) AS Puntuacion FROM `Pelicula`" +
                 " LEFT JOIN Critica ON Pelicula.id_peli = Critica.peli_critica GROUP BY Pelicula.id_peli");
 
@@ -230,9 +230,30 @@ namespace ProyectoEquipoVerde
 
         public static DataTable BuscarPeliculas(string busqueda)
         {
-            string consulta = String.Format("SELECT portada AS Portada, id_peli AS ID, nombre_peli AS Titulo, anyo_peli AS Fecha, director_peli AS Director, " +
+            string consulta = String.Format("SELECT id_peli AS ID, nombre_peli AS Titulo, anyo_peli AS Fecha, director_peli AS Director, " +
                 "(SELECT ROUND(AVG(Critica.valoracion_critica), 0) FROM Critica WHERE Pelicula.id_peli = Critica.peli_critica) AS Puntuacion FROM `Pelicula` " +
-                "LEFT JOIN CriticaON Pelicula.id_peli = Critica.peli_criticaWHERE director_peli LIKE '%{0}%' OR nombre_peli LIKE '%{0}%'GROUP BY Pelicula.id_peli", busqueda);
+                "LEFT JOIN Critica ON Pelicula.id_peli = Critica.peli_critica WHERE director_peli LIKE '%{0}%' OR nombre_peli LIKE '%{0}%' GROUP BY Pelicula.id_peli", busqueda);
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            DataTable lista = new DataTable();
+            if (reader.HasRows)
+            {
+                lista.Load(reader);
+            }
+            Conexion.CerrarConexion();
+
+            return lista;
+        }
+
+        public static DataTable BuscarPeliculasPorAnyo(int anyo1, int anyo2)
+        {
+            string consulta = String.Format("SELECT id_peli AS ID, nombre_peli AS Titulo, anyo_peli AS Fecha, director_peli AS Director, " +
+                "(SELECT ROUND(AVG(Critica.valoracion_critica), 0) FROM Critica WHERE Pelicula.id_peli = Critica.peli_critica) AS Puntuacion " +
+                "FROM `Pelicula` LEFT JOIN Critica ON Pelicula.id_peli = Critica.peli_critica WHERE (anyo_peli BETWEEN '{0}-01-01' AND '{1}-01-01') GROUP BY Pelicula.id_peli", anyo1, anyo2);
 
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
 
@@ -294,7 +315,6 @@ namespace ProyectoEquipoVerde
             Conexion.AbrirConexion();
             MySqlDataReader reader = comando.ExecuteReader();
 
-            DataTable lista = new DataTable();
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -327,5 +347,39 @@ namespace ProyectoEquipoVerde
             return lista;
         }
 
+        public static List<Pelicula> CargarListaPeliculasPorValoracion()
+        {
+            string consulta = String.Format("SELECT id_peli AS ID, portada AS Portada, (SELECT ROUND(AVG(Critica.valoracion_critica), 0) FROM Critica WHERE Pelicula.id_peli = Critica.peli_critica) AS Puntuacion" +
+                " FROM `Pelicula` LEFT JOIN Critica ON Pelicula.id_peli = Critica.peli_critica GROUP BY Pelicula.id_peli ORDER BY `Puntuacion` DESC");
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
+
+            Conexion.AbrirConexion();
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            List<Pelicula> lista = new List<Pelicula>();
+
+            Pelicula peliTemp;
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    byte[] num = (byte[])reader[1];
+                    MemoryStream ms = new MemoryStream(num);
+                    Image returnImage = Image.FromStream(ms);
+                    Image image = returnImage;
+
+                    peliTemp = new Pelicula();
+                    peliTemp.id_pelicula = reader.GetInt32(0);
+                    peliTemp.cartel = image;
+
+                    lista.Add(peliTemp);
+                }
+            }
+            Conexion.CerrarConexion();
+
+            return lista;
+        }
     }
 }
