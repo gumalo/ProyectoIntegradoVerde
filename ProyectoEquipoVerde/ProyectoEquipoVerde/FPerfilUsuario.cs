@@ -14,10 +14,16 @@ namespace ProyectoEquipoVerde
     public partial class FPerfilUsuario : Form
     {
         private Usuario usuario;
+        int idUsuario;
 
         public FPerfilUsuario(int idUsuario)
         {
             InitializeComponent();
+
+            this.idUsuario = idUsuario;
+
+            //if (idUsuario != LoginInfo.IdUserLogged)
+            //    btnRefresh.Visible = false;
 
             usuario = Usuario.BuscarUsuario(idUsuario);
 
@@ -106,7 +112,7 @@ namespace ProyectoEquipoVerde
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            FPerfilUsuario form = new FPerfilUsuario(usuario.Id);
+            FPerfilUsuario form = new FPerfilUsuario(idUsuario);
             form.Show();
             form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();

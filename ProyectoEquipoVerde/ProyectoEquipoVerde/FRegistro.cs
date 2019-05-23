@@ -135,7 +135,7 @@ namespace ProyectoEquipoVerde
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Usuario.ModificarUsuario(LoginInfo.IdUserLogged, txtUsuario.Text, txtNombre.Text, txtContrasenya.Text, pcbImagenPerfil.Image);
+            Usuario.ModificarUsuario(LoginInfo.IdUserLogged, txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, pcbImagenPerfil.Image);
 
             Dispose();
         }

@@ -36,16 +36,6 @@ namespace ProyectoEquipoVerde
                 }
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frm2_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void DgvPeliculasUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvUsuarios.SelectedCells.Count > 0)
@@ -306,12 +296,15 @@ namespace ProyectoEquipoVerde
 
             foreach (DataGridViewRow row in dgvPelis.Rows)
             {
-                if (Pelicula.ObtenerTag((int)row.Cells["idpeli"].Value) != trbTag.Value)
+                if (row.Cells["punt_media"].Value != null)
                 {
-                    CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvPelis.DataSource];
-                    currencyManager1.SuspendBinding();
-                    row.Visible = false;
-                    currencyManager1.ResumeBinding();
+                    if (Pelicula.ObtenerTag((int)row.Cells["idpeli"].Value) != trbTag.Value)
+                    {
+                        CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvPelis.DataSource];
+                        currencyManager1.SuspendBinding();
+                        row.Visible = false;
+                        currencyManager1.ResumeBinding();
+                    }
                 }
             }
         }
