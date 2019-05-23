@@ -170,6 +170,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "FInicioSesion";
             this.Text = "Inicio Sesión";
+            this.Load += new System.EventHandler(this.FInicioSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

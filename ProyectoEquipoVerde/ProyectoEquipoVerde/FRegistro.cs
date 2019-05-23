@@ -157,6 +157,7 @@ namespace ProyectoEquipoVerde
 
         private void FRegistro_Load(object sender, EventArgs e)
         {
+            
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
             AplicarIdioma();
         }

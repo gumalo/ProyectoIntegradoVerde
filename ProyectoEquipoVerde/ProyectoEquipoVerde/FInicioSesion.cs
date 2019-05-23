@@ -105,5 +105,10 @@ namespace ProyectoEquipoVerde
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
             AplicarIdioma();
         }
+
+        private void FInicioSesion_Load(object sender, EventArgs e)
+        {
+            LoginInfo.Cultura = "ES-ES";
+        }
     }
 }
