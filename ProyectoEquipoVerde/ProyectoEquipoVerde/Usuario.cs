@@ -47,8 +47,6 @@ namespace ProyectoEquipoVerde
             string consulta = String.Format("INSERT INTO `Usuario` (`id_usuario`, `nombre_usuario`, `nickname`, `contrasenya`, `foto_perfil`) VALUES " +
                 "('{0}','{1}','{2}','{3}',@imagen)", null, usu.nombre, usu.nickname, usu.contrasenya);
 
-            MessageBox.Show(consulta);
-
             MySqlCommand comando = new MySqlCommand(consulta, Conexion.Con);
             comando.Parameters.AddWithValue("imagen", img);
 

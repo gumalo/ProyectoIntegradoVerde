@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace ProyectoEquipoVerde
 {
-    static class LoginInfo
+    public class LoginInfo
     {
         private static int idUserLogged;
         private static string cultura;
 
         public static int IdUserLogged { get => idUserLogged; set => idUserLogged = value; }
         public static string Cultura { get => cultura; set => cultura = value; }
+
+        public LoginInfo() { }
 
         public static bool IniciadaSesion(int id)
         {

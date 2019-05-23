@@ -42,7 +42,7 @@ namespace ProyectoEquipoVerde
             btnModificar.Visible = true;
         }
 
-        private Image ImagenTag(int numTag)
+        public Image ImagenTag(int numTag)
         {
             Image imagenTag;
 
@@ -94,7 +94,6 @@ namespace ProyectoEquipoVerde
 
             Dispose();
         }
-
 
 
         private void AplicarIdioma()
