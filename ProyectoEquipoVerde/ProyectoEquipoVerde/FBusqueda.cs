@@ -219,10 +219,110 @@ namespace ProyectoEquipoVerde
 
         private void BtnBuscarFecha_Click(object sender, EventArgs e)
         {
+            HacerVisiblesFilas();
+
+            //if (trbAnyo1.Value < trbAnyo2.Value)
+            //    dgvPelis.DataSource = Pelicula.BuscarPeliculasPorAnyo(trbAnyo1.Value, trbAnyo2.Value);
+            //else
+            //    dgvPelis.DataSource = Pelicula.BuscarPeliculasPorAnyo(trbAnyo2.Value, trbAnyo1.Value);
+
+            string stFecha1 = $"{trbAnyo1.Value}/01/01";
+            DateTime fecha1 = Convert.ToDateTime(stFecha1);
+
+            string stFecha2 = $"{trbAnyo2.Value}/01/01";
+            DateTime fecha2 = Convert.ToDateTime(stFecha2);
+
+            DateTime fechaFila;
+
             if (trbAnyo1.Value < trbAnyo2.Value)
-                dgvPelis.DataSource = Pelicula.BuscarPeliculasPorAnyo(trbAnyo1.Value, trbAnyo2.Value);
+            {
+                foreach (DataGridViewRow row in dgvPelis.Rows)
+                {
+                    fechaFila = Convert.ToDateTime(row.Cells["fecha"].Value);
+
+                    if (fechaFila.Ticks < fecha1.Ticks || fechaFila.Ticks > fecha2.Ticks)
+                    {
+                        CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvPelis.DataSource];
+                        currencyManager1.SuspendBinding();
+                        row.Visible = false;
+                        currencyManager1.ResumeBinding();
+                    }
+                }
+            }
             else
-                dgvPelis.DataSource = Pelicula.BuscarPeliculasPorAnyo(trbAnyo2.Value, trbAnyo1.Value);
+            {
+                foreach (DataGridViewRow row in dgvPelis.Rows)
+                {
+                    fechaFila = Convert.ToDateTime(row.Cells["fecha"].Value);
+
+                    if (fechaFila.Ticks > fecha1.Ticks || fechaFila.Ticks < fecha2.Ticks)
+                    {
+                        CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvPelis.DataSource];
+                        currencyManager1.SuspendBinding();
+                        row.Visible = false;
+                        currencyManager1.ResumeBinding();
+                    }
+                }
+            }
+        }
+
+        private Image ImagenTag(int numTag)
+        {
+            Image imagenTag;
+
+            switch (numTag)
+            {
+                case 1:
+                    imagenTag = ProyectoEquipoVerde.Properties.Resources.brainwash;
+                    break;
+                case 2:
+                    imagenTag = ProyectoEquipoVerde.Properties.Resources.icons8_grupos_de_usuarios_100;
+                    break;
+                case 3:
+                    imagenTag = ProyectoEquipoVerde.Properties.Resources.icons8_boleto_100;
+                    break;
+                case 4:
+                    imagenTag = ProyectoEquipoVerde.Properties.Resources.icons8_hombres_lgbt_100;
+                    break;
+                case 5:
+                    imagenTag = ProyectoEquipoVerde.Properties.Resources.labyrinth;
+                    break;
+                default:
+                    imagenTag = ProyectoEquipoVerde.Properties.Resources.undefined_document_256;
+                    break;
+            }
+
+            return imagenTag;
+        }
+
+        private void TrbTag_Scroll(object sender, EventArgs e)
+        {
+            pcbTagBusqueda.Image = ImagenTag(trbTag.Value);
+        }
+
+        private void BtnBuscarTag_Click(object sender, EventArgs e)
+        {
+            HacerVisiblesFilas();
+
+            foreach (DataGridViewRow row in dgvPelis.Rows)
+            {
+                if (Pelicula.ObtenerTag((int)row.Cells["idpeli"].Value) != trbTag.Value)
+                {
+                    CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvPelis.DataSource];
+                    currencyManager1.SuspendBinding();
+                    row.Visible = false;
+                    currencyManager1.ResumeBinding();
+                }
+            }
+        }
+
+        private void HacerVisiblesFilas()
+        {
+            foreach (DataGridViewColumn column in dgvPelis.Columns)
+            {
+                if (column.Name != "idpeli")
+                    column.Visible = true;
+            }
         }
     }
 }

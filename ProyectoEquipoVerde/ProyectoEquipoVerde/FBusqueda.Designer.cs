@@ -77,6 +77,9 @@
             this.lblPortada = new System.Windows.Forms.Label();
             this.lblTag = new System.Windows.Forms.Label();
             this.lblImagenPerfil = new System.Windows.Forms.Label();
+            this.btnBuscarTag = new System.Windows.Forms.Button();
+            this.pcbTagBusqueda = new System.Windows.Forms.PictureBox();
+            this.trbTag = new System.Windows.Forms.TrackBar();
             this.pnlHeader.SuspendLayout();
             this.pnlUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -87,6 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbTag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbAnyo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbAnyo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTagBusqueda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbTag)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscarUsuario
@@ -576,12 +581,51 @@
             this.lblImagenPerfil.TabIndex = 41;
             this.lblImagenPerfil.Text = "IMG PERFIL";
             // 
+            // btnBuscarTag
+            // 
+            this.btnBuscarTag.AutoSize = true;
+            this.btnBuscarTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBuscarTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarTag.Location = new System.Drawing.Point(981, 615);
+            this.btnBuscarTag.Name = "btnBuscarTag";
+            this.btnBuscarTag.Size = new System.Drawing.Size(137, 34);
+            this.btnBuscarTag.TabIndex = 42;
+            this.btnBuscarTag.Text = "Buscar por tag";
+            this.btnBuscarTag.UseVisualStyleBackColor = false;
+            this.btnBuscarTag.Click += new System.EventHandler(this.BtnBuscarTag_Click);
+            // 
+            // pcbTagBusqueda
+            // 
+            this.pcbTagBusqueda.Image = global::ProyectoEquipoVerde.Properties.Resources.brainwash;
+            this.pcbTagBusqueda.InitialImage = null;
+            this.pcbTagBusqueda.Location = new System.Drawing.Point(1172, 537);
+            this.pcbTagBusqueda.Name = "pcbTagBusqueda";
+            this.pcbTagBusqueda.Size = new System.Drawing.Size(73, 73);
+            this.pcbTagBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTagBusqueda.TabIndex = 44;
+            this.pcbTagBusqueda.TabStop = false;
+            // 
+            // trbTag
+            // 
+            this.trbTag.Location = new System.Drawing.Point(1153, 627);
+            this.trbTag.Maximum = 5;
+            this.trbTag.Minimum = 1;
+            this.trbTag.Name = "trbTag";
+            this.trbTag.Size = new System.Drawing.Size(104, 45);
+            this.trbTag.TabIndex = 43;
+            this.trbTag.Value = 1;
+            this.trbTag.Scroll += new System.EventHandler(this.TrbTag_Scroll);
+            // 
             // FBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(1344, 681);
+            this.Controls.Add(this.pcbTagBusqueda);
+            this.Controls.Add(this.trbTag);
+            this.Controls.Add(this.btnBuscarTag);
             this.Controls.Add(this.lblImagenPerfil);
             this.Controls.Add(this.lblTag);
             this.Controls.Add(this.lblPortada);
@@ -616,6 +660,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbTag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbAnyo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbAnyo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTagBusqueda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trbTag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,9 +683,6 @@
         private System.Windows.Forms.Panel pnlPelis;
         private System.Windows.Forms.Label lblPelis;
         private System.Windows.Forms.DataGridView dgvPelis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nickname;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
@@ -664,5 +707,8 @@
         private System.Windows.Forms.Label lblPortada;
         private System.Windows.Forms.Label lblTag;
         private System.Windows.Forms.Label lblImagenPerfil;
+        private System.Windows.Forms.Button btnBuscarTag;
+        private System.Windows.Forms.PictureBox pcbTagBusqueda;
+        private System.Windows.Forms.TrackBar trbTag;
     }
 }
