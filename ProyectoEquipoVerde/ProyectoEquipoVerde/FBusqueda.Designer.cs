@@ -648,6 +648,7 @@
             this.Controls.Add(this.txtBuscarUsuario);
             this.Name = "FBusqueda";
             this.Text = "FBusqueda";
+            this.Load += new System.EventHandler(this.FBusqueda_Load_1);
             this.pnlHeader.ResumeLayout(false);
             this.pnlUsuarios.ResumeLayout(false);
             this.pnlUsuarios.PerformLayout();

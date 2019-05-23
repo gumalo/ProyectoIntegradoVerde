@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
+using ProyectoEquipoVerde.Recursos;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -138,6 +141,24 @@ namespace ProyectoEquipoVerde
             Usuario.ModificarUsuario(LoginInfo.IdUserLogged, txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, pcbImagenPerfil.Image);
 
             Dispose();
+        }
+
+
+
+        private void AplicarIdioma()
+        {
+            lblContrasenya.Text = Rec.lblContrasenyRegistro;
+            lblNombre.Text = Rec.lblNombreRegistro;
+            lblRepetirContrasenya.Text = Rec.lblRepetirContrasenyaRegistro;
+            lblUsuario.Text = Rec.lblUsuarioRegistro;
+            btnCargarImagen.Text = Rec.btnCargarImagenRegistro;
+            chbContr.Text = Rec.chbContrRegistro;
+        }
+
+        private void FRegistro_Load(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
         }
     }
 }

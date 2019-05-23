@@ -117,71 +117,121 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-facebook-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-facebook-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnCargarImagenRegistro" xml:space="preserve">
+    <value>Cargar Imagen: </value>
   </data>
-  <data name="palomitas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\palomitas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnCriticaPerfil" xml:space="preserve">
+    <value>PUNTÚA</value>
   </data>
-  <data name="icons8-cierre-de-sesión-redondeado-hacia-la-izquierda-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-cierre-de-sesión-redondeado-hacia-la-izquierda-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnEnviarCritica" xml:space="preserve">
+    <value>ENVIAR</value>
   </data>
-  <data name="Users-Find-User-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\Users-Find-User-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnInicioSesionInicio" xml:space="preserve">
+    <value>INICIA SESIÓN</value>
   </data>
-  <data name="labyrinth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\labyrinth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnModificarCritica" xml:space="preserve">
+    <value>MODIFICAR</value>
   </data>
-  <data name="icons8-hombres-lgbt-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-hombres-lgbt-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnRegistrarseInicio" xml:space="preserve">
+    <value>REGÍSTRATE</value>
   </data>
-  <data name="icons8-instagram-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-instagram-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chbContrRegistro" xml:space="preserve">
+    <value>Hacer visible</value>
   </data>
-  <data name="LOGO APP - Extended V3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\LOGO APP - Extended V3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="errorProvider1Inicio" xml:space="preserve">
+    <value />
   </data>
-  <data name="icons8-boleto-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-boleto-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label1PerfilPeli" xml:space="preserve">
+    <value>TAG</value>
   </data>
-  <data name="brainwash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\brainwash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblContrasenyaInicio" xml:space="preserve">
+    <value>Contraseña</value>
   </data>
-  <data name="uk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\uk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblContrasenyRegistro" xml:space="preserve">
+    <value>Contraseña: </value>
   </data>
-  <data name="arrowhead-thin-outline-to-the-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\arrowhead-thin-outline-to-the-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblCriticaCritica" xml:space="preserve">
+    <value>Crítica (opcional)</value>
   </data>
-  <data name="Users-Name-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\Users-Name-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblCriticaRecientePerfil" xml:space="preserve">
+    <value>CRÍTICAS RECIENTES</value>
   </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblDescripcionPerfil" xml:space="preserve">
+    <value>Descripción:</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblDirecPerfil" xml:space="preserve">
+    <value>Director: </value>
   </data>
-  <data name="icons8-grupos-de-usuarios-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-grupos-de-usuarios-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblFechaPerfil" xml:space="preserve">
+    <value>Fecha:</value>
   </data>
-  <data name="arrow-point-to-right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\arrow-point-to-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblNombreRegistro" xml:space="preserve">
+    <value>Nombre:</value>
   </data>
-  <data name="grupo_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\grupo_w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblNotaCritica" xml:space="preserve">
+    <value>Valoracion</value>
   </data>
-  <data name="icons8-twitter-filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\icons8-twitter-filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblPelisBusqueda" xml:space="preserve">
+    <value>PELÍCULAS</value>
   </data>
-  <data name="media-film-solid-search-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\media-film-solid-search-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblPelisMejorValoradasMain" xml:space="preserve">
+    <value>MEJOR VALORADAS</value>
   </data>
-  <data name="undefined-document-256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\undefined-document-256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblRepetirContrasenyaRegistro" xml:space="preserve">
+    <value>Repetir Contraseña:</value>
   </data>
-  <data name="banderaespaña" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\banderaespaña.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblTagCritica" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="lblTagPerfil" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="lblTitPerfil" xml:space="preserve">
+    <value>Título: </value>
+  </data>
+  <data name="lblUsuarioInicio" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="lblUsuarioRegistro" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
+  <data name="lblUsuariosBusqueda" xml:space="preserve">
+    <value>USUARIOS</value>
+  </data>
+  <data name="lblImagenPerfil" xml:space="preserve">
+    <value>IMG PERFIL</value>
+  </data>
+  <data name="btnBuscarFechaBusqueda" xml:space="preserve">
+    <value>Buscar por fecha</value>
+  </data>
+  <data name="InicioSesionLoginInfo" xml:space="preserve">
+    <value>Inicio Sesión</value>
+  </data>
+  <data name="lblPortadaBusqueda" xml:space="preserve">
+    <value>PORTADA</value>
+  </data>
+  <data name="lblTagBusqueda" xml:space="preserve">
+    <value>TAG</value>
+  </data>
+  <data name="lblUsuariosActivos" xml:space="preserve">
+    <value>USUARIOS MÁS ACTIVOS</value>
+  </data>
+  <data name="btnEditarUsuario" xml:space="preserve">
+    <value>EDITAR</value>
+  </data>
+  <data name="label1Usuario" xml:space="preserve">
+    <value>TAG</value>
+  </data>
+  <data name="lblCriticaRecienteUsuario" xml:space="preserve">
+    <value>CRÍTICAS RECIENTES</value>
+  </data>
+  <data name="lblPelisUsuario" xml:space="preserve">
+    <value>PELÍCULAS VISTAS</value>
+  </data>
+  <data name="btnBuscarTagBusqueda" xml:space="preserve">
+    <value>Buscar por tag</value>
+  </data>
+  <data name="str" xml:space="preserve">
+    <value />
   </data>
 </root>

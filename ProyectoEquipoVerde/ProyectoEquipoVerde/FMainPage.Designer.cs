@@ -553,6 +553,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FMainPage";
             this.Text = "FMainPage";
+            this.Load += new System.EventHandler(this.FMainPage_Load);
             this.pnlPelis.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlUsuarios.ResumeLayout(false);

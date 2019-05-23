@@ -202,6 +202,7 @@
             this.Controls.Add(this.txtCritica);
             this.Name = "FCritica";
             this.Text = "FCritica";
+            this.Load += new System.EventHandler(this.FCritica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trbPuntuacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

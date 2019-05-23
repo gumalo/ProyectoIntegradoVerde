@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
+using ProyectoEquipoVerde.Recursos;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +38,24 @@ namespace ProyectoEquipoVerde
                     break;
                 }
         }
+
+        private void FBusqueda_Load(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
+        }
+
+
+        private void AplicarIdioma()
+        {
+            lblUsuarios.Text = Rec.lblUsuariosBusqueda;
+            lblPelis.Text = Rec.lblPelisBusqueda;
+            lblImagenPerfil.Text = Rec.lblImagenPerfil;
+            lblPortada.Text = Rec.lblPortadaBusqueda;
+            lblTag.Text = Rec.lblTagBusqueda;
+            btnBuscarFecha.Text = Rec.btnBuscarFechaBusqueda;
+        }
+
 
         private void DgvPeliculasUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -316,6 +337,12 @@ namespace ProyectoEquipoVerde
                 if (column.Name != "idpeli")
                     column.Visible = true;
             }
+        }
+
+        private void FBusqueda_Load_1(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
         }
     }
 }

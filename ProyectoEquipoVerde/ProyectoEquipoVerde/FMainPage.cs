@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
+using ProyectoEquipoVerde.Recursos;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -484,6 +487,22 @@ namespace ProyectoEquipoVerde
             form.Show();
             form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
+        }
+
+
+
+        private void AplicarIdioma()
+        {
+            lblPelisMejorValoradas.Text = Rec.lblPelisMejorValoradasMain;
+            lblUsuariosActivos.Text = Rec.lblUsuariosActivos;
+        }
+
+        private void FMainPage_Load(object sender, EventArgs e)
+        {
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
+
         }
     }
 }

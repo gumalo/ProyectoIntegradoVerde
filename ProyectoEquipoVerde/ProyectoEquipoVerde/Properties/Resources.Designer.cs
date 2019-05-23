@@ -83,6 +83,16 @@ namespace ProyectoEquipoVerde.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banderaespaña {
+            get {
+                object obj = ResourceManager.GetObject("banderaespaña", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brainwash {
             get {
                 object obj = ResourceManager.GetObject("brainwash", resourceCulture);
@@ -226,6 +236,16 @@ namespace ProyectoEquipoVerde.Properties {
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uk {
+            get {
+                object obj = ResourceManager.GetObject("uk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

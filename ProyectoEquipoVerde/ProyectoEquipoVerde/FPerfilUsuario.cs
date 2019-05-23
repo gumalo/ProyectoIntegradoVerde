@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
+using ProyectoEquipoVerde.Recursos;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -156,6 +159,22 @@ namespace ProyectoEquipoVerde
                         break;
                 }
             }
+        }
+
+
+
+        private void AplicarIdioma()
+        {
+            lblCriticaReciente.Text = Rec.lblCriticaRecientePerfil;
+            lblPelis.Text = Rec.lblPelisUsuario;
+            label1.Text = Rec.label1Usuario;
+            btnEditar.Text = Rec.btnEditarUsuario;
+        }
+
+        private void FPerfilUsuario_Load_1(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
         }
     }
 }

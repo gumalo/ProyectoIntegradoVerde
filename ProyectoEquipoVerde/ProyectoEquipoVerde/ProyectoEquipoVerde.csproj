@@ -108,6 +108,8 @@
     <Compile Include="Pelicula.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\Rec.Designer.cs" />
+    <Compile Include="Recursos\Rec.EN-GB.Designer.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="FBusqueda.resx">
       <DependentUpon>FBusqueda.cs</DependentUpon>
@@ -140,6 +142,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recursos\Rec.EN-GB.resx" />
+    <EmbeddedResource Include="Recursos\Rec.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -213,6 +217,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imagenes\arrow-point-to-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagenes\banderaespaña.jpg" />
+    <Content Include="imagenes\uk.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

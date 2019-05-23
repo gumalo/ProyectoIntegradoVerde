@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
+using ProyectoEquipoVerde.Recursos;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -90,6 +93,23 @@ namespace ProyectoEquipoVerde
             Critica.ModificarValoracion(idPeli, LoginInfo.IdUserLogged, trbPuntuacion.Value, trbTag.Value, txtCritica.Text);
 
             Dispose();
+        }
+
+
+
+        private void AplicarIdioma()
+        {
+            lblNota.Text = Rec.lblNotaCritica;
+            lblTag.Text = Rec.lblTagCritica;
+            lblCritica.Text = Rec.lblCriticaCritica;
+            btnEnviar.Text = Rec.btnEnviarCritica;
+            btnModificar.Text = Rec.btnModificarCritica;
+        }
+
+        private void FCritica_Load(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
         }
     }
 }

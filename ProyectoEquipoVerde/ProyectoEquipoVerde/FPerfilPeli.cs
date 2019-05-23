@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
+using ProyectoEquipoVerde.Recursos;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -160,6 +163,25 @@ namespace ProyectoEquipoVerde
                         break;
                 }
             }
+        }
+
+
+        private void AplicarIdioma()
+        {
+            lblTit.Text = Rec.lblTitPerfil;
+            lblDirector.Text = Rec.lblDirecPerfil;
+            lblFecha.Text = Rec.lblFechaPerfil;
+            lblDescripcion.Text = Rec.lblDescripcionPerfil;
+            lblCriticaReciente.Text = Rec.lblCriticaRecientePerfil;
+            lblTag.Text = Rec.lblTagPerfil;
+            btnCritica.Text = Rec.btnCriticaPerfil;
+            label1.Text = Rec.label1PerfilPeli;
+        }
+
+        private void FPerfilPeli_Load_1(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
         }
     }
 }

@@ -70,10 +70,10 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(404, 72);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(86, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(76, 20);
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -88,10 +88,10 @@
             // lblContrasenya
             // 
             this.lblContrasenya.AutoSize = true;
-            this.lblContrasenya.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasenya.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasenya.Location = new System.Drawing.Point(370, 105);
             this.lblContrasenya.Name = "lblContrasenya";
-            this.lblContrasenya.Size = new System.Drawing.Size(120, 20);
+            this.lblContrasenya.Size = new System.Drawing.Size(107, 20);
             this.lblContrasenya.TabIndex = 5;
             this.lblContrasenya.Text = "Contraseña:";
             // 
@@ -106,10 +106,10 @@
             // lblRepetirContrasenya
             // 
             this.lblRepetirContrasenya.AutoSize = true;
-            this.lblRepetirContrasenya.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRepetirContrasenya.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRepetirContrasenya.Location = new System.Drawing.Point(297, 141);
             this.lblRepetirContrasenya.Name = "lblRepetirContrasenya";
-            this.lblRepetirContrasenya.Size = new System.Drawing.Size(193, 20);
+            this.lblRepetirContrasenya.Size = new System.Drawing.Size(171, 20);
             this.lblRepetirContrasenya.TabIndex = 7;
             this.lblRepetirContrasenya.Text = "Repetir Contraseña:";
             // 
@@ -137,10 +137,10 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(404, 38);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(86, 20);
+            this.lblNombre.Size = new System.Drawing.Size(76, 20);
             this.lblNombre.TabIndex = 14;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -220,6 +220,7 @@
             this.Controls.Add(this.pcbLogo);
             this.Name = "FRegistro";
             this.Text = "FRegistro";
+            this.Load += new System.EventHandler(this.FRegistro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagenPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

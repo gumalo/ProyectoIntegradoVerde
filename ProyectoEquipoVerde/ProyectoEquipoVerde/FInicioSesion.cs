@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
+using ProyectoEquipoVerde.Recursos;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +26,15 @@ namespace ProyectoEquipoVerde
 
             txtUsuario.Text = nickname;
         }
+
+        private void AplicarIdioma()
+        {
+            lblContrasenya.Text = Rec.lblContrasenyaInicio;
+            lblUsuario.Text = Rec.lblUsuarioInicio;
+            btnInicioSesion.Text = Rec.btnInicioSesionInicio;
+            btnRegistrarse.Text = Rec.btnRegistrarseInicio;
+        }
+
 
         private bool ValidarDatos()
         {
@@ -78,6 +90,20 @@ namespace ProyectoEquipoVerde
             form.Show();
             form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
+        }
+
+        private void BtnEspanyol_Click_1(object sender, EventArgs e)
+        {
+            LoginInfo.Cultura = "ES-ES";
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
+        }
+
+        private void BtnIngles_Click(object sender, EventArgs e)
+        {
+            LoginInfo.Cultura = "EN-GB";
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(LoginInfo.Cultura);
+            AplicarIdioma();
         }
     }
 }

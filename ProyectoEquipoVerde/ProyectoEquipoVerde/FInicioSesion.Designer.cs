@@ -33,23 +33,25 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasenya = new System.Windows.Forms.TextBox();
             this.lblContrasenya = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnInicioSesion = new System.Windows.Forms.Button();
+            this.btnEspanyol = new System.Windows.Forms.Button();
+            this.btnIngles = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(132, 239);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(86, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(76, 20);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -71,32 +73,12 @@
             // lblContrasenya
             // 
             this.lblContrasenya.AutoSize = true;
-            this.lblContrasenya.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasenya.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasenya.Location = new System.Drawing.Point(98, 273);
             this.lblContrasenya.Name = "lblContrasenya";
-            this.lblContrasenya.Size = new System.Drawing.Size(120, 20);
+            this.lblContrasenya.Size = new System.Drawing.Size(107, 20);
             this.lblContrasenya.TabIndex = 3;
             this.lblContrasenya.Text = "Contraseña:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 203);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoEquipoVerde.Properties.Resources.palomitas;
-            this.pictureBox2.Location = new System.Drawing.Point(288, 161);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(314, 289);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
             // 
             // errorProvider1
             // 
@@ -130,12 +112,54 @@
             this.btnInicioSesion.UseVisualStyleBackColor = false;
             this.btnInicioSesion.Click += new System.EventHandler(this.btnInicioSesion_Click);
             // 
+            // btnEspanyol
+            // 
+            this.btnEspanyol.Image = global::ProyectoEquipoVerde.Properties.Resources.banderaespaña;
+            this.btnEspanyol.Location = new System.Drawing.Point(27, 21);
+            this.btnEspanyol.Name = "btnEspanyol";
+            this.btnEspanyol.Size = new System.Drawing.Size(51, 27);
+            this.btnEspanyol.TabIndex = 33;
+            this.btnEspanyol.UseVisualStyleBackColor = true;
+            this.btnEspanyol.Click += new System.EventHandler(this.BtnEspanyol_Click_1);
+            // 
+            // btnIngles
+            // 
+            this.btnIngles.Image = global::ProyectoEquipoVerde.Properties.Resources.uk;
+            this.btnIngles.Location = new System.Drawing.Point(27, 54);
+            this.btnIngles.Name = "btnIngles";
+            this.btnIngles.Size = new System.Drawing.Size(51, 27);
+            this.btnIngles.TabIndex = 32;
+            this.btnIngles.UseVisualStyleBackColor = true;
+            this.btnIngles.Click += new System.EventHandler(this.BtnIngles_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoEquipoVerde.Properties.Resources.LOGO_APP___Extended_V3;
+            this.pictureBox1.Location = new System.Drawing.Point(136, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(262, 203);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoEquipoVerde.Properties.Resources.palomitas;
+            this.pictureBox2.Location = new System.Drawing.Point(288, 161);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(314, 289);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // FInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(531, 408);
+            this.Controls.Add(this.btnEspanyol);
+            this.Controls.Add(this.btnIngles);
             this.Controls.Add(this.btnInicioSesion);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.txtContrasenya);
@@ -146,9 +170,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "FInicioSesion";
             this.Text = "Inicio Sesión";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +189,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnInicioSesion;
         private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.Button btnEspanyol;
+        private System.Windows.Forms.Button btnIngles;
     }
 }

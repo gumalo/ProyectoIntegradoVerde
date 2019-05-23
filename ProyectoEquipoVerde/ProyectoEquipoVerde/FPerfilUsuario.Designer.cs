@@ -499,6 +499,7 @@
             this.MinimizeBox = false;
             this.Name = "FPerfilUsuario";
             this.Text = "Usuario";
+            this.Load += new System.EventHandler(this.FPerfilUsuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculasUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCriticasUser)).EndInit();
             this.pnlHeader.ResumeLayout(false);
