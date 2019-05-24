@@ -56,7 +56,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="CriticaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

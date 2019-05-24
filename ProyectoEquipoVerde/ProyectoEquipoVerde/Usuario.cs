@@ -12,7 +12,7 @@ using System.Drawing.Imaging;
 
 namespace ProyectoEquipoVerde
 {
-    class Usuario
+    public class Usuario
     {
         private int id;
         private string nombre;

@@ -40,8 +40,6 @@ namespace ProyectoEquipoVerde
 
         public Pelicula() { }
 
-
-
         public static List<Pelicula> VerPelisPorFecha(DateTime fecha)
         {
             string laFecha = fecha.ToString("yyyy-MM-dd");
@@ -58,7 +56,6 @@ namespace ProyectoEquipoVerde
                     Pelicula peli = new Pelicula();
                     byte[] img = (byte[])reader["portada"];
                     MemoryStream ms = new MemoryStream(img);
-                    Image foto = Image.FromStream(ms);
 
                     peli.id_pelicula = reader.GetInt16(0);
                     peli.nombre = reader.GetString(1);

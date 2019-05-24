@@ -187,27 +187,7 @@ namespace ProyectoEquipoVerde
 
                 int numTag = Pelicula.ObtenerTag(id);
 
-                switch (numTag)
-                {
-                    case 1:
-                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.brainwash;
-                        break;
-                    case 2:
-                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.icons8_grupos_de_usuarios_100;
-                        break;
-                    case 3:
-                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.icons8_boleto_100;
-                        break;
-                    case 4:
-                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.icons8_hombres_lgbt_100;
-                        break;
-                    case 5:
-                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.labyrinth;
-                        break;
-                    default:
-                        pcbTag.Image = ProyectoEquipoVerde.Properties.Resources.undefined_document_256;
-                        break;
-                }
+                pcbTag.Image = ImagenTag(numTag);
             }
         }
 
@@ -277,7 +257,7 @@ namespace ProyectoEquipoVerde
             }
         }
 
-        private Image ImagenTag(int numTag)
+        public static Image ImagenTag(int numTag)
         {
             Image imagenTag;
 

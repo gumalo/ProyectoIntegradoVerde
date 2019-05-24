@@ -8,10 +8,8 @@ using System.Windows.Forms;
 
 namespace ProyectoEquipoVerde
 {
-    class Critica
+    public class Critica
     {
-
-
         private int id_critica;
         private int valoracion;
         private string comentario;
@@ -19,9 +17,6 @@ namespace ProyectoEquipoVerde
         private int id_peli;
         private int id_usuario;
         private DateTime fecha;
-
-
-
 
         public int Id_critica { get { return id_critica; } set { id_critica = value; } }
         public int Valoracion { get { return valoracion; } set { valoracion = value; } }
@@ -44,17 +39,6 @@ namespace ProyectoEquipoVerde
             this.fecha = fecha;
         }
 
-
-
-        /// <summary>
-        /// Este método recibe un string de un text box y lo añade a la base de datos
-        /// También añade una valoración a la película
-        /// 
-        /// </summary>
-        /// <param name="peliId"></param>
-        /// <param name="usuarioId"></param>
-        /// <returns>int, el número de filas afectadas por la consulta</returns>
-        /// 
 
         public static int HacerValoracion(int peliId, int usuarioId, int laValoracion, int elTag, string elComentario)
         {
