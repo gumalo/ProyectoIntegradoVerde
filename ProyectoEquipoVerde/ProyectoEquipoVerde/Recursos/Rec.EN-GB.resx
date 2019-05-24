@@ -159,9 +159,6 @@
   <data name="lblDescripcionPerfil" xml:space="preserve">
     <value>Description:</value>
   </data>
-  <data name="lblDirecPerfil" xml:space="preserve">
-    <value>Director: </value>
-  </data>
   <data name="lblFechaPerfil" xml:space="preserve">
     <value>Date:</value>
   </data>

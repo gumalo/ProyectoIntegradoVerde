@@ -169,7 +169,6 @@ namespace ProyectoEquipoVerde
         private void AplicarIdioma()
         {
             lblTit.Text = Rec.lblTitPerfil;
-            lblDirector.Text = Rec.lblDirecPerfil;
             lblFecha.Text = Rec.lblFechaPerfil;
             lblDescripcion.Text = Rec.lblDescripcionPerfil;
             lblCriticaReciente.Text = Rec.lblCriticaRecientePerfil;

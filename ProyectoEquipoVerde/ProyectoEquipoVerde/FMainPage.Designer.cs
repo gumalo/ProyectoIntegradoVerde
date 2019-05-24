@@ -507,7 +507,7 @@
             this.pnlPelisMejorValoradas.Controls.Add(this.lblPelisMejorValoradas);
             this.pnlPelisMejorValoradas.Location = new System.Drawing.Point(0, 142);
             this.pnlPelisMejorValoradas.Name = "pnlPelisMejorValoradas";
-            this.pnlPelisMejorValoradas.Size = new System.Drawing.Size(274, 36);
+            this.pnlPelisMejorValoradas.Size = new System.Drawing.Size(220, 36);
             this.pnlPelisMejorValoradas.TabIndex = 35;
             // 
             // lblPelisMejorValoradas
