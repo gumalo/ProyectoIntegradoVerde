@@ -16,11 +16,9 @@ namespace ProyectoEquipoVerde.Tests
         {
             string nickUser = "gumalo";
 
-            bool resEsperado = true;
-
             bool resultado = Usuario.ExisteUsuario(nickUser);
 
-            Assert.AreEqual(resEsperado, resultado);
+            Assert.IsTrue(resultado);
         }
 
         [TestMethod()]
@@ -29,11 +27,9 @@ namespace ProyectoEquipoVerde.Tests
             string nickUser = "gumalo";
             string pass = "tola";
 
-            bool resEsperado = true;
-
             bool resultado = Usuario.ExisteUsuario(nickUser, pass);
 
-            Assert.AreEqual(resEsperado, resultado);
+            Assert.IsTrue(resultado);
         }
     }
 }

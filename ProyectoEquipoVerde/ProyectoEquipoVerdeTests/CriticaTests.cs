@@ -17,11 +17,9 @@ namespace ProyectoEquipoVerde.Tests
             int idUser = 8;
             int idPeli = 32;
 
-            bool resEsperado = true;
-
             bool resultado = Critica.ExisteCritica(idUser, idPeli);
 
-            Assert.AreEqual(resEsperado, resultado);
+            Assert.IsTrue(resultado);
         }
     }
 }
