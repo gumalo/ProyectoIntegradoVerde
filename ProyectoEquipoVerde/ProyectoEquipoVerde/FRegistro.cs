@@ -138,6 +138,14 @@ namespace ProyectoEquipoVerde
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (!ValidarDatos()) return;
+
+            if (Usuario.ExisteUsuario(txtUsuario.Text))
+            {
+                var result = MessageBox.Show("Usuario ya registrado");
+                return;
+            }
+
             Usuario.ModificarUsuario(LoginInfo.IdUserLogged, txtNombre.Text, txtUsuario.Text, txtContrasenya.Text, pcbImagenPerfil.Image);
 
             Dispose();
