@@ -153,6 +153,8 @@ namespace ProyectoEquipoVerde
             lblUsuario.Text = Rec.lblUsuarioRegistro;
             btnCargarImagen.Text = Rec.btnCargarImagenRegistro;
             chbContr.Text = Rec.chbContrRegistro;
+            btnRegistrarse.Text = Rec.btnRegistrarseInicio;
+            btnModificar.Text = Rec.btnModificarCritica;
         }
 
         private void FRegistro_Load(object sender, EventArgs e)

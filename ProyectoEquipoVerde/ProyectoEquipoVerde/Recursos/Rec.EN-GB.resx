@@ -228,7 +228,13 @@
   <data name="btnBuscarTagBusqueda" xml:space="preserve">
     <value>Search by tag</value>
   </data>
-  <data name="string" xml:space="preserve">
-    <value />
+  <data name="btnRegistrarseRegistro" xml:space="preserve">
+    <value>SIGN IN</value>
+  </data>
+  <data name="btnModificar" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="btnModificarRegistro" xml:space="preserve">
+    <value>SAVE</value>
   </data>
 </root>
