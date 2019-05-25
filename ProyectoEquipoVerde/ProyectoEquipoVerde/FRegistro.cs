@@ -15,6 +15,8 @@ namespace ProyectoEquipoVerde
 {
     public partial class FRegistro : Form
     {
+        string usuarioMod;
+
         public FRegistro()
         {
             InitializeComponent();
@@ -30,6 +32,8 @@ namespace ProyectoEquipoVerde
             txtNombre.Text = usuario.Nombre;
             txtContrasenya.Text = usuario.Contrasenya;
             pcbImagenPerfil.Image = usuario.Imagen;
+
+            usuarioMod = usuario.Nickname;
 
             btnRegistrarse.Visible = false;
             btnModificar.Visible = true;
@@ -140,9 +144,9 @@ namespace ProyectoEquipoVerde
         {
             if (!ValidarDatos()) return;
 
-            if (Usuario.ExisteUsuario(txtUsuario.Text))
+            if (usuarioMod != txtUsuario.Text && Usuario.ExisteUsuario(txtUsuario.Text))
             {
-                var result = MessageBox.Show("Usuario ya registrado");
+                MessageBox.Show("Usuario ya registrado");
                 return;
             }
 
