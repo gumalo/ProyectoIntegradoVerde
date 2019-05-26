@@ -54,6 +54,7 @@ namespace ProyectoEquipoVerde
             lblPortada.Text = Rec.lblPortadaBusqueda;
             lblTag.Text = Rec.lblTagBusqueda;
             btnBuscarFecha.Text = Rec.btnBuscarFechaBusqueda;
+            btnBuscarTag.Text=Rec.btnBuscarTagBusqueda;
         }
 
 

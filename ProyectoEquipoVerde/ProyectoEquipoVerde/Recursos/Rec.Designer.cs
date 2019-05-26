@@ -392,5 +392,13 @@ namespace ProyectoEquipoVerde.Recursos {
                 return ResourceManager.GetString("lblUsuariosBusqueda", resourceCulture);
             }
         }
+
+        internal static string btnBuscarTagBusqueda
+        {
+            get
+            {
+                return ResourceManager.GetString("btnBuscarTagBusqueda", resourceCulture);
+            }
+        }
     }
 }
